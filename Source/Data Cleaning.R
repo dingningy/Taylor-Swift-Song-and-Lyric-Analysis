@@ -68,7 +68,7 @@ raw.ts.spotify <- raw.ts.spotify %>%
   mutate(across(where(is.numeric), ~round(., 3)))
          
 # Add a column to distinguish albums before and after Taylor signed off from Big Machine Records
-raw.ts.spotify <- raw.ts.spotify %>%
+ts.spotify <- raw.ts.spotify %>%
   mutate(
     album_label = case_when(
       as.numeric(levels(release_year)[release_year]) < 2019 ~ "Big Machine",
@@ -79,7 +79,7 @@ raw.ts.spotify <- raw.ts.spotify %>%
   relocate(album_label, .after = album)
 
 # Write out the cleaned and transformed data for data analysis
-write_csv(raw.ts.spotify, "data/ts.spotify.csv")
+write_csv(ts.spotify, "data/ts.spotify.csv")
 
 
 
