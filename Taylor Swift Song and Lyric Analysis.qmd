@@ -95,6 +95,7 @@ Specifically, `r round(100 * sum(ts.spotify$album_label == "Republic") / nrow(ts
 
 ```{r}
 #| label: fig-album-label-percentage
+#| fig.cap: "Percentage of Taylor Swift's Songs by Record Label"
 #| include: true
 
 # Summarize data for album label
@@ -180,12 +181,188 @@ Click the button below to listen to ***I Think He Knows***: High Danceability Sc
 
 Your browser does not support the audio element. </audio>
 
+##### Summary
+Specifically, the average danceability score of Taylor Swift's songs is `r round(mean(ts.spotify$danceability), 2)`(*SD* = `r round(sd(ts.spotify$danceability, na.rm = TRUE), 1)`).
+
+
 #### Energy
 
 Energy is a measure from 0.0 to 1.0 and represents a perceptual measure of intensity and activity. Typically, energetic tracks feel fast, loud, and noisy.
 
-For instance, the lowest energy score is 0.000 for ***Soon You'll Get Better*** and the highest is 0.964 for ***I Think He Knows***.
+For instance, the lowest energy score is 0.118 for ***State Of Grace - Acoustic*** and the highest is 0.948 for ***Haunted***.
+
+##### State Of Grace - Acoustic
+
+Click the button below to listen to ***State Of Grace - Acoustic***: Low Energy Score
+
+<audio controls>
+
+<source src="audio/Taylor Swift - State Of Grace (Acoustic Version) (Taylor's Version).mp3" type="audio/mpeg">
+
+Your browser does not support the audio element. </audio>
+
+##### Haunted
+
+Click the button below to listen to ***Haunted***: High Energy Score
+
+<audio controls>
+
+<source src="audio/Taylor Swift - Haunted.mp3" type="audio/mpeg">
+
+Your browser does not support the audio element. </audio>
+
+##### Summary
+Specifically, the average energy score of Taylor Swift's songs is `r round(mean(ts.spotify$energy), 2)`(*SD* = `r round(sd(ts.spotify$energy, na.rm = TRUE), 1)`).
+
+
+#### Liveness
+
+Liveness detects the presence of an audience in the recording. Higher liveness values represent an increased probability that the track was performed live. A value above 0.8 provides strong likelihood that the track is live.
+
+For instance, the lowest liveness score is 0.034 for ***I Knew You Were Trouble*** and the highest is 0.931 for ***Better Than Revenge - Live/2011***.
+
+##### I Knew You Were Trouble
+
+Click the button below to listen to ***I Knew You Were Trouble***: Low Liveness Score
+
+<audio controls>
+
+<source src="audio/Taylor Swift - I Knew You Were Trouble (Taylor's Version).mp3" type="audio/mpeg">
+
+
+##### Better Than Revenge - Live/2011
+
+Click the button below to listen to ***Better Than Revenge - Live/2011***: High Liveness Score
+
+<audio controls>
+
+<source src="audio/Taylor Swift - Better Than Revenge (Live2011).mp3" type="audio/mpeg">
+
+##### Summary
+
+Specifically, the average liveness score of Taylor Swift's songs is `r round(mean(ts.spotify$liveness), 2)`(*SD* = `r round(sd(ts.spotify$liveness, na.rm = TRUE), 1)`). It is notable that most albums have a liveness score close to 0, indicating that the majority of the songs are studio albums rather than live recordings. Nevertheless, it is possible that the same song may have different versions, such as live versions, acoustic versions, or remixes, which may have higher liveness scores. For instance, ***I Knew You Were Trouble*** has multiple live versions. Here is an example from reputation Stadium tour (Oct 19, 2018):
+
+<video width="320" height="240" controls>
+     <source src="audio/IKYWT live2018.mp4" type="video/mp4">
+     Your browser does not support the video tag.
+   </video>
+   
+   
+#### Valence
+
+A measure from 0.0 to 1.0 describing the musical positiveness conveyed by a track. Tracks with high valence sound more positive (e.g. happy, cheerful, euphoric), while tracks with low valence sound more negative (e.g. sad, depressed, angry).
+
+For instance, the lowest valence score is 0.153 for ***Maroon*** and the highest is 0.943 for ***Shake It Off***.
+
+##### Maroon
+
+Click the button below to listen to ***Maroon***: Low Valence Score
+
+<audio controls>
+
+<source src="audio/Taylor Swift - Maroon.mp3" type="audio/mpeg">
+
+
+
+##### Shake It Off
+
+Click the button below to listen to ***Shake It Off***: High Valence Score
+
+<audio controls>
+
+<source src="audio/Taylor Swift - Shake It Off.mp3" type="audio/mpeg">
+
+##### Summary
+
+Specifically, the average valence score of Taylor Swift's songs is `r round(mean(ts.spotify$valence), 2)`(*SD* = `r round(sd(ts.spotify$valence, na.rm = TRUE), 1)`). This indicates that her songs are slightly skewed towards negative emotions. 
+
+
+It is reasonable to conclude that the song ***Maroon*** has a low valence score based on the the lyrics and the muse of the song. Specifically, the lyrics are proven to be related to several plots in a book called "*The Seven Husbands of Evelyn Hugo*" by Taylor Jenkins Reid. The novel follows Evelyn rose from poverty to become a major star in the 1950s-60s, navigating the complicated world of Hollywood while hiding her true identity as a bisexual Cuban woman by seven marriages. "*The rust that grew between telephone*" is a metaphor for the distance between Evelyn and Celia when they experienced public love blackouts, and the "maroon" color is a symbol of both the joy they shared together (drinking wine) and pain that Evelyn has experienced. The book is claimed to be paralleled with Taylor Swift's life about her beard romantic relationships and love blackout with the New York muse Karlie Kloss. Karlie Kloss confirmed her identity as the ***Maroon*** muse by wearing the "Cheap Ass Rosé" bracelet to the Eras tour on Aug 9, 2023 in Los Angeles, which resembles the "roommate muse" in ***Maroon***. 
+
+It is also easy to tell ***Shake It Off***  is a positive song if you listen to it!
+
+
+***Note***: Loudness is not discussed here since all values are negative. Speechiness is not discussed here since all values are close to zero. Tempo is not considered in the popularity score prediction since it is unrelated. 
+
+### Popularity Score Predictors
+
+#### Record Labels
+
+Taylor Swift left Big Machine Records, her original label since age 15, and signed with Universal Music Group's Republic Records in November 2018. This move came after her contract with Big Machine expired. Taylor wanted to own her master recordings, which Big Machine wouldn't allow. After leaving, Big Machine sold her back catalog to Scooter Braun's company, leading to a public dispute. Unable to buy back her masters, Taylor began re-recording her first six albums (i.e., Taylor's Version) to regain control of her work. This section presents the popularity scores of Taylor Swift's songs under different record labels, aiming to see if her control over her work affects the popularity of her songs.
+
+```{r}
+#| label: ANOVA for popularity scores by record label
+#| include: false
+
+# Perform ANOVA for popularity scores by record label
+anova_pop_label <- aov(popularity ~ album_label, data = ts.spotify)
+summary (anova_pop_label)
+summary_label_effect <- summary(anova_pop_label)[[1]]
+
+# Check effect size
+SSbetween <- summary_label_effect$`Sum Sq`[1]  # Sum of squares for the factor
+SStotal <- sum(summary_label_effect$`Sum Sq`)  # Total sum of squares
+
+eta_squared <- SSbetween / SStotal
+
+# Round to 3 decimal places
+eta_squared_rounded <- round(eta_squared, 3)
+
+
+```
+
+One-way ANOVA results indicated significant differences were found between record labels' impacts on popularity scores (Figure 2). Specifically, songs under the Big Machine label showed lower popularity scores than under the Republic label ($M_{\text{Big Machine}} = `r round(mean(ts.spotify$popularity[ts.spotify$album_label == "Big Machine"]), 2)`$ vs. $M_{\text{Republic}} = `r round(mean(ts.spotify$popularity[ts.spotify$album_label == "Republic"]), 2)`$; *F*(`r summary_label_effect$Df[1]`, `r summary_label_effect$Df[2]`) = `r round(summary_label_effect$"F value"[1], 2)`; *p* `r if(summary_label_effect$"Pr(>F)"[1] < 0.001) "< 0.001" else paste("=", sprintf("%.3f", summary_label_effect$"Pr(>F)"[1]))`, η² = `r eta_squared_rounded`). It indicates that approximately 46.5% of the variance in popularity scores can be explained by the difference in record labels (Big Machine vs. Republic), suggesting that Taylor Swift's control over her work has a significant impact on the popularity of her songs. The ownership not only allows her to re-record her songs but also to control the distribution and promotion of her music, which may contribute to the higher popularity scores under the Republic label. It is notable that the re-record versions are generally promoted by fans as a way to support Taylor Swift's ownership of her work. This also reflects Taylor's determination to regain control of her work and the revolutionary impact of her move on the music industry.
+
+
+
+
+```{r}
+#| label: fig-popularity-by-label
+#| fig.cap: "Popularity Scores by Record Label"
+
+# Define the theme
+theme.clean <- function(){
+  theme_bw()+
+    theme(axis.text.x = element_text(size = 12, vjust = 1, hjust = 1),
+          axis.text.y = element_text(size = 12),
+          axis.title.x = element_text(size = 14, face = "plain"),             
+          axis.title.y = element_text(size = 14, face = "plain"),
+          panel.grid.major.x = element_blank(),                                          
+          panel.grid.minor.x = element_blank(),
+          panel.grid.minor.y = element_blank(),
+          panel.grid.major.y = element_blank(),  
+          plot.margin = unit(c(0.5, 0.5, 0.5, 0.5), units = , "cm"),
+          plot.title = element_text(size = 16, vjust = 1, hjust = 0.5),
+          plot.caption = element_text (size = 8,vjust = 1, hjust = 0.9),
+          legend.text = element_text(size = 12, face = "italic"),          
+          legend.position = "right")}
+
+# Create the boxplot
+
+label_effect_boxplot <- ggplot(ts.spotify, aes(album_label, popularity)) + 
+  geom_boxplot(aes(fill = album_label)) +
+  theme_bw() +
+  scale_fill_manual(values = c("#f6ed95", "#800000")) +               
+  scale_colour_manual(values = c("#f6ed95", "#800000")) + 
+  labs(title = "Record Label Comparison of Song Popularity Impacts", 
+       x = "Record Label", y = "Song Popularity Score") +
+  theme.clean()+
+  theme(axis.text.x = element_text(hjust = 0.5))+
+  scale_y_continuous(breaks = seq(floor(min(ts.spotify$popularity)), 
+                                  ceiling(max(ts.spotify$popularity)), by = 10)) +
+  stat_summary(fun = mean, geom = "point", color = "black", size = 3, shape = 18, 
+               position = position_dodge(0.75), aes(shape = "Mean"), 
+               show.legend = FALSE) +  
+  stat_summary(fun = mean, geom = "text", aes(label = round(after_stat(y), 2)), 
+               color = "white", vjust = -1, position = position_dodge(0.75), 
+               size = 3.5, show.legend = FALSE) +
+  labs(fill = "Record Label") 
+
+print (label_effect_boxplot)
+
+
+```
 
 ## Running Code
 
-www
+
