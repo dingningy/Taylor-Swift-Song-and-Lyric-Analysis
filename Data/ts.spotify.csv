@@ -1,0 +1,583 @@
+id,track_name,track_number,album,album_label,release_year,release_month,acousticness,danceability,energy,liveness,loudness,speechiness,tempo,valence,popularity
+1,Fortnight (feat. Post Malone),1,THE TORTURED POETS DEPARTMENT: THE ANTHOLOGY,Republic,2024,April,0.502,0.504,0.386,0.096,-10.976,0.031,192.004,0.281,82
+2,The Tortured Poets Department,2,THE TORTURED POETS DEPARTMENT: THE ANTHOLOGY,Republic,2024,April,0.048,0.604,0.428,0.126,-8.441,0.025,110.259,0.292,79
+3,My Boy Only Breaks His Favorite Toys,3,THE TORTURED POETS DEPARTMENT: THE ANTHOLOGY,Republic,2024,April,0.137,0.596,0.563,0.302,-7.362,0.027,97.073,0.481,80
+4,Down Bad,4,THE TORTURED POETS DEPARTMENT: THE ANTHOLOGY,Republic,2024,April,0.56,0.541,0.366,0.095,-10.412,0.075,159.707,0.168,82
+5,"So Long, London",5,THE TORTURED POETS DEPARTMENT: THE ANTHOLOGY,Republic,2024,April,0.73,0.423,0.533,0.082,-11.388,0.322,160.218,0.248,80
+6,But Daddy I Love Him,6,THE TORTURED POETS DEPARTMENT: THE ANTHOLOGY,Republic,2024,April,0.384,0.521,0.72,0.135,-7.684,0.104,79.943,0.438,81
+7,Fresh Out The Slammer,7,THE TORTURED POETS DEPARTMENT: THE ANTHOLOGY,Republic,2024,April,0.624,0.33,0.483,0.111,-9.394,0.04,87.115,0.34,78
+8,Florida!!! (feat. Florence + The Machine),8,THE TORTURED POETS DEPARTMENT: THE ANTHOLOGY,Republic,2024,April,0.178,0.533,0.573,0.309,-7.123,0.138,150.088,0.398,79
+9,Guilty as Sin?,9,THE TORTURED POETS DEPARTMENT: THE ANTHOLOGY,Republic,2024,April,0.607,0.626,0.428,0.092,-8.374,0.026,94.95,0.487,82
+10,Who’s Afraid of Little Old Me?,10,THE TORTURED POETS DEPARTMENT: THE ANTHOLOGY,Republic,2024,April,0.315,0.606,0.338,0.106,-10.555,0.048,119.88,0.238,81
+11,I Can Fix Him (No Really I Can),11,THE TORTURED POETS DEPARTMENT: THE ANTHOLOGY,Republic,2024,April,0.768,0.661,0.257,0.176,-13.961,0.045,106.896,0.318,77
+12,loml,12,THE TORTURED POETS DEPARTMENT: THE ANTHOLOGY,Republic,2024,April,0.858,0.423,0.272,0.108,-12.56,0.049,78.539,0.195,80
+13,I Can Do It With a Broken Heart,13,THE TORTURED POETS DEPARTMENT: THE ANTHOLOGY,Republic,2024,April,0.123,0.701,0.751,0.15,-8.39,0.05,129.994,0.22,82
+14,The Smallest Man Who Ever Lived,14,THE TORTURED POETS DEPARTMENT: THE ANTHOLOGY,Republic,2024,April,0.52,0.426,0.41,0.338,-9.083,0.058,142.377,0.263,81
+15,The Alchemy,15,THE TORTURED POETS DEPARTMENT: THE ANTHOLOGY,Republic,2024,April,0.422,0.64,0.421,0.103,-8.802,0.027,100.056,0.353,78
+16,Clara Bow,16,THE TORTURED POETS DEPARTMENT: THE ANTHOLOGY,Republic,2024,April,0.636,0.686,0.318,0.106,-11.046,0.026,104.088,0.214,76
+17,The Black Dog,17,THE TORTURED POETS DEPARTMENT: THE ANTHOLOGY,Republic,2024,April,0.707,0.527,0.27,0.102,-10.855,0.038,154.042,0.23,79
+18,imgonnagetyouback,18,THE TORTURED POETS DEPARTMENT: THE ANTHOLOGY,Republic,2024,April,0.608,0.784,0.391,0.252,-9.471,0.063,110.007,0.15,81
+19,The Albatross,19,THE TORTURED POETS DEPARTMENT: THE ANTHOLOGY,Republic,2024,April,0.655,0.352,0.479,0.094,-8.942,0.058,172.013,0.292,77
+20,Chloe or Sam or Sophia or Marcus,20,THE TORTURED POETS DEPARTMENT: THE ANTHOLOGY,Republic,2024,April,0.78,0.516,0.451,0.105,-8.552,0.045,70.266,0.218,77
+21,How Did It End?,21,THE TORTURED POETS DEPARTMENT: THE ANTHOLOGY,Republic,2024,April,0.785,0.492,0.379,0.108,-8.859,0.026,83.993,0.273,80
+22,So High School,22,THE TORTURED POETS DEPARTMENT: THE ANTHOLOGY,Republic,2024,April,0.027,0.366,0.866,0.106,-4.514,0.047,176.07,0.293,82
+23,I Hate It Here,23,THE TORTURED POETS DEPARTMENT: THE ANTHOLOGY,Republic,2024,April,0.717,0.485,0.562,0.357,-7.197,0.035,105.953,0.297,78
+24,thanK you aIMee,24,THE TORTURED POETS DEPARTMENT: THE ANTHOLOGY,Republic,2024,April,0.609,0.609,0.541,0.122,-8.013,0.035,95.997,0.252,76
+25,I Look in People's Windows,25,THE TORTURED POETS DEPARTMENT: THE ANTHOLOGY,Republic,2024,April,0.69,0.763,0.274,0.164,-11.429,0.074,90.796,0.385,76
+26,The Prophecy,26,THE TORTURED POETS DEPARTMENT: THE ANTHOLOGY,Republic,2024,April,0.825,0.421,0.525,0.308,-10.359,0.047,167.927,0.535,81
+27,Cassandra,27,THE TORTURED POETS DEPARTMENT: THE ANTHOLOGY,Republic,2024,April,0.806,0.587,0.587,0.137,-9.879,0.06,139.963,0.514,76
+28,Peter,28,THE TORTURED POETS DEPARTMENT: THE ANTHOLOGY,Republic,2024,April,0.805,0.342,0.376,0.059,-8.212,0.037,176.859,0.29,77
+29,The Bolter,29,THE TORTURED POETS DEPARTMENT: THE ANTHOLOGY,Republic,2024,April,0.638,0.455,0.586,0.131,-7.978,0.049,183.694,0.481,77
+30,Robin,30,THE TORTURED POETS DEPARTMENT: THE ANTHOLOGY,Republic,2024,April,0.791,0.476,0.386,0.1,-10.601,0.03,138.265,0.158,73
+31,The Manuscript,31,THE TORTURED POETS DEPARTMENT: THE ANTHOLOGY,Republic,2024,April,0.901,0.509,0.256,0.103,-11.665,0.031,94.184,0.436,74
+32,Fortnight (feat. Post Malone),1,THE TORTURED POETS DEPARTMENT,Republic,2024,April,0.502,0.504,0.386,0.096,-10.976,0.031,192.004,0.281,91
+33,The Tortured Poets Department,2,THE TORTURED POETS DEPARTMENT,Republic,2024,April,0.048,0.604,0.428,0.126,-8.441,0.025,110.259,0.292,75
+34,My Boy Only Breaks His Favorite Toys,3,THE TORTURED POETS DEPARTMENT,Republic,2024,April,0.137,0.596,0.563,0.302,-7.362,0.027,97.073,0.481,77
+35,Down Bad,4,THE TORTURED POETS DEPARTMENT,Republic,2024,April,0.56,0.541,0.366,0.095,-10.412,0.075,159.707,0.168,82
+36,"So Long, London",5,THE TORTURED POETS DEPARTMENT,Republic,2024,April,0.73,0.423,0.533,0.082,-11.388,0.322,160.218,0.248,78
+37,But Daddy I Love Him,6,THE TORTURED POETS DEPARTMENT,Republic,2024,April,0.384,0.521,0.72,0.135,-7.684,0.104,79.943,0.438,78
+38,Fresh Out The Slammer,7,THE TORTURED POETS DEPARTMENT,Republic,2024,April,0.624,0.33,0.483,0.111,-9.394,0.04,87.115,0.34,69
+39,Florida!!! (feat. Florence + The Machine),8,THE TORTURED POETS DEPARTMENT,Republic,2024,April,0.178,0.533,0.573,0.309,-7.123,0.138,150.088,0.398,76
+40,Guilty as Sin?,9,THE TORTURED POETS DEPARTMENT,Republic,2024,April,0.607,0.626,0.428,0.092,-8.374,0.026,94.95,0.487,82
+41,Who’s Afraid of Little Old Me?,10,THE TORTURED POETS DEPARTMENT,Republic,2024,April,0.315,0.606,0.338,0.106,-10.555,0.048,119.88,0.238,80
+42,I Can Fix Him (No Really I Can),11,THE TORTURED POETS DEPARTMENT,Republic,2024,April,0.768,0.661,0.257,0.176,-13.961,0.045,106.896,0.318,67
+43,loml,12,THE TORTURED POETS DEPARTMENT,Republic,2024,April,0.858,0.423,0.272,0.108,-12.56,0.049,78.539,0.195,75
+44,I Can Do It With a Broken Heart,13,THE TORTURED POETS DEPARTMENT,Republic,2024,April,0.123,0.701,0.751,0.15,-8.39,0.05,129.994,0.22,88
+45,The Smallest Man Who Ever Lived,14,THE TORTURED POETS DEPARTMENT,Republic,2024,April,0.52,0.426,0.41,0.338,-9.083,0.058,142.377,0.263,74
+46,The Alchemy,15,THE TORTURED POETS DEPARTMENT,Republic,2024,April,0.422,0.64,0.421,0.103,-8.802,0.027,100.056,0.353,73
+47,Clara Bow,16,THE TORTURED POETS DEPARTMENT,Republic,2024,April,0.636,0.686,0.318,0.106,-11.046,0.026,104.088,0.214,67
+48,Welcome To New York (Taylor's Version),1,1989 (Taylor's Version) [Deluxe],Republic,2023,October,0.007,0.76,0.602,0.325,-4.871,0.032,116.989,0.685,62
+49,Blank Space (Taylor's Version),2,1989 (Taylor's Version) [Deluxe],Republic,2023,October,0.09,0.732,0.719,0.331,-5.469,0.064,96.035,0.71,64
+50,Style (Taylor's Version),3,1989 (Taylor's Version) [Deluxe],Republic,2023,October,0,0.514,0.821,0.095,-4.803,0.044,94.884,0.298,65
+51,Out Of The Woods (Taylor's Version),4,1989 (Taylor's Version) [Deluxe],Republic,2023,October,0,0.544,0.884,0.381,-5.973,0.038,91.981,0.184,63
+52,All You Had To Do Was Stay (Taylor's Version),5,1989 (Taylor's Version) [Deluxe],Republic,2023,October,0.001,0.589,0.713,0.188,-5.614,0.031,97.069,0.54,62
+53,Shake It Off (Taylor's Version),6,1989 (Taylor's Version) [Deluxe],Republic,2023,October,0.011,0.632,0.805,0.156,-5.707,0.069,160.052,0.903,62
+54,I Wish You Would (Taylor's Version),7,1989 (Taylor's Version) [Deluxe],Republic,2023,October,0.004,0.671,0.853,0.081,-6.568,0.042,118.032,0.523,61
+55,Bad Blood (Taylor's Version),8,1989 (Taylor's Version) [Deluxe],Republic,2023,October,0.037,0.624,0.711,0.19,-6.347,0.159,169.999,0.347,61
+56,Wildest Dreams (Taylor's Version),9,1989 (Taylor's Version) [Deluxe],Republic,2023,October,0.035,0.587,0.663,0.097,-7.439,0.06,139.993,0.539,63
+57,How You Get The Girl (Taylor's Version),10,1989 (Taylor's Version) [Deluxe],Republic,2023,October,0.002,0.761,0.67,0.087,-5.956,0.054,120.014,0.519,61
+58,This Love (Taylor’s Version),11,1989 (Taylor's Version) [Deluxe],Republic,2023,October,0.302,0.47,0.494,0.067,-8.672,0.035,144.039,0.052,60
+59,I Know Places (Taylor's Version),12,1989 (Taylor's Version) [Deluxe],Republic,2023,October,0.085,0.572,0.807,0.071,-5.348,0.057,160.015,0.626,61
+60,Clean (Taylor's Version),13,1989 (Taylor's Version) [Deluxe],Republic,2023,October,0.297,0.782,0.379,0.103,-8.964,0.03,103.99,0.267,62
+61,Wonderland (Taylor's Version),14,1989 (Taylor's Version) [Deluxe],Republic,2023,October,0.011,0.387,0.703,0.128,-5.956,0.054,123.18,0.32,61
+62,You Are In Love (Taylor's Version),15,1989 (Taylor's Version) [Deluxe],Republic,2023,October,0.572,0.554,0.509,0.113,-9.403,0.046,85.079,0.401,62
+63,New Romantics (Taylor's Version),16,1989 (Taylor's Version) [Deluxe],Republic,2023,October,0.005,0.653,0.848,0.08,-5.936,0.058,122.017,0.724,63
+64,"""Slut!"" (Taylor's Version) (From The Vault)",17,1989 (Taylor's Version) [Deluxe],Republic,2023,October,0.33,0.621,0.415,0.063,-13.187,0.054,77.978,0.313,64
+65,Say Don't Go (Taylor's Version) (From The Vault),18,1989 (Taylor's Version) [Deluxe],Republic,2023,October,0.068,0.632,0.539,0.132,-8.375,0.034,109.962,0.186,63
+66,Now That We Don't Talk (Taylor's Version) (From The Vault),19,1989 (Taylor's Version) [Deluxe],Republic,2023,October,0.16,0.8,0.509,0.083,-9.386,0.034,109.994,0.077,65
+67,Suburban Legends (Taylor's Version) (From The Vault),20,1989 (Taylor's Version) [Deluxe],Republic,2023,October,0.212,0.695,0.607,0.102,-8.84,0.036,118.043,0.394,61
+68,Is It Over Now? (Taylor's Version) (From The Vault),21,1989 (Taylor's Version) [Deluxe],Republic,2023,October,0.049,0.599,0.651,0.126,-7.343,0.035,100.001,0.153,66
+69,Bad Blood (feat. Kendrick Lamar) (Taylor's Version),22,1989 (Taylor's Version) [Deluxe],Republic,2023,October,0.014,0.604,0.644,0.237,-6.931,0.089,170.088,0.197,74
+70,Welcome To New York (Taylor's Version),1,1989 (Taylor's Version),Republic,2023,October,0.007,0.76,0.602,0.325,-4.871,0.032,116.989,0.685,71
+71,Blank Space (Taylor's Version),2,1989 (Taylor's Version),Republic,2023,October,0.09,0.732,0.719,0.331,-5.469,0.064,96.035,0.71,80
+72,Style (Taylor's Version),3,1989 (Taylor's Version),Republic,2023,October,0,0.514,0.821,0.095,-4.803,0.044,94.884,0.298,79
+73,Out Of The Woods (Taylor's Version),4,1989 (Taylor's Version),Republic,2023,October,0,0.544,0.884,0.381,-5.973,0.038,91.981,0.184,73
+74,All You Had To Do Was Stay (Taylor's Version),5,1989 (Taylor's Version),Republic,2023,October,0.001,0.589,0.713,0.188,-5.614,0.031,97.069,0.54,69
+75,Shake It Off (Taylor's Version),6,1989 (Taylor's Version),Republic,2023,October,0.011,0.632,0.805,0.156,-5.707,0.069,160.052,0.903,75
+76,I Wish You Would (Taylor's Version),7,1989 (Taylor's Version),Republic,2023,October,0.004,0.671,0.853,0.081,-6.568,0.042,118.032,0.523,68
+77,Bad Blood (Taylor's Version),8,1989 (Taylor's Version),Republic,2023,October,0.037,0.624,0.711,0.19,-6.347,0.159,169.999,0.347,71
+78,Wildest Dreams (Taylor's Version),9,1989 (Taylor's Version),Republic,2023,October,0.035,0.587,0.663,0.097,-7.439,0.06,139.993,0.539,77
+79,How You Get The Girl (Taylor's Version),10,1989 (Taylor's Version),Republic,2023,October,0.002,0.761,0.67,0.087,-5.956,0.054,120.014,0.519,67
+80,This Love (Taylor’s Version),11,1989 (Taylor's Version),Republic,2023,October,0.302,0.47,0.494,0.067,-8.672,0.035,144.039,0.052,67
+81,I Know Places (Taylor's Version),12,1989 (Taylor's Version),Republic,2023,October,0.085,0.572,0.807,0.071,-5.348,0.057,160.015,0.626,66
+82,Clean (Taylor's Version),13,1989 (Taylor's Version),Republic,2023,October,0.297,0.782,0.379,0.103,-8.964,0.03,103.99,0.267,70
+83,Wonderland (Taylor's Version),14,1989 (Taylor's Version),Republic,2023,October,0.011,0.387,0.703,0.128,-5.956,0.054,123.18,0.32,67
+84,You Are In Love (Taylor's Version),15,1989 (Taylor's Version),Republic,2023,October,0.572,0.554,0.509,0.113,-9.403,0.046,85.079,0.401,69
+85,New Romantics (Taylor's Version),16,1989 (Taylor's Version),Republic,2023,October,0.005,0.653,0.848,0.08,-5.936,0.058,122.017,0.724,74
+86,"""Slut!"" (Taylor's Version) (From The Vault)",17,1989 (Taylor's Version),Republic,2023,October,0.33,0.621,0.415,0.063,-13.187,0.054,77.978,0.313,77
+87,Say Don't Go (Taylor's Version) (From The Vault),18,1989 (Taylor's Version),Republic,2023,October,0.068,0.632,0.539,0.132,-8.375,0.034,109.962,0.186,73
+88,Now That We Don't Talk (Taylor's Version) (From The Vault),19,1989 (Taylor's Version),Republic,2023,October,0.16,0.8,0.509,0.083,-9.386,0.034,109.994,0.077,77
+89,Suburban Legends (Taylor's Version) (From The Vault),20,1989 (Taylor's Version),Republic,2023,October,0.212,0.695,0.607,0.102,-8.84,0.036,118.043,0.394,68
+90,Is It Over Now? (Taylor's Version) (From The Vault),21,1989 (Taylor's Version),Republic,2023,October,0.049,0.599,0.651,0.126,-7.343,0.035,100.001,0.153,78
+91,Mine (Taylor's Version),1,Speak Now (Taylor's Version),Republic,2023,July,0.003,0.647,0.793,0.174,-2.903,0.036,121.101,0.5,74
+92,Sparks Fly (Taylor’s Version),2,Speak Now (Taylor's Version),Republic,2023,July,0.024,0.605,0.769,0.094,-2.413,0.032,114.921,0.366,72
+93,Back To December (Taylor's Version),3,Speak Now (Taylor's Version),Republic,2023,July,0.007,0.486,0.635,0.119,-3.994,0.028,141.868,0.235,74
+94,Speak Now (Taylor's Version),4,Speak Now (Taylor's Version),Republic,2023,July,0.225,0.734,0.686,0.136,-2.926,0.035,119.002,0.598,69
+95,Dear John (Taylor's Version),5,Speak Now (Taylor's Version),Republic,2023,July,0.033,0.379,0.468,0.158,-5.07,0.03,119.447,0.115,69
+96,Mean (Taylor's Version),6,Speak Now (Taylor's Version),Republic,2023,July,0.321,0.526,0.7,0.213,-3.95,0.039,163.949,0.596,69
+97,The Story Of Us (Taylor's Version),7,Speak Now (Taylor's Version),Republic,2023,July,0.001,0.516,0.784,0.05,-2.636,0.056,139.787,0.552,70
+98,Never Grow Up (Taylor's Version),8,Speak Now (Taylor's Version),Republic,2023,July,0.867,0.684,0.339,0.194,-7.259,0.029,125.054,0.572,65
+99,Enchanted (Taylor's Version),9,Speak Now (Taylor's Version),Republic,2023,July,0.016,0.52,0.553,0.165,-3.546,0.027,81.949,0.227,80
+100,Better Than Revenge (Taylor's Version),10,Speak Now (Taylor's Version),Republic,2023,July,0.001,0.505,0.893,0.178,-3.013,0.077,145.913,0.659,71
+101,Innocent (Taylor's Version),11,Speak Now (Taylor's Version),Republic,2023,July,0.097,0.524,0.611,0.127,-5.298,0.03,133.583,0.126,63
+102,Haunted (Taylor's Version),12,Speak Now (Taylor's Version),Republic,2023,July,0.006,0.44,0.916,0.252,-1.927,0.063,162.025,0.371,69
+103,Last Kiss (Taylor's Version),13,Speak Now (Taylor's Version),Republic,2023,July,0.443,0.557,0.362,0.1,-8.641,0.026,79.573,0.187,69
+104,Long Live (Taylor's Version),14,Speak Now (Taylor's Version),Republic,2023,July,0.016,0.38,0.628,0.227,-4.054,0.038,203.826,0.098,73
+105,Ours (Taylor’s Version),15,Speak Now (Taylor's Version),Republic,2023,July,0.42,0.539,0.475,0.109,-8.411,0.029,159.824,0.293,66
+106,Superman (Taylor’s Version),16,Speak Now (Taylor's Version),Republic,2023,July,0.002,0.537,0.733,0.11,-3.506,0.03,131.898,0.347,62
+107,Electric Touch (feat. Fall Out Boy) (Taylor’s Version) (From The Vault),17,Speak Now (Taylor's Version),Republic,2023,July,0.018,0.547,0.854,0.156,-4.753,0.053,131.068,0.26,68
+108,When Emma Falls in Love (Taylor’s Version) (From The Vault),18,Speak Now (Taylor's Version),Republic,2023,July,0.168,0.524,0.759,0.104,-4.714,0.047,77.879,0.234,66
+109,I Can See You (Taylor’s Version) (From The Vault),19,Speak Now (Taylor's Version),Republic,2023,July,0.058,0.695,0.768,0.043,-4.883,0.034,123.054,0.813,75
+110,Castles Crumbling (feat. Hayley Williams) (Taylor’s Version) (From The Vault),20,Speak Now (Taylor's Version),Republic,2023,July,0.342,0.578,0.565,0.066,-8.064,0.044,147.781,0.351,67
+111,Foolish One (Taylor’s Version) (From The Vault),21,Speak Now (Taylor's Version),Republic,2023,July,0.599,0.672,0.613,0.112,-4.709,0.03,97.041,0.557,68
+112,Timeless (Taylor’s Version) (From The Vault),22,Speak Now (Taylor's Version),Republic,2023,July,0.332,0.629,0.578,0.087,-5.806,0.032,142.887,0.651,69
+113,Lavender Haze,1,Midnights (The Til Dawn Edition),Republic,2023,May,0.23,0.735,0.449,0.132,-10.56,0.088,97.05,0.096,63
+114,Maroon,2,Midnights (The Til Dawn Edition),Republic,2023,May,0.063,0.655,0.384,0.097,-8.29,0.035,108.058,0.038,64
+115,Anti-Hero,3,Midnights (The Til Dawn Edition),Republic,2023,May,0.121,0.633,0.648,0.161,-6.645,0.062,96.888,0.49,63
+116,Snow On The Beach (feat. Lana Del Rey),4,Midnights (The Til Dawn Edition),Republic,2023,May,0.701,0.663,0.321,0.107,-13.527,0.041,110.021,0.153,60
+117,"You're On Your Own, Kid",5,Midnights (The Til Dawn Edition),Republic,2023,May,0.447,0.696,0.39,0.125,-10.331,0.062,120.032,0.395,64
+118,Midnight Rain,6,Midnights (The Til Dawn Edition),Republic,2023,May,0.71,0.604,0.375,0.116,-11.637,0.063,137.651,0.203,63
+119,Question...?,7,Midnights (The Til Dawn Edition),Republic,2023,May,0.206,0.654,0.51,0.249,-8.767,0.242,108.874,0.105,61
+120,Vigilante Shit,8,Midnights (The Til Dawn Edition),Republic,2023,May,0.166,0.872,0.267,0.123,-10.764,0.387,79.964,0.168,62
+121,Bejeweled,9,Midnights (The Til Dawn Edition),Republic,2023,May,0.059,0.687,0.551,0.09,-9.202,0.079,163.994,0.443,63
+122,Labyrinth,10,Midnights (The Til Dawn Edition),Republic,2023,May,0.797,0.48,0.295,0.12,-15.512,0.038,110.018,0.132,61
+123,Karma,11,Midnights (The Til Dawn Edition),Republic,2023,May,0.062,0.64,0.619,0.475,-7.108,0.065,90.008,0.121,62
+124,Sweet Nothing,12,Midnights (The Til Dawn Edition),Republic,2023,May,0.968,0.336,0.161,0.115,-14.973,0.046,176.48,0.407,60
+125,Mastermind,13,Midnights (The Til Dawn Edition),Republic,2023,May,0.565,0.66,0.343,0.092,-14.132,0.14,125.96,0.137,61
+126,The Great War,14,Midnights (The Til Dawn Edition),Republic,2023,May,0.199,0.57,0.747,0.085,-8.93,0.034,96.016,0.574,62
+127,Bigger Than The Whole Sky,15,Midnights (The Til Dawn Edition),Republic,2023,May,0.841,0.42,0.22,0.114,-12.584,0.047,165.564,0.07,60
+128,Paris,16,Midnights (The Til Dawn Edition),Republic,2023,May,0.103,0.703,0.518,0.148,-10.501,0.085,110.94,0.347,60
+129,High Infidelity,17,Midnights (The Til Dawn Edition),Republic,2023,May,0.704,0.571,0.547,0.088,-10.141,0.101,175.933,0.768,59
+130,Glitch,18,Midnights (The Til Dawn Edition),Republic,2023,May,0.314,0.677,0.47,0.11,-9.65,0.259,140.881,0.347,58
+131,"Would've, Could've, Should've",19,Midnights (The Til Dawn Edition),Republic,2023,May,0.393,0.485,0.846,0.124,-6.557,0.117,157.918,0.548,62
+132,Dear Reader,20,Midnights (The Til Dawn Edition),Republic,2023,May,0.464,0.674,0.39,0.116,-11.944,0.048,107.891,0.151,59
+133,Hits Different,21,Midnights (The Til Dawn Edition),Republic,2023,May,0.134,0.666,0.786,0.265,-6.556,0.044,106.02,0.261,72
+134,Snow On The Beach (feat. More Lana Del Rey),22,Midnights (The Til Dawn Edition),Republic,2023,May,0.797,0.664,0.399,0.105,-10.997,0.035,109.937,0.265,73
+135,Karma (feat. Ice Spice),23,Midnights (The Til Dawn Edition),Republic,2023,May,0.057,0.615,0.626,0.596,-6.548,0.078,89.984,0.07,64
+136,Lavender Haze,1,Midnights (3am Edition),Republic,2022,October,0.23,0.735,0.449,0.132,-10.56,0.088,97.05,0.096,61
+137,Maroon,2,Midnights (3am Edition),Republic,2022,October,0.063,0.655,0.384,0.097,-8.29,0.035,108.058,0.038,61
+138,Anti-Hero,3,Midnights (3am Edition),Republic,2022,October,0.121,0.633,0.648,0.161,-6.645,0.062,96.888,0.49,62
+139,Snow On The Beach (feat. Lana Del Rey),4,Midnights (3am Edition),Republic,2022,October,0.701,0.663,0.321,0.107,-13.527,0.041,110.021,0.153,62
+140,"You're On Your Own, Kid",5,Midnights (3am Edition),Republic,2022,October,0.447,0.696,0.39,0.125,-10.331,0.062,120.032,0.395,62
+141,Midnight Rain,6,Midnights (3am Edition),Republic,2022,October,0.71,0.604,0.375,0.116,-11.637,0.063,137.651,0.203,61
+142,Question...?,7,Midnights (3am Edition),Republic,2022,October,0.206,0.654,0.51,0.249,-8.767,0.242,108.874,0.105,58
+143,Vigilante Shit,8,Midnights (3am Edition),Republic,2022,October,0.166,0.872,0.267,0.123,-10.764,0.387,79.964,0.168,61
+144,Bejeweled,9,Midnights (3am Edition),Republic,2022,October,0.059,0.687,0.551,0.09,-9.202,0.079,163.994,0.443,62
+145,Labyrinth,10,Midnights (3am Edition),Republic,2022,October,0.797,0.48,0.295,0.12,-15.512,0.038,110.018,0.132,58
+146,Karma,11,Midnights (3am Edition),Republic,2022,October,0.062,0.64,0.619,0.475,-7.108,0.065,90.008,0.121,65
+147,Sweet Nothing,12,Midnights (3am Edition),Republic,2022,October,0.968,0.336,0.161,0.115,-14.973,0.046,176.48,0.407,60
+148,Mastermind,13,Midnights (3am Edition),Republic,2022,October,0.565,0.66,0.343,0.092,-14.132,0.14,125.96,0.137,64
+149,The Great War,14,Midnights (3am Edition),Republic,2022,October,0.199,0.57,0.747,0.085,-8.93,0.034,96.016,0.574,69
+150,Bigger Than The Whole Sky,15,Midnights (3am Edition),Republic,2022,October,0.841,0.42,0.22,0.114,-12.584,0.047,165.564,0.07,66
+151,Paris,16,Midnights (3am Edition),Republic,2022,October,0.103,0.703,0.518,0.148,-10.501,0.085,110.94,0.347,66
+152,High Infidelity,17,Midnights (3am Edition),Republic,2022,October,0.704,0.571,0.547,0.088,-10.141,0.101,175.933,0.768,64
+153,Glitch,18,Midnights (3am Edition),Republic,2022,October,0.314,0.677,0.47,0.11,-9.65,0.259,140.881,0.347,63
+154,"Would've, Could've, Should've",19,Midnights (3am Edition),Republic,2022,October,0.393,0.485,0.846,0.124,-6.557,0.117,157.918,0.548,68
+155,Dear Reader,20,Midnights (3am Edition),Republic,2022,October,0.464,0.674,0.39,0.116,-11.944,0.048,107.891,0.151,64
+156,Lavender Haze,1,Midnights,Republic,2022,October,0.23,0.735,0.449,0.132,-10.56,0.088,97.05,0.096,77
+157,Maroon,2,Midnights,Republic,2022,October,0.063,0.655,0.384,0.097,-8.29,0.035,108.058,0.038,72
+158,Anti-Hero,3,Midnights,Republic,2022,October,0.121,0.633,0.648,0.161,-6.645,0.062,96.888,0.49,85
+159,Snow On The Beach (feat. Lana Del Rey),4,Midnights,Republic,2022,October,0.701,0.663,0.321,0.107,-13.527,0.041,110.021,0.153,69
+160,"You're On Your Own, Kid",5,Midnights,Republic,2022,October,0.447,0.696,0.39,0.125,-10.331,0.062,120.032,0.395,77
+161,Midnight Rain,6,Midnights,Republic,2022,October,0.71,0.604,0.375,0.116,-11.637,0.063,137.651,0.203,76
+162,Question...?,7,Midnights,Republic,2022,October,0.206,0.654,0.51,0.249,-8.767,0.242,108.874,0.105,66
+163,Vigilante Shit,8,Midnights,Republic,2022,October,0.166,0.872,0.267,0.123,-10.764,0.387,79.964,0.168,74
+164,Bejeweled,9,Midnights,Republic,2022,October,0.059,0.687,0.551,0.09,-9.202,0.079,163.994,0.443,77
+165,Labyrinth,10,Midnights,Republic,2022,October,0.797,0.48,0.295,0.12,-15.512,0.038,110.018,0.132,70
+166,Karma,11,Midnights,Republic,2022,October,0.062,0.64,0.619,0.475,-7.108,0.065,90.008,0.121,80
+167,Sweet Nothing,12,Midnights,Republic,2022,October,0.968,0.336,0.161,0.115,-14.973,0.046,176.48,0.407,69
+168,Mastermind,13,Midnights,Republic,2022,October,0.565,0.66,0.343,0.092,-14.132,0.14,125.96,0.137,72
+169,State Of Grace (Taylor's Version),1,Red (Taylor's Version),Republic,2021,November,0,0.594,0.713,0.114,-5.314,0.05,129.958,0.328,65
+170,Red (Taylor's Version),2,Red (Taylor's Version),Republic,2021,November,0.001,0.516,0.777,0.076,-4.908,0.038,125.047,0.408,73
+171,Treacherous (Taylor's Version),3,Red (Taylor's Version),Republic,2021,November,0.034,0.645,0.593,0.13,-6.506,0.029,109.984,0.299,65
+172,I Knew You Were Trouble (Taylor's Version),4,Red (Taylor's Version),Republic,2021,November,0.013,0.584,0.557,0.058,-6.371,0.034,154.008,0.767,76
+173,All Too Well (Taylor's Version),5,Red (Taylor's Version),Republic,2021,November,0.017,0.44,0.528,0.234,-7.809,0.032,185.972,0.132,71
+174,22 (Taylor's Version),6,Red (Taylor's Version),Republic,2021,November,0,0.642,0.695,0.075,-5.62,0.028,103.984,0.642,76
+175,I Almost Do (Taylor's Version),7,Red (Taylor's Version),Republic,2021,November,0.017,0.511,0.559,0.113,-6.587,0.026,145.88,0.248,64
+176,We Are Never Ever Getting Back Together (Taylor's Version),8,Red (Taylor's Version),Republic,2021,November,0.032,0.567,0.686,0.073,-6.139,0.175,172.014,0.716,76
+177,Stay Stay Stay (Taylor's Version),9,Red (Taylor's Version),Republic,2021,November,0.085,0.693,0.681,0.077,-7.039,0.025,100.02,0.663,64
+178,The Last Time (feat. Gary Lightbody of Snow Patrol) (Taylor’s Version),10,Red (Taylor's Version),Republic,2021,November,0.04,0.502,0.534,0.098,-5.954,0.028,94.05,0.155,67
+179,Holy Ground (Taylor's Version),11,Red (Taylor's Version),Republic,2021,November,0.029,0.622,0.809,0.109,-5.623,0.064,156.894,0.511,64
+180,Sad Beautiful Tragic (Taylor's Version),12,Red (Taylor's Version),Republic,2021,November,0.622,0.601,0.406,0.133,-11.827,0.028,130.059,0.232,65
+181,The Lucky One (Taylor's Version),13,Red (Taylor's Version),Republic,2021,November,0.066,0.686,0.571,0.061,-7.138,0.05,117.889,0.538,63
+182,Everything Has Changed (feat. Ed Sheeran) (Taylor’s Version),14,Red (Taylor's Version),Republic,2021,November,0.271,0.498,0.61,0.223,-5.098,0.036,79.918,0.474,70
+183,Starlight (Taylor's Version),15,Red (Taylor's Version),Republic,2021,November,0.003,0.628,0.685,0.18,-5.864,0.036,126.014,0.605,63
+184,Begin Again (Taylor's Version),16,Red (Taylor's Version),Republic,2021,November,0.075,0.519,0.527,0.132,-7.673,0.027,78.915,0.267,66
+185,The Moment I Knew (Taylor's Version),17,Red (Taylor's Version),Republic,2021,November,0.049,0.636,0.402,0.107,-7.855,0.031,125.952,0.208,63
+186,Come Back...Be Here (Taylor's Version),18,Red (Taylor's Version),Republic,2021,November,0.016,0.46,0.632,0.082,-6.031,0.03,79.846,0.399,66
+187,Girl At Home (Taylor's Version),19,Red (Taylor's Version),Republic,2021,November,0.01,0.691,0.736,0.101,-6.974,0.033,125.089,0.612,61
+188,State Of Grace (Acoustic Version) (Taylor's Version),20,Red (Taylor's Version),Republic,2021,November,0.663,0.445,0.131,0.108,-13.778,0.056,208.918,0.101,61
+189,Ronan (Taylor's Version),21,Red (Taylor's Version),Republic,2021,November,0.661,0.623,0.279,0.193,-10.802,0.031,116.04,0.38,58
+190,Better Man (Taylor's Version) (From The Vault),22,Red (Taylor's Version),Republic,2021,November,0.214,0.473,0.579,0.088,-5.824,0.038,73.942,0.255,67
+191,Nothing New (feat. Phoebe Bridgers) (Taylor’s Version) (From The Vault),23,Red (Taylor's Version),Republic,2021,November,0.817,0.606,0.377,0.154,-9.455,0.028,101.96,0.446,70
+192,Babe (Taylor's Version) (From The Vault),24,Red (Taylor's Version),Republic,2021,November,0.054,0.584,0.743,0.121,-7.075,0.093,167.844,0.746,67
+193,Message In A Bottle (Taylor's Version) (From The Vault),25,Red (Taylor's Version),Republic,2021,November,0.002,0.622,0.791,0.083,-6.106,0.054,115.915,0.494,70
+194,I Bet You Think About Me (feat. Chris Stapleton) (Taylor’s Version) (From The Vault),26,Red (Taylor's Version),Republic,2021,November,0.167,0.391,0.715,0.183,-4.516,0.05,149.654,0.473,70
+195,Forever Winter (Taylor's Version) (From The Vault),27,Red (Taylor's Version),Republic,2021,November,0.256,0.611,0.552,0.134,-5.828,0.031,116.012,0.41,63
+196,Run (feat. Ed Sheeran) (Taylor’s Version) (From The Vault),28,Red (Taylor's Version),Republic,2021,November,0.817,0.61,0.488,0.312,-6.918,0.029,125.039,0.443,64
+197,The Very First Night (Taylor's Version) (From The Vault),29,Red (Taylor's Version),Republic,2021,November,0.001,0.678,0.733,0.104,-5.025,0.028,121.009,0.581,69
+198,All Too Well (10 Minute Version) (Taylor's Version) (From The Vault),30,Red (Taylor's Version),Republic,2021,November,0.274,0.631,0.518,0.088,-8.771,0.03,93.023,0.205,80
+199,Fearless (Taylor’s Version),1,Fearless (Taylor's Version),Republic,2021,April,0.012,0.569,0.741,0.333,-4.963,0.028,100.118,0.43,78
+200,Fifteen (Taylor’s Version),2,Fearless (Taylor's Version),Republic,2021,April,0.116,0.559,0.646,0.32,-4.61,0.027,95.466,0.289,66
+201,Love Story (Taylor’s Version),3,Fearless (Taylor's Version),Republic,2021,April,0.13,0.627,0.792,0.084,-4.311,0.031,119.054,0.415,78
+202,Hey Stephen (Taylor’s Version),4,Fearless (Taylor's Version),Republic,2021,April,0.106,0.788,0.571,0.093,-6.135,0.03,115.99,0.797,65
+203,White Horse (Taylor’s Version),5,Fearless (Taylor's Version),Republic,2021,April,0.369,0.423,0.517,0.177,-7.377,0.049,185.262,0.366,67
+204,You Belong With Me (Taylor’s Version),6,Fearless (Taylor's Version),Republic,2021,April,0.062,0.632,0.773,0.088,-4.856,0.035,130.033,0.474,81
+205,Breathe (feat. Colbie Caillat) (Taylor’s Version),7,Fearless (Taylor's Version),Republic,2021,April,0.156,0.506,0.626,0.228,-6.066,0.029,148.035,0.321,63
+206,Tell Me Why (Taylor’s Version),8,Fearless (Taylor's Version),Republic,2021,April,0.022,0.578,0.909,0.333,-3.669,0.063,100.023,0.541,62
+207,You’re Not Sorry (Taylor’s Version),9,Fearless (Taylor's Version),Republic,2021,April,0.054,0.506,0.444,0.123,-4.99,0.028,133.873,0.241,64
+208,The Way I Loved You (Taylor’s Version),10,Fearless (Taylor's Version),Republic,2021,April,0.003,0.402,0.732,0.108,-4.665,0.048,161.032,0.472,76
+209,Forever & Always (Taylor’s Version),11,Fearless (Taylor's Version),Republic,2021,April,0.023,0.598,0.821,0.143,-4.433,0.045,128.03,0.673,67
+210,The Best Day (Taylor’s Version),12,Fearless (Taylor's Version),Republic,2021,April,0.488,0.642,0.576,0.159,-8.524,0.028,125,0.469,61
+211,Change (Taylor’s Version),13,Fearless (Taylor's Version),Republic,2021,April,0,0.499,0.815,0.181,-4.063,0.034,95.999,0.344,60
+212,Jump Then Fall (Taylor’s Version),14,Fearless (Taylor's Version),Republic,2021,April,0.047,0.572,0.69,0.09,-6.201,0.036,160.111,0.624,62
+213,Untouchable (Taylor’s Version),15,Fearless (Taylor's Version),Republic,2021,April,0.018,0.393,0.531,0.169,-6.112,0.033,200.391,0.224,63
+214,Forever & Always (Piano Version) (Taylor’s Version),16,Fearless (Taylor's Version),Republic,2021,April,0.819,0.546,0.273,0.137,-9.208,0.031,118.753,0.271,61
+215,Come In With The Rain (Taylor’s Version),17,Fearless (Taylor's Version),Republic,2021,April,0.041,0.476,0.564,0.102,-5.677,0.027,143.929,0.167,59
+216,Superstar (Taylor’s Version),18,Fearless (Taylor's Version),Republic,2021,April,0.157,0.454,0.555,0.343,-6.69,0.028,171.862,0.171,59
+217,The Other Side Of The Door (Taylor’s Version),19,Fearless (Taylor's Version),Republic,2021,April,0.028,0.432,0.873,0.167,-4.367,0.058,163.936,0.629,64
+218,Today Was A Fairytale (Taylor’s Version),20,Fearless (Taylor's Version),Republic,2021,April,0.014,0.482,0.779,0.296,-5.025,0.041,158.162,0.328,62
+219,You All Over Me (feat. Maren Morris) (Taylor’s Version) (From The Vault),21,Fearless (Taylor's Version),Republic,2021,April,0.816,0.599,0.494,0.101,-7.61,0.037,142.893,0.44,59
+220,Mr. Perfectly Fine (Taylor’s Version) (From The Vault),22,Fearless (Taylor's Version),Republic,2021,April,0.162,0.66,0.817,0.067,-6.269,0.052,135.942,0.714,70
+221,We Were Happy (Taylor’s Version) (From The Vault),23,Fearless (Taylor's Version),Republic,2021,April,0.849,0.609,0.373,0.078,-8.819,0.026,106.007,0.13,62
+222,That’s When (feat. Keith Urban) (Taylor’s Version) (From The Vault),24,Fearless (Taylor's Version),Republic,2021,April,0.225,0.588,0.608,0.092,-7.062,0.036,90.201,0.508,64
+223,Don’t You (Taylor’s Version) (From The Vault),25,Fearless (Taylor's Version),Republic,2021,April,0.514,0.563,0.473,0.109,-11.548,0.05,101.934,0.405,63
+224,Bye Bye Baby (Taylor’s Version) (From The Vault),26,Fearless (Taylor's Version),Republic,2021,April,0.334,0.624,0.624,0.1,-7.86,0.054,80.132,0.527,61
+225,willow,1,evermore (deluxe version),Republic,2021,January,0.833,0.392,0.574,0.145,-9.195,0.17,81.112,0.529,66
+226,champagne problems,2,evermore (deluxe version),Republic,2021,January,0.92,0.462,0.24,0.113,-12.077,0.038,171.319,0.32,67
+227,gold rush,3,evermore (deluxe version),Republic,2021,January,0.83,0.512,0.462,0.121,-10.491,0.041,112.05,0.353,64
+228,‘tis the damn season,4,evermore (deluxe version),Republic,2021,January,0.735,0.575,0.434,0.105,-8.193,0.031,145.916,0.348,64
+229,tolerate it,5,evermore (deluxe version),Republic,2021,January,0.878,0.316,0.361,0.08,-10.381,0.049,74.952,0.221,66
+230,"no body, no crime (feat. HAIM)",6,evermore (deluxe version),Republic,2021,January,0.418,0.546,0.613,0.103,-7.589,0.026,79.015,0.535,64
+231,happiness,7,evermore (deluxe version),Republic,2021,January,0.87,0.559,0.334,0.114,-10.733,0.038,122.079,0.211,62
+232,dorothea,8,evermore (deluxe version),Republic,2021,January,0.696,0.605,0.488,0.129,-8.322,0.026,119.966,0.354,61
+233,coney island (feat. The National),9,evermore (deluxe version),Republic,2021,January,0.819,0.537,0.537,0.142,-11.266,0.062,107.895,0.292,63
+234,ivy,10,evermore (deluxe version),Republic,2021,January,0.855,0.515,0.545,0.092,-9.277,0.035,88.856,0.535,63
+235,cowboy like me,11,evermore (deluxe version),Republic,2021,January,0.768,0.604,0.517,0.123,-9.014,0.035,127.967,0.511,63
+236,long story short,12,evermore (deluxe version),Republic,2021,January,0.66,0.546,0.73,0.097,-7.704,0.042,157.895,0.573,62
+237,marjorie,13,evermore (deluxe version),Republic,2021,January,0.876,0.535,0.561,0.115,-11.609,0.048,96.103,0.287,63
+238,closure,14,evermore (deluxe version),Republic,2021,January,0.835,0.689,0.704,0.134,-10.813,0.245,151.884,0.92,60
+239,evermore (feat. Bon Iver),15,evermore (deluxe version),Republic,2021,January,0.937,0.39,0.27,0.111,-10.673,0.031,125.177,0.32,64
+240,right where you left me - bonus track,16,evermore (deluxe version),Republic,2021,January,0.769,0.581,0.619,0.117,-6.524,0.028,137.915,0.645,74
+241,it’s time to go - bonus track,17,evermore (deluxe version),Republic,2021,January,0.801,0.592,0.41,0.09,-12.426,0.04,151.923,0.416,66
+242,willow,1,evermore,Republic,2020,December,0.833,0.392,0.574,0.145,-9.195,0.17,81.112,0.529,77
+243,champagne problems,2,evermore,Republic,2020,December,0.92,0.462,0.24,0.113,-12.077,0.038,171.319,0.32,77
+244,gold rush,3,evermore,Republic,2020,December,0.83,0.512,0.462,0.121,-10.491,0.041,112.05,0.353,67
+245,‘tis the damn season,4,evermore,Republic,2020,December,0.735,0.575,0.434,0.105,-8.193,0.031,145.916,0.348,65
+246,tolerate it,5,evermore,Republic,2020,December,0.878,0.316,0.361,0.08,-10.381,0.049,74.952,0.221,72
+247,"no body, no crime (feat. HAIM)",6,evermore,Republic,2020,December,0.418,0.546,0.613,0.103,-7.589,0.026,79.015,0.535,66
+248,happiness,7,evermore,Republic,2020,December,0.87,0.559,0.334,0.114,-10.733,0.038,122.079,0.211,64
+249,dorothea,8,evermore,Republic,2020,December,0.696,0.605,0.488,0.129,-8.322,0.026,119.966,0.354,62
+250,coney island (feat. The National),9,evermore,Republic,2020,December,0.819,0.537,0.537,0.142,-11.266,0.062,107.895,0.292,61
+251,ivy,10,evermore,Republic,2020,December,0.855,0.515,0.545,0.092,-9.277,0.035,88.856,0.535,66
+252,cowboy like me,11,evermore,Republic,2020,December,0.768,0.604,0.517,0.123,-9.014,0.035,127.967,0.511,65
+253,long story short,12,evermore,Republic,2020,December,0.66,0.546,0.73,0.097,-7.704,0.042,157.895,0.573,62
+254,marjorie,13,evermore,Republic,2020,December,0.876,0.535,0.561,0.115,-11.609,0.048,96.103,0.287,70
+255,closure,14,evermore,Republic,2020,December,0.835,0.689,0.704,0.134,-10.813,0.245,151.884,0.92,59
+256,evermore (feat. Bon Iver),15,evermore,Republic,2020,December,0.937,0.39,0.27,0.111,-10.673,0.031,125.177,0.32,63
+257,the 1,1,folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition],Republic,2020,November,0.75,0.78,0.361,0.108,-6.942,0.048,139.902,0.163,48
+258,cardigan,2,folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition],Republic,2020,November,0.525,0.612,0.58,0.26,-8.572,0.042,130.045,0.534,49
+259,the last great american dynasty,3,folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition],Republic,2020,November,0.481,0.688,0.653,0.106,-8.558,0.04,147.991,0.701,47
+260,exile (feat. Bon Iver),4,folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition],Republic,2020,November,0.761,0.31,0.374,0.11,-8.464,0.028,75.938,0.16,48
+261,my tears ricochet,5,folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition],Republic,2020,November,0.814,0.456,0.265,0.068,-10.663,0.033,129.947,0.112,48
+262,mirrorball,6,folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition],Republic,2020,November,0.686,0.549,0.417,0.06,-10.064,0.035,110.137,0.347,46
+263,seven,7,folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition],Republic,2020,November,0.888,0.602,0.494,0.09,-10.813,0.028,94.955,0.374,45
+264,august,8,folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition],Republic,2020,November,0.553,0.387,0.634,0.093,-9.222,0.036,89.567,0.42,48
+265,this is me trying,9,folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition],Republic,2020,November,0.312,0.511,0.478,0.147,-9.837,0.032,135.882,0.408,47
+266,illicit affairs,10,folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition],Republic,2020,November,0.862,0.529,0.304,0.108,-10.567,0.036,119.58,0.44,46
+267,invisible string,11,folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition],Republic,2020,November,0.859,0.651,0.459,0.105,-11.128,0.051,83.455,0.454,46
+268,mad woman,12,folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition],Republic,2020,November,0.67,0.593,0.7,0.116,-9.016,0.049,141.898,0.451,44
+269,epiphany,13,folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition],Republic,2020,November,0.727,0.317,0.254,0.087,-13.679,0.029,93.933,0.103,43
+270,betty,14,folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition],Republic,2020,November,0.589,0.595,0.376,0.099,-8.767,0.026,95.946,0.476,45
+271,peace,15,folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition],Republic,2020,November,0.916,0.644,0.284,0.091,-12.879,0.082,150.072,0.328,43
+272,hoax,16,folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition],Republic,2020,November,0.964,0.676,0.178,0.135,-15.01,0.039,118.84,0.404,43
+273,the lakes - bonus track,17,folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition],Republic,2020,November,0.842,0.313,0.258,0.095,-11.532,0.038,179.947,0.268,45
+274,the 1 - the long pond studio sessions,1,folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition],Republic,2020,November,0.898,0.708,0.25,0.102,-10.731,0.036,139.803,0.156,54
+275,cardigan - the long pond studio sessions,2,folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition],Republic,2020,November,0.88,0.395,0.234,0.107,-9.704,0.038,86.478,0.247,54
+276,the last great american dynasty - the long pond studio sessions,3,folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition],Republic,2020,November,0.743,0.64,0.618,0.057,-11.715,0.038,147.948,0.614,51
+277,exile (feat. Bon Iver) - the long pond studio sessions,4,folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition],Republic,2020,November,0.848,0.359,0.305,0.111,-10.295,0.031,151.956,0.108,53
+278,my tears ricochet - the long pond studio sessions,5,folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition],Republic,2020,November,0.946,0.531,0.172,0.062,-12.34,0.035,129.007,0.168,55
+279,mirrorball - the long pond studio sessions,6,folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition],Republic,2020,November,0.78,0.509,0.386,0.118,-8.434,0.027,109.993,0.109,53
+280,seven - the long pond studio sessions,7,folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition],Republic,2020,November,0.914,0.694,0.449,0.1,-11.49,0.03,94.963,0.363,51
+281,august - the long pond studio sessions,8,folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition],Republic,2020,November,0.5,0.554,0.663,0.791,-8.961,0.032,89.977,0.545,54
+282,this is me trying - the long pond studio sessions,9,folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition],Republic,2020,November,0.928,0.435,0.332,0.087,-11.611,0.031,68.097,0.157,54
+283,illicit affairs - the long pond studio sessions,10,folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition],Republic,2020,November,0.883,0.489,0.235,0.113,-10.274,0.036,117.699,0.435,53
+284,invisible string - the long pond studio sessions,11,folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition],Republic,2020,November,0.942,0.59,0.282,0.11,-10.542,0.028,83.438,0.351,51
+285,mad woman - the long pond studio sessions,12,folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition],Republic,2020,November,0.887,0.663,0.465,0.109,-10.463,0.041,141.834,0.346,50
+286,epiphany - the long pond studio sessions,13,folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition],Republic,2020,November,0.916,0.524,0.2,0.068,-13.004,0.027,93.87,0.113,49
+287,betty - the long pond studio sessions,14,folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition],Republic,2020,November,0.841,0.538,0.316,0.119,-9.5,0.03,95.68,0.518,51
+288,peace - the long pond studio sessions,15,folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition],Republic,2020,November,0.93,0.619,0.344,0.073,-11.472,0.065,149.897,0.513,50
+289,hoax - the long pond studio sessions,16,folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition],Republic,2020,November,0.962,0.682,0.155,0.18,-13.083,0.039,118.832,0.483,51
+290,the lakes - the long pond studio sessions,17,folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition],Republic,2020,November,0.794,0.606,0.221,0.089,-11.767,0.047,89.844,0.112,53
+291,the 1,1,folklore (deluxe version),Republic,2020,August,0.75,0.78,0.361,0.108,-6.942,0.048,139.902,0.163,68
+292,cardigan,2,folklore (deluxe version),Republic,2020,August,0.525,0.612,0.58,0.26,-8.572,0.042,130.045,0.534,68
+293,the last great american dynasty,3,folklore (deluxe version),Republic,2020,August,0.481,0.688,0.653,0.106,-8.558,0.04,147.991,0.701,66
+294,exile (feat. Bon Iver),4,folklore (deluxe version),Republic,2020,August,0.761,0.31,0.374,0.11,-8.464,0.028,75.938,0.16,68
+295,my tears ricochet,5,folklore (deluxe version),Republic,2020,August,0.814,0.456,0.265,0.068,-10.663,0.033,129.947,0.112,68
+296,mirrorball,6,folklore (deluxe version),Republic,2020,August,0.686,0.549,0.417,0.06,-10.064,0.035,110.137,0.347,66
+297,seven,7,folklore (deluxe version),Republic,2020,August,0.888,0.602,0.494,0.09,-10.813,0.028,94.955,0.374,66
+298,august,8,folklore (deluxe version),Republic,2020,August,0.553,0.387,0.634,0.093,-9.222,0.036,89.567,0.42,68
+299,this is me trying,9,folklore (deluxe version),Republic,2020,August,0.312,0.511,0.478,0.147,-9.837,0.032,135.882,0.408,66
+300,illicit affairs,10,folklore (deluxe version),Republic,2020,August,0.862,0.529,0.304,0.108,-10.567,0.036,119.58,0.44,66
+301,invisible string,11,folklore (deluxe version),Republic,2020,August,0.859,0.651,0.459,0.105,-11.128,0.051,83.455,0.454,66
+302,mad woman,12,folklore (deluxe version),Republic,2020,August,0.67,0.593,0.7,0.116,-9.016,0.049,141.898,0.451,64
+303,epiphany,13,folklore (deluxe version),Republic,2020,August,0.727,0.317,0.254,0.087,-13.679,0.029,93.933,0.103,63
+304,betty,14,folklore (deluxe version),Republic,2020,August,0.589,0.595,0.376,0.099,-8.767,0.026,95.946,0.476,65
+305,peace,15,folklore (deluxe version),Republic,2020,August,0.916,0.644,0.284,0.091,-12.879,0.082,150.072,0.328,63
+306,hoax,16,folklore (deluxe version),Republic,2020,August,0.964,0.676,0.178,0.135,-15.01,0.039,118.84,0.404,63
+307,the lakes - bonus track,17,folklore (deluxe version),Republic,2020,August,0.842,0.313,0.258,0.095,-11.532,0.038,179.947,0.268,67
+308,the 1,1,folklore,Republic,2020,July,0.757,0.777,0.357,0.108,-6.942,0.052,139.884,0.172,74
+309,cardigan,2,folklore,Republic,2020,July,0.537,0.613,0.581,0.25,-8.588,0.042,130.033,0.551,84
+310,the last great american dynasty,3,folklore,Republic,2020,July,0.467,0.686,0.662,0.109,-8.505,0.041,147.922,0.706,70
+311,exile (feat. Bon Iver),4,folklore,Republic,2020,July,0.778,0.298,0.38,0.11,-8.426,0.029,75.602,0.152,77
+312,my tears ricochet,5,folklore,Republic,2020,July,0.806,0.469,0.263,0.075,-10.63,0.033,129.86,0.112,78
+313,mirrorball,6,folklore,Republic,2020,July,0.687,0.553,0.413,0.059,-10.037,0.033,110.107,0.379,73
+314,seven,7,folklore,Republic,2020,July,0.9,0.596,0.488,0.091,-10.769,0.027,94.922,0.415,70
+315,august,8,folklore,Republic,2020,July,0.538,0.532,0.623,0.092,-9.208,0.033,89.937,0.403,84
+316,this is me trying,9,folklore,Republic,2020,July,0.314,0.515,0.476,0.171,-9.843,0.033,135.886,0.412,73
+317,illicit affairs,10,folklore,Republic,2020,July,0.881,0.559,0.31,0.106,-10.445,0.034,119.845,0.46,77
+318,invisible string,11,folklore,Republic,2020,July,0.838,0.653,0.452,0.108,-11.143,0.055,83.433,0.45,73
+319,mad woman,12,folklore,Republic,2020,July,0.655,0.592,0.699,0.114,-8.995,0.047,141.916,0.506,65
+320,epiphany,13,folklore,Republic,2020,July,0.731,0.175,0.267,0.086,-13.69,0.03,94.203,0.106,64
+321,betty,14,folklore,Republic,2020,July,0.6,0.593,0.377,0.098,-8.761,0.025,95.939,0.502,73
+322,peace,15,folklore,Republic,2020,July,0.918,0.647,0.272,0.092,-12.906,0.092,150.044,0.339,65
+323,hoax,16,folklore,Republic,2020,July,0.966,0.662,0.181,0.133,-15.065,0.042,118.819,0.429,65
+324,I Forgot That You Existed,1,Lover,Republic,2019,August,0.298,0.664,0.316,0.081,-10.345,0.519,92.875,0.541,71
+325,Cruel Summer,2,Lover,Republic,2019,August,0.117,0.552,0.702,0.105,-5.707,0.157,169.994,0.564,93
+326,Lover,3,Lover,Republic,2019,August,0.492,0.359,0.543,0.118,-7.582,0.092,68.534,0.453,86
+327,The Man,4,Lover,Republic,2019,August,0.077,0.777,0.658,0.09,-5.191,0.054,110.048,0.633,81
+328,The Archer,5,Lover,Republic,2019,August,0.12,0.292,0.574,0.066,-9.375,0.04,124.344,0.166,75
+329,I Think He Knows,6,Lover,Republic,2019,August,0.009,0.897,0.366,0.072,-8.029,0.057,100.003,0.416,72
+330,Miss Americana & The Heartbreak Prince,7,Lover,Republic,2019,August,0.028,0.662,0.747,0.138,-6.926,0.074,150.088,0.487,79
+331,Paper Rings,8,Lover,Republic,2019,August,0.013,0.811,0.719,0.074,-6.553,0.05,103.979,0.865,78
+332,Cornelia Street,9,Lover,Republic,2019,August,0.781,0.824,0.624,0.1,-9.728,0.083,102.012,0.248,74
+333,Death By A Thousand Cuts,10,Lover,Republic,2019,August,0.454,0.712,0.732,0.319,-6.754,0.063,94.071,0.313,72
+334,London Boy,11,Lover,Republic,2019,August,0.025,0.695,0.71,0.133,-6.639,0.05,157.925,0.557,74
+335,Soon You’ll Get Better (feat. The Chicks),12,Lover,Republic,2019,August,0.907,0.433,0.182,0.123,-12.566,0.064,207.476,0.421,66
+336,False God,13,Lover,Republic,2019,August,0.736,0.739,0.32,0.111,-10.862,0.239,79.97,0.351,73
+337,You Need To Calm Down,14,Lover,Republic,2019,August,0.009,0.771,0.671,0.064,-5.617,0.055,85.026,0.714,80
+338,Afterglow,15,Lover,Republic,2019,August,0.13,0.756,0.449,0.114,-8.746,0.034,111.011,0.399,74
+339,ME! (feat. Brendon Urie of Panic! At The Disco),16,Lover,Republic,2019,August,0.033,0.61,0.83,0.118,-4.105,0.057,182.162,0.728,75
+340,It’s Nice To Have A Friend,17,Lover,Republic,2019,August,0.971,0.737,0.175,0.171,-9.912,0.04,70.008,0.545,66
+341,Daylight,18,Lover,Republic,2019,August,0.808,0.557,0.496,0.077,-9.602,0.056,149.983,0.265,78
+342,...Ready For It?,1,reputation,Big Machine,2017,November,0.053,0.613,0.764,0.197,-6.509,0.136,160.015,0.417,82
+343,End Game,2,reputation,Big Machine,2017,November,0.008,0.649,0.589,0.108,-6.237,0.056,159.073,0.151,74
+344,I Did Something Bad,3,reputation,Big Machine,2017,November,0.068,0.696,0.602,0.07,-6.156,0.159,82.989,0.305,75
+345,Don’t Blame Me,4,reputation,Big Machine,2017,November,0.106,0.615,0.534,0.061,-6.719,0.039,135.917,0.193,85
+346,Delicate,5,reputation,Big Machine,2017,November,0.216,0.75,0.404,0.091,-10.178,0.068,95.045,0.05,81
+347,Look What You Made Me Do,6,reputation,Big Machine,2017,November,0.204,0.766,0.709,0.126,-6.471,0.123,128.07,0.506,81
+348,So It Goes...,7,reputation,Big Machine,2017,November,0.122,0.574,0.61,0.13,-7.283,0.073,74.957,0.374,69
+349,Gorgeous,8,reputation,Big Machine,2017,November,0.071,0.8,0.535,0.213,-6.684,0.135,92.027,0.451,76
+350,Getaway Car,9,reputation,Big Machine,2017,November,0.005,0.562,0.689,0.089,-6.745,0.127,172.054,0.351,79
+351,King Of My Heart,10,reputation,Big Machine,2017,November,0.009,0.675,0.703,0.039,-7.902,0.038,110.01,0.314,72
+352,Dancing With Our Hands Tied,11,reputation,Big Machine,2017,November,0.06,0.624,0.691,0.138,-6.686,0.196,160.024,0.284,72
+353,Dress,12,reputation,Big Machine,2017,November,0.033,0.719,0.469,0.169,-8.792,0.053,120.085,0.085,75
+354,This Is Why We Can't Have Nice Things,13,reputation,Big Machine,2017,November,0.016,0.567,0.789,0.382,-5.986,0.115,163.96,0.438,70
+355,Call It What You Want,14,reputation,Big Machine,2017,November,0.186,0.598,0.504,0.34,-9.874,0.073,163.954,0.252,75
+356,New Year’s Day,15,reputation,Big Machine,2017,November,0.921,0.661,0.151,0.13,-12.864,0.035,94.922,0.23,70
+357,All Too Well,1,reputation Stadium Tour Surprise Song Playlist,Big Machine,2017,November,0.045,0.463,0.605,0.128,-7.803,0.029,186.113,0.317,35
+358,Wildest Dreams,2,reputation Stadium Tour Surprise Song Playlist,Big Machine,2017,November,0.07,0.55,0.688,0.106,-7.416,0.09,139.998,0.461,38
+359,The Best Day,3,reputation Stadium Tour Surprise Song Playlist,Big Machine,2017,November,0.638,0.668,0.448,0.158,-8.567,0.028,126.066,0.386,30
+360,Red,4,reputation Stadium Tour Surprise Song Playlist,Big Machine,2017,November,0.078,0.605,0.899,0.091,-4.273,0.042,124.982,0.647,33
+361,Holy Ground,5,reputation Stadium Tour Surprise Song Playlist,Big Machine,2017,November,0.016,0.627,0.816,0.096,-6.698,0.077,157.043,0.648,29
+362,Teardrops On My Guitar - Radio Single Remix,6,reputation Stadium Tour Surprise Song Playlist,Big Machine,2017,November,0.315,0.626,0.427,0.138,-6.993,0.023,99.962,0.265,32
+363,Our Song,7,reputation Stadium Tour Surprise Song Playlist,Big Machine,2017,November,0.114,0.545,0.663,0.321,-5.05,0.036,178.016,0.565,36
+364,22,8,reputation Stadium Tour Surprise Song Playlist,Big Machine,2017,November,0.003,0.66,0.732,0.047,-6.565,0.038,104.009,0.677,35
+365,I Knew You Were Trouble.,9,reputation Stadium Tour Surprise Song Playlist,Big Machine,2017,November,0.005,0.536,0.464,0.036,-6.761,0.041,77.318,0.666,36
+366,I Don’t Wanna Live Forever (Fifty Shades Darker),10,reputation Stadium Tour Surprise Song Playlist,Big Machine,2017,November,0.059,0.73,0.444,0.14,-8.418,0.054,117.979,0.106,79
+367,Mean,11,reputation Stadium Tour Surprise Song Playlist,Big Machine,2017,November,0.449,0.576,0.755,0.223,-3.982,0.043,163.884,0.791,32
+368,How You Get The Girl,12,reputation Stadium Tour Surprise Song Playlist,Big Machine,2017,November,0.004,0.764,0.657,0.092,-6.112,0.05,119.995,0.546,31
+369,So It Goes...,13,reputation Stadium Tour Surprise Song Playlist,Big Machine,2017,November,0.122,0.578,0.61,0.13,-7.283,0.068,74.996,0.371,54
+370,Fifteen,14,reputation Stadium Tour Surprise Song Playlist,Big Machine,2017,November,0.07,0.549,0.63,0.138,-4.436,0.027,95.124,0.217,29
+371,Mine,15,reputation Stadium Tour Surprise Song Playlist,Big Machine,2017,November,0.003,0.622,0.781,0.187,-2.945,0.03,121.029,0.662,37
+372,Sparks Fly,16,reputation Stadium Tour Surprise Song Playlist,Big Machine,2017,November,0.041,0.61,0.782,0.16,-2.98,0.031,114.974,0.399,31
+373,State Of Grace,17,reputation Stadium Tour Surprise Song Playlist,Big Machine,2017,November,0,0.591,0.828,0.088,-5.895,0.033,129.958,0.383,28
+374,Haunted,18,reputation Stadium Tour Surprise Song Playlist,Big Machine,2017,November,0.066,0.43,0.948,0.061,-2.622,0.06,162.026,0.371,30
+375,Never Grow Up,19,reputation Stadium Tour Surprise Song Playlist,Big Machine,2017,November,0.824,0.714,0.309,0.136,-8.828,0.03,124.892,0.546,28
+376,Treacherous,20,reputation Stadium Tour Surprise Song Playlist,Big Machine,2017,November,0.101,0.704,0.621,0.14,-8.086,0.033,109.996,0.395,27
+377,Babe,21,reputation Stadium Tour Surprise Song Playlist,Big Machine,2017,November,0.022,0.577,0.785,0.125,-3.266,0.102,171.78,0.647,29
+378,Welcome To New York,22,reputation Stadium Tour Surprise Song Playlist,Big Machine,2017,November,0.035,0.789,0.634,0.302,-4.762,0.032,117,0.658,31
+379,Fearless,23,reputation Stadium Tour Surprise Song Playlist,Big Machine,2017,November,0.038,0.603,0.717,0.307,-4.401,0.027,100.163,0.429,29
+380,Enchanted,24,reputation Stadium Tour Surprise Song Playlist,Big Machine,2017,November,0.071,0.536,0.629,0.158,-3.907,0.028,81.963,0.222,40
+381,Change,25,reputation Stadium Tour Surprise Song Playlist,Big Machine,2017,November,0.004,0.543,0.764,0.111,-4.206,0.038,95.999,0.233,26
+382,Ours,26,reputation Stadium Tour Surprise Song Playlist,Big Machine,2017,November,0.469,0.609,0.56,0.087,-7.392,0.028,159.838,0.228,30
+383,Out Of The Woods,27,reputation Stadium Tour Surprise Song Playlist,Big Machine,2017,November,0.001,0.553,0.841,0.341,-6.937,0.04,91.999,0.339,32
+384,Come Back...Be Here,28,reputation Stadium Tour Surprise Song Playlist,Big Machine,2017,November,0.005,0.486,0.548,0.1,-6.291,0.026,79.873,0.22,28
+385,A Place in this World,29,reputation Stadium Tour Surprise Song Playlist,Big Machine,2017,November,0.058,0.573,0.767,0.327,-2.929,0.032,114.985,0.438,27
+386,This Love,30,reputation Stadium Tour Surprise Song Playlist,Big Machine,2017,November,0.679,0.48,0.435,0.093,-8.795,0.032,143.942,0.108,28
+387,The Lucky One,31,reputation Stadium Tour Surprise Song Playlist,Big Machine,2017,November,0.035,0.706,0.505,0.13,-7.639,0.036,117.935,0.561,26
+388,Invisible,32,reputation Stadium Tour Surprise Song Playlist,Big Machine,2017,November,0.56,0.608,0.384,0.165,-5.732,0.025,95.963,0.217,27
+389,Breathe,33,reputation Stadium Tour Surprise Song Playlist,Big Machine,2017,November,0.416,0.442,0.48,0.129,-7.405,0.028,73.849,0.167,31
+390,Better Man,34,reputation Stadium Tour Surprise Song Playlist,Big Machine,2017,November,0.121,0.503,0.844,0.097,-3.648,0.038,143.941,0.508,30
+391,Jump Then Fall,35,reputation Stadium Tour Surprise Song Playlist,Big Machine,2017,November,0.113,0.617,0.699,0.074,-5.712,0.027,79.979,0.827,26
+392,Begin Again,36,reputation Stadium Tour Surprise Song Playlist,Big Machine,2017,November,0.197,0.516,0.526,0.14,-8.349,0.027,78.985,0.312,27
+393,Tied Together with a Smile,37,reputation Stadium Tour Surprise Song Playlist,Big Machine,2017,November,0.523,0.478,0.547,0.073,-4.948,0.028,146.134,0.238,27
+394,The Story Of Us,38,reputation Stadium Tour Surprise Song Playlist,Big Machine,2017,November,0.006,0.547,0.807,0.059,-3.63,0.04,139.911,0.645,28
+395,Forever & Always,39,reputation Stadium Tour Surprise Song Playlist,Big Machine,2017,November,0.08,0.607,0.829,0.207,-5.02,0.059,128.055,0.521,26
+396,Hey Stephen,40,reputation Stadium Tour Surprise Song Playlist,Big Machine,2017,November,0.191,0.843,0.541,0.108,-7.361,0.032,116.002,0.839,26
+397,Speak Now,41,reputation Stadium Tour Surprise Song Playlist,Big Machine,2017,November,0.099,0.712,0.603,0.102,-3.753,0.03,118.979,0.714,28
+398,Wonderland,42,reputation Stadium Tour Surprise Song Playlist,Big Machine,2017,November,0.049,0.422,0.692,0.177,-5.447,0.055,184.019,0.197,30
+399,White Horse,43,reputation Stadium Tour Surprise Song Playlist,Big Machine,2017,November,0.311,0.578,0.348,0.1,-8.066,0.026,92.671,0.218,28
+400,I'm Only Me When I'm With You,44,reputation Stadium Tour Surprise Song Playlist,Big Machine,2017,November,0.005,0.556,0.933,0.101,-3.685,0.072,143.929,0.521,28
+401,Starlight,45,reputation Stadium Tour Surprise Song Playlist,Big Machine,2017,November,0.019,0.649,0.779,0.234,-5.798,0.039,126.014,0.617,27
+402,I Know Places,46,reputation Stadium Tour Surprise Song Playlist,Big Machine,2017,November,0.243,0.603,0.755,0.178,-4.991,0.071,159.971,0.496,28
+403,Welcome To New York,1,1989 (Deluxe),Big Machine,2014,January,0.035,0.789,0.634,0.302,-4.762,0.032,116.992,0.658,48
+404,Blank Space,2,1989 (Deluxe),Big Machine,2014,January,0.103,0.76,0.703,0.091,-5.412,0.054,95.997,0.57,81
+405,Style,3,1989 (Deluxe),Big Machine,2014,January,0.002,0.588,0.791,0.118,-5.595,0.04,94.933,0.487,79
+406,Out Of The Woods,4,1989 (Deluxe),Big Machine,2014,January,0.001,0.553,0.841,0.341,-6.937,0.04,92.008,0.338,59
+407,All You Had To Do Was Stay,5,1989 (Deluxe),Big Machine,2014,January,0.002,0.605,0.725,0.101,-5.729,0.032,96.97,0.539,47
+408,Shake It Off,6,1989 (Deluxe),Big Machine,2014,January,0.065,0.647,0.8,0.334,-5.384,0.165,160.078,0.942,80
+409,I Wish You Would,7,1989 (Deluxe),Big Machine,2014,January,0.016,0.653,0.893,0.102,-5.966,0.054,118.035,0.513,51
+410,Bad Blood,8,1989 (Deluxe),Big Machine,2014,January,0.088,0.646,0.794,0.201,-6.104,0.19,170.216,0.287,52
+411,Wildest Dreams,9,1989 (Deluxe),Big Machine,2014,January,0.069,0.55,0.688,0.106,-7.416,0.09,139.997,0.465,52
+412,How You Get The Girl,10,1989 (Deluxe),Big Machine,2014,January,0.004,0.765,0.656,0.092,-6.112,0.05,119.997,0.545,55
+413,This Love,11,1989 (Deluxe),Big Machine,2014,January,0.678,0.481,0.435,0.093,-8.795,0.032,143.95,0.107,50
+414,I Know Places,12,1989 (Deluxe),Big Machine,2014,January,0.245,0.602,0.755,0.178,-4.991,0.071,159.965,0.495,50
+415,Clean,13,1989 (Deluxe),Big Machine,2014,January,0.232,0.815,0.377,0.1,-7.754,0.035,103.97,0.211,55
+416,Wonderland,14,1989 (Deluxe),Big Machine,2014,January,0.049,0.422,0.692,0.177,-5.447,0.055,184.014,0.197,55
+417,You Are In Love,15,1989 (Deluxe),Big Machine,2014,January,0.707,0.474,0.48,0.09,-8.894,0.062,170.109,0.319,55
+418,New Romantics,16,1989 (Deluxe),Big Machine,2014,January,0.005,0.633,0.889,0.066,-5.87,0.072,121.956,0.584,62
+419,I Know Places - Voice Memo,17,1989 (Deluxe),Big Machine,2014,January,0.829,0.592,0.128,0.527,-17.932,0.589,78.828,0.15,0
+420,I Wish You Would - Voice Memo,18,1989 (Deluxe),Big Machine,2014,January,0.717,0.781,0.357,0.185,-16.394,0.912,118.317,0.645,0
+421,Blank Space - Voice Memo,19,1989 (Deluxe),Big Machine,2014,January,0.801,0.675,0.234,0.657,-15.064,0.721,127.296,0.578,0
+422,Welcome To New York,1,1989,Big Machine,2014,January,0.038,0.793,0.634,0.304,-4.807,0.032,117.023,0.615,59
+423,Blank Space,2,1989,Big Machine,2014,January,0.085,0.752,0.678,0.13,-5.421,0.065,96.009,0.583,60
+424,Style,3,1989,Big Machine,2014,January,0.003,0.598,0.786,0.117,-5.572,0.038,95.021,0.456,56
+425,Out Of The Woods,4,1989,Big Machine,2014,January,0.001,0.552,0.841,0.337,-6.938,0.037,91.993,0.342,46
+426,All You Had To Do Was Stay,5,1989,Big Machine,2014,January,0.002,0.602,0.735,0.105,-5.778,0.034,96.969,0.472,53
+427,Shake It Off,6,1989,Big Machine,2014,January,0.056,0.648,0.785,0.148,-5.414,0.165,160.02,0.943,53
+428,I Wish You Would,7,1989,Big Machine,2014,January,0.016,0.649,0.898,0.109,-5.963,0.051,118.027,0.503,42
+429,Bad Blood,8,1989,Big Machine,2014,January,0.087,0.652,0.802,0.148,-6.114,0.181,170.157,0.295,71
+430,Wildest Dreams,9,1989,Big Machine,2014,January,0.071,0.553,0.664,0.106,-7.417,0.074,140.06,0.467,75
+431,How You Get The Girl,10,1989,Big Machine,2014,January,0.005,0.764,0.659,0.092,-6.136,0.049,119.982,0.525,43
+432,This Love,11,1989,Big Machine,2014,January,0.635,0.485,0.459,0.101,-8.768,0.034,71.981,0.086,42
+433,I Know Places,12,1989,Big Machine,2014,January,0.231,0.595,0.763,0.2,-4.991,0.066,159.959,0.507,43
+434,Clean,13,1989,Big Machine,2014,January,0.242,0.81,0.38,0.113,-7.755,0.035,103.981,0.211,42
+435,State Of Grace,1,Red (Deluxe Edition),Big Machine,2012,October,0,0.588,0.825,0.088,-5.882,0.033,129.968,0.397,43
+436,Red,2,Red (Deluxe Edition),Big Machine,2012,October,0.077,0.602,0.896,0.091,-4.267,0.044,124.978,0.641,54
+437,Treacherous,3,Red (Deluxe Edition),Big Machine,2012,October,0.101,0.704,0.621,0.14,-8.086,0.033,109.995,0.395,41
+438,I Knew You Were Trouble.,4,Red (Deluxe Edition),Big Machine,2012,October,0.005,0.622,0.469,0.034,-6.798,0.036,77.019,0.679,59
+439,All Too Well,5,Red (Deluxe Edition),Big Machine,2012,October,0.038,0.602,0.609,0.128,-7.803,0.024,93.06,0.337,59
+440,22,6,Red (Deluxe Edition),Big Machine,2012,October,0.002,0.661,0.729,0.048,-6.561,0.038,103.987,0.668,59
+441,I Almost Do,7,Red (Deluxe Edition),Big Machine,2012,October,0.017,0.567,0.481,0.182,-7.357,0.027,145.865,0.233,43
+442,We Are Never Ever Getting Back Together,8,Red (Deluxe Edition),Big Machine,2012,October,0.01,0.628,0.676,0.121,-5.911,0.092,85.984,0.75,59
+443,Stay Stay Stay,9,Red (Deluxe Edition),Big Machine,2012,October,0.307,0.729,0.748,0.096,-6.67,0.024,99.981,0.928,43
+444,The Last Time,10,Red (Deluxe Edition),Big Machine,2012,October,0.035,0.505,0.443,0.091,-7.039,0.028,94.069,0.123,45
+445,Holy Ground,11,Red (Deluxe Edition),Big Machine,2012,October,0.016,0.627,0.816,0.096,-6.698,0.077,157.043,0.648,41
+446,Sad Beautiful Tragic,12,Red (Deluxe Edition),Big Machine,2012,October,0.632,0.624,0.34,0.08,-12.411,0.029,129.987,0.261,40
+447,The Lucky One,13,Red (Deluxe Edition),Big Machine,2012,October,0.037,0.706,0.499,0.132,-7.675,0.037,117.937,0.545,40
+448,Everything Has Changed,14,Red (Deluxe Edition),Big Machine,2012,October,0.36,0.624,0.458,0.311,-6.755,0.029,80.016,0.436,52
+449,Starlight,15,Red (Deluxe Edition),Big Machine,2012,October,0.021,0.649,0.777,0.21,-5.804,0.041,126.018,0.587,41
+450,Begin Again,16,Red (Deluxe Edition),Big Machine,2012,October,0.199,0.53,0.526,0.14,-8.349,0.026,79.025,0.323,45
+451,The Moment I Knew,17,Red (Deluxe Edition),Big Machine,2012,October,0.187,0.619,0.506,0.101,-7.327,0.032,126.03,0.274,38
+452,Come Back...Be Here,18,Red (Deluxe Edition),Big Machine,2012,October,0.005,0.483,0.548,0.1,-6.291,0.025,79.926,0.217,43
+453,Girl At Home,19,Red (Deluxe Edition),Big Machine,2012,October,0.272,0.733,0.59,0.134,-5.86,0.028,125.048,0.633,37
+454,Treacherous - Original Demo Recording,20,Red (Deluxe Edition),Big Machine,2012,October,0.175,0.828,0.64,0.099,-8.248,0.035,109.993,0.519,34
+455,Red - Original Demo Recording,21,Red (Deluxe Edition),Big Machine,2012,October,0.113,0.678,0.902,0.07,-4.659,0.036,124.998,0.637,36
+456,State Of Grace - Acoustic,22,Red (Deluxe Edition),Big Machine,2012,October,0.664,0.626,0.118,0.127,-15.91,0.03,105.597,0.068,37
+457,State Of Grace,1,Red,Big Machine,2012,October,0,0.588,0.825,0.088,-5.882,0.033,129.968,0.397,40
+458,Red,2,Red,Big Machine,2012,October,0.077,0.602,0.896,0.091,-4.267,0.044,124.978,0.641,58
+459,Treacherous,3,Red,Big Machine,2012,October,0.101,0.705,0.621,0.147,-8.086,0.033,109.993,0.395,38
+460,I Knew You Were Trouble.,4,Red,Big Machine,2012,October,0.005,0.622,0.469,0.04,-6.798,0.036,77.019,0.679,61
+461,All Too Well,5,Red,Big Machine,2012,October,0.038,0.602,0.609,0.127,-7.803,0.024,93.06,0.337,44
+462,22,6,Red,Big Machine,2012,October,0.002,0.658,0.729,0.075,-6.561,0.038,104.007,0.668,53
+463,I Almost Do,7,Red,Big Machine,2012,October,0.017,0.567,0.481,0.182,-7.357,0.027,145.865,0.233,39
+464,We Are Never Ever Getting Back Together,8,Red,Big Machine,2012,October,0.01,0.628,0.676,0.102,-5.911,0.092,85.984,0.75,59
+465,Stay Stay Stay,9,Red,Big Machine,2012,October,0.307,0.729,0.748,0.09,-6.67,0.024,99.981,0.928,39
+466,The Last Time,10,Red,Big Machine,2012,October,0.035,0.505,0.443,0.092,-7.039,0.028,94.069,0.123,38
+467,Holy Ground,11,Red,Big Machine,2012,October,0.016,0.627,0.816,0.097,-6.698,0.077,157.043,0.648,37
+468,Sad Beautiful Tragic,12,Red,Big Machine,2012,October,0.632,0.624,0.34,0.121,-12.411,0.029,129.987,0.261,35
+469,The Lucky One,13,Red,Big Machine,2012,October,0.037,0.706,0.499,0.132,-7.675,0.037,117.937,0.545,36
+470,Everything Has Changed,14,Red,Big Machine,2012,October,0.36,0.624,0.458,0.303,-6.755,0.029,80.017,0.436,50
+471,Starlight,15,Red,Big Machine,2012,October,0.021,0.649,0.777,0.221,-5.804,0.041,126.018,0.587,37
+472,Begin Again,16,Red,Big Machine,2012,October,0.199,0.53,0.526,0.232,-8.349,0.026,79.025,0.323,56
+473,Sparks Fly - Live/2011,1,Speak Now World Tour Live,Big Machine,2010,October,0.009,0.455,0.783,0.918,-5.184,0.039,114.981,0.298,42
+474,Mine - Live/2011,2,Speak Now World Tour Live,Big Machine,2010,October,0.002,0.496,0.852,0.554,-4.775,0.037,120.969,0.442,40
+475,The Story Of Us - Live,3,Speak Now World Tour Live,Big Machine,2010,October,0,0.419,0.908,0.815,-5.156,0.065,139.813,0.472,40
+476,Mean - Live/2011,4,Speak Now World Tour Live,Big Machine,2010,October,0.154,0.429,0.915,0.693,-4.373,0.069,163.752,0.432,40
+477,Ours - Live/2011,5,Speak Now World Tour Live,Big Machine,2010,October,0.715,0.421,0.355,0.867,-10.21,0.03,77.769,0.267,39
+478,Back To December/Apologize/You're Not Sorry - Live/2011/Medley,6,Speak Now World Tour Live,Big Machine,2010,October,0.155,0.374,0.516,0.795,-8.745,0.029,142.057,0.171,47
+479,Better Than Revenge - Live/2011,7,Speak Now World Tour Live,Big Machine,2010,October,0.003,0.445,0.887,0.931,-5.629,0.077,145.954,0.386,41
+480,Speak Now - Live/2011,8,Speak Now World Tour Live,Big Machine,2010,October,0.064,0.615,0.694,0.83,-5.251,0.032,118.876,0.373,40
+481,Last Kiss - Live/2011,9,Speak Now World Tour Live,Big Machine,2010,October,0.205,0.427,0.395,0.701,-12.551,0.029,79.517,0.188,40
+482,Drops Of Jupiter - Live/2011,10,Speak Now World Tour Live,Big Machine,2010,October,0.806,0.374,0.504,0.76,-8.407,0.039,109.025,0.27,46
+483,Bette Davis Eyes - Live/2011,11,Speak Now World Tour Live,Big Machine,2010,October,0.713,0.327,0.488,0.837,-9.287,0.032,104.46,0.363,42
+484,I Want You Back - Live/2011,12,Speak Now World Tour Live,Big Machine,2010,October,0.794,0.536,0.512,0.497,-6.794,0.034,97.397,0.249,40
+485,Dear John - Live/2011,13,Speak Now World Tour Live,Big Machine,2010,October,0.016,0.521,0.386,0.884,-8.784,0.03,119.518,0.138,40
+486,Enchanted - Live/2011,14,Speak Now World Tour Live,Big Machine,2010,October,0.075,0.34,0.663,0.563,-5.597,0.033,163.678,0.214,42
+487,Haunted - Live/2011,15,Speak Now World Tour Live,Big Machine,2010,October,0.024,0.338,0.818,0.889,-7.495,0.05,162.157,0.177,41
+488,Long Live - Live/2011,16,Speak Now World Tour Live,Big Machine,2010,October,0.005,0.544,0.728,0.865,-5.838,0.028,101.939,0.204,41
+489,Mine - POP Mix,1,Speak Now,Big Machine,2010,October,0.005,0.696,0.768,0.101,-3.863,0.031,121.05,0.692,42
+490,Sparks Fly,2,Speak Now,Big Machine,2010,October,0.039,0.608,0.785,0.158,-2.976,0.031,114.985,0.376,53
+491,Back To December,3,Speak Now,Big Machine,2010,October,0.02,0.517,0.606,0.324,-5.797,0.029,141.929,0.296,62
+492,Speak Now,4,Speak Now,Big Machine,2010,October,0.101,0.708,0.601,0.098,-3.75,0.031,118.962,0.742,50
+493,Dear John,5,Speak Now,Big Machine,2010,October,0.183,0.583,0.468,0.111,-5.378,0.028,119.375,0.126,46
+494,Mean,6,Speak Now,Big Machine,2010,October,0.445,0.57,0.747,0.219,-3.978,0.043,164.004,0.808,51
+495,The Story Of Us,7,Speak Now,Big Machine,2010,October,0,0.575,0.855,0.042,-4.827,0.047,139.92,0.84,48
+496,Never Grow Up,8,Speak Now,Big Machine,2010,October,0.829,0.715,0.308,0.16,-8.829,0.03,124.899,0.547,48
+497,Enchanted,9,Speak Now,Big Machine,2010,October,0.072,0.535,0.618,0.169,-3.913,0.027,81.975,0.228,71
+498,Better Than Revenge,10,Speak Now,Big Machine,2010,October,0.017,0.519,0.917,0.359,-3.185,0.089,145.882,0.652,54
+499,Innocent,11,Speak Now,Big Machine,2010,October,0.202,0.553,0.604,0.125,-5.295,0.026,133.989,0.186,38
+500,Haunted,12,Speak Now,Big Machine,2010,October,0.077,0.434,0.944,0.151,-2.641,0.058,162.02,0.361,47
+501,Last Kiss,13,Speak Now,Big Machine,2010,October,0.581,0.359,0.329,0.098,-9.531,0.029,84.358,0.208,49
+502,Long Live,14,Speak Now,Big Machine,2010,October,0.043,0.412,0.682,0.106,-4.319,0.034,203.959,0.146,51
+503,Mine - POP Mix,1,Speak Now (Deluxe Package),Big Machine,2010,January,0.005,0.696,0.768,0.101,-3.863,0.031,121.05,0.692,42
+504,Sparks Fly,2,Speak Now (Deluxe Package),Big Machine,2010,January,0.039,0.608,0.785,0.158,-2.976,0.031,114.985,0.376,52
+505,Back To December,3,Speak Now (Deluxe Package),Big Machine,2010,January,0.02,0.517,0.606,0.324,-5.797,0.029,141.929,0.296,63
+506,Speak Now,4,Speak Now (Deluxe Package),Big Machine,2010,January,0.101,0.708,0.601,0.098,-3.75,0.031,118.962,0.742,51
+507,Dear John,5,Speak Now (Deluxe Package),Big Machine,2010,January,0.183,0.583,0.468,0.111,-5.378,0.028,119.375,0.126,46
+508,Mean,6,Speak Now (Deluxe Package),Big Machine,2010,January,0.445,0.57,0.747,0.219,-3.978,0.043,164.004,0.808,55
+509,The Story Of Us,7,Speak Now (Deluxe Package),Big Machine,2010,January,0,0.575,0.855,0.042,-4.827,0.047,139.92,0.84,40
+510,Never Grow Up,8,Speak Now (Deluxe Package),Big Machine,2010,January,0.829,0.715,0.308,0.16,-8.829,0.03,124.899,0.547,44
+511,Enchanted,9,Speak Now (Deluxe Package),Big Machine,2010,January,0.072,0.535,0.618,0.169,-3.913,0.027,81.975,0.228,71
+512,Better Than Revenge,10,Speak Now (Deluxe Package),Big Machine,2010,January,0.017,0.519,0.917,0.359,-3.185,0.089,145.882,0.652,54
+513,Innocent,11,Speak Now (Deluxe Package),Big Machine,2010,January,0.202,0.553,0.604,0.125,-5.295,0.026,133.989,0.186,40
+514,Haunted,12,Speak Now (Deluxe Package),Big Machine,2010,January,0.077,0.434,0.944,0.151,-2.641,0.058,162.02,0.361,48
+515,Last Kiss,13,Speak Now (Deluxe Package),Big Machine,2010,January,0.581,0.359,0.329,0.098,-9.531,0.029,84.358,0.208,46
+516,Long Live,14,Speak Now (Deluxe Package),Big Machine,2010,January,0.043,0.412,0.682,0.106,-4.319,0.034,203.959,0.146,46
+517,Ours,15,Speak Now (Deluxe Package),Big Machine,2010,January,0.505,0.61,0.556,0.085,-7.369,0.028,159.838,0.192,46
+518,If This Was A Movie,16,Speak Now (Deluxe Package),Big Machine,2010,January,0.154,0.515,0.724,0.269,-3.498,0.027,147.788,0.257,45
+519,Superman,17,Speak Now (Deluxe Package),Big Machine,2010,January,0.019,0.582,0.817,0.101,-3.718,0.034,131.983,0.547,39
+520,Back To December - Acoustic,18,Speak Now (Deluxe Package),Big Machine,2010,January,0.731,0.541,0.451,0.197,-6.522,0.027,141.713,0.333,49
+521,Haunted - Acoustic Version,19,Speak Now (Deluxe Package),Big Machine,2010,January,0.841,0.574,0.462,0.28,-5.124,0.025,80.858,0.314,44
+522,Mine,20,Speak Now (Deluxe Package),Big Machine,2010,January,0.003,0.621,0.78,0.184,-2.934,0.03,121.038,0.672,57
+523,Back To December,21,Speak Now (Deluxe Package),Big Machine,2010,January,0.113,0.525,0.676,0.294,-4.684,0.029,141.95,0.281,34
+524,The Story Of Us,22,Speak Now (Deluxe Package),Big Machine,2010,January,0.005,0.546,0.809,0.044,-3.621,0.041,139.91,0.649,52
+525,Jump Then Fall,1,Fearless (Platinum Edition),Big Machine,2008,November,0.111,0.618,0.687,0.069,-5.737,0.027,79.991,0.82,41
+526,Untouchable,2,Fearless (Platinum Edition),Big Machine,2008,November,0.058,0.419,0.454,0.097,-6.809,0.034,200.017,0.288,43
+527,Forever & Always - Piano Version,3,Fearless (Platinum Edition),Big Machine,2008,November,0.852,0.592,0.16,0.116,-10.785,0.035,118.929,0.294,41
+528,Come In With The Rain,4,Fearless (Platinum Edition),Big Machine,2008,November,0.096,0.527,0.461,0.24,-6.172,0.026,143.94,0.23,39
+529,SuperStar,5,Fearless (Platinum Edition),Big Machine,2008,November,0.367,0.61,0.531,0.351,-6.123,0.024,85.979,0.228,38
+530,The Other Side Of The Door,6,Fearless (Platinum Edition),Big Machine,2008,November,0.169,0.476,0.816,0.238,-4.279,0.035,163.847,0.469,39
+531,Fearless,7,Fearless (Platinum Edition),Big Machine,2008,November,0.036,0.598,0.714,0.31,-4.397,0.027,99.979,0.467,50
+532,Fifteen,8,Fearless (Platinum Edition),Big Machine,2008,November,0.073,0.559,0.636,0.144,-4.4,0.026,95.485,0.214,40
+533,Love Story,9,Fearless (Platinum Edition),Big Machine,2008,November,0.157,0.618,0.736,0.073,-3.937,0.031,118.982,0.307,56
+534,Hey Stephen,10,Fearless (Platinum Edition),Big Machine,2008,November,0.168,0.843,0.553,0.107,-7.348,0.032,115.997,0.825,43
+535,White Horse,11,Fearless (Platinum Edition),Big Machine,2008,November,0.302,0.585,0.346,0.102,-8.014,0.026,92.564,0.195,42
+536,You Belong With Me,12,Fearless (Platinum Edition),Big Machine,2008,November,0.164,0.687,0.771,0.112,-4.424,0.038,129.964,0.445,57
+537,Breathe,13,Fearless (Platinum Edition),Big Machine,2008,November,0.373,0.498,0.486,0.113,-7.384,0.027,147.952,0.17,38
+538,Tell Me Why,14,Fearless (Platinum Edition),Big Machine,2008,November,0.061,0.601,0.852,0.37,-3.096,0.039,100.015,0.513,40
+539,You're Not Sorry,15,Fearless (Platinum Edition),Big Machine,2008,November,0.13,0.459,0.459,0.113,-4.126,0.028,134.018,0.281,42
+540,The Way I Loved You,16,Fearless (Platinum Edition),Big Machine,2008,November,0.032,0.436,0.712,0.111,-3.689,0.033,160.886,0.379,48
+541,Forever & Always,17,Fearless (Platinum Edition),Big Machine,2008,November,0.091,0.605,0.829,0.106,-4.993,0.055,128.012,0.514,43
+542,The Best Day,18,Fearless (Platinum Edition),Big Machine,2008,November,0.611,0.664,0.447,0.139,-8.535,0.029,126.079,0.364,40
+543,Change,19,Fearless (Platinum Edition),Big Machine,2008,November,0.005,0.548,0.756,0.117,-4.175,0.036,96.038,0.224,40
+544,Fearless,1,Fearless (International Version),Big Machine,2008,November,0.045,0.593,0.705,0.309,-4.43,0.027,100.11,0.472,36
+545,Fifteen,2,Fearless (International Version),Big Machine,2008,November,0.072,0.555,0.648,0.143,-4.419,0.027,95.431,0.207,32
+546,Love Story,3,Fearless (International Version),Big Machine,2008,November,0.019,0.62,0.639,0.206,-5.398,0.028,119.055,0.34,46
+547,Hey Stephen,4,Fearless (International Version),Big Machine,2008,November,0.174,0.843,0.543,0.097,-7.364,0.032,116,0.826,30
+548,White Horse,5,Fearless (International Version),Big Machine,2008,November,0.298,0.587,0.342,0.106,-8.034,0.026,92.71,0.212,33
+549,You Belong With Me,6,Fearless (International Version),Big Machine,2008,November,0.151,0.688,0.775,0.104,-4.436,0.038,129.969,0.469,45
+550,Breathe,7,Fearless (International Version),Big Machine,2008,November,0.389,0.488,0.472,0.125,-7.39,0.028,147.926,0.163,31
+551,Tell Me Why,8,Fearless (International Version),Big Machine,2008,November,0.061,0.606,0.848,0.374,-3.058,0.037,99.999,0.476,27
+552,You're Not Sorry,9,Fearless (International Version),Big Machine,2008,November,0.145,0.471,0.458,0.108,-4.137,0.027,133.96,0.309,28
+553,The Way I Loved You,10,Fearless (International Version),Big Machine,2008,November,0.032,0.434,0.723,0.125,-3.748,0.034,160.872,0.412,31
+554,Forever & Always,11,Fearless (International Version),Big Machine,2008,November,0.079,0.604,0.816,0.164,-5.002,0.054,128,0.55,28
+555,The Best Day,12,Fearless (International Version),Big Machine,2008,November,0.648,0.671,0.44,0.141,-8.561,0.029,126.059,0.368,26
+556,Change,13,Fearless (International Version),Big Machine,2008,November,0.005,0.545,0.747,0.115,-4.231,0.037,96.017,0.214,25
+557,Our Song - International Mix,14,Fearless (International Version),Big Machine,2008,November,0.007,0.516,0.696,0.354,-4.833,0.03,177.936,0.664,31
+558,Teardrops On My Guitar - International Mix,15,Fearless (International Version),Big Machine,2008,November,0.018,0.514,0.557,0.114,-6.307,0.026,99.974,0.152,34
+559,Should've Said No - International Mix,16,Fearless (International Version),Big Machine,2008,November,0.005,0.398,0.761,0.234,-4.382,0.038,168.092,0.454,29
+560,Love Story - Live From Clear Channel Stripped 2008,1,Live From Clear Channel Stripped 2008,Big Machine,2008,June,0.659,0.741,0.444,0.131,-7.031,0.031,119.006,0.512,35
+561,Fearless - Live From Clear Channel Stripped 2008,2,Live From Clear Channel Stripped 2008,Big Machine,2008,June,0.814,0.623,0.266,0.145,-5.894,0.026,96.601,0.467,35
+562,Beautiful Eyes - Live From Clear Channel Stripped 2008,3,Live From Clear Channel Stripped 2008,Big Machine,2008,June,0.596,0.627,0.704,0.06,-3.739,0.027,98.958,0.457,38
+563,Untouchable - Live From Clear Channel Stripped 2008,4,Live From Clear Channel Stripped 2008,Big Machine,2008,June,0.856,0.731,0.184,0.093,-9.235,0.042,102.404,0.331,32
+564,Teardrops On My Guitar - Live From Clear Channel Stripped 2008,5,Live From Clear Channel Stripped 2008,Big Machine,2008,June,0.664,0.344,0.801,0.106,-5.373,0.057,204.489,0.615,30
+565,Picture To Burn - Live From Clear Channel Stripped 2008,6,Live From Clear Channel Stripped 2008,Big Machine,2008,June,0.266,0.647,0.872,0.419,-1.953,0.052,105.798,0.684,30
+566,Should've Said No - Live From Clear Channel Stripped 2008,7,Live From Clear Channel Stripped 2008,Big Machine,2008,June,0.399,0.429,0.808,0.088,-3.004,0.068,171.537,0.438,30
+567,Change - Live From Clear Channel Stripped 2008,8,Live From Clear Channel Stripped 2008,Big Machine,2008,June,0.156,0.243,0.712,0.111,-4.307,0.058,202.319,0.273,28
+568,Tim McGraw,1,Taylor Swift (Deluxe Edition),Big Machine,2006,October,0.575,0.58,0.491,0.121,-6.462,0.025,76.009,0.425,56
+569,Picture To Burn,2,Taylor Swift (Deluxe Edition),Big Machine,2006,October,0.173,0.658,0.877,0.096,-2.098,0.032,105.586,0.821,61
+570,Teardrops On My Guitar - Radio Single Remix,3,Taylor Swift (Deluxe Edition),Big Machine,2006,October,0.288,0.621,0.417,0.119,-6.941,0.023,99.953,0.289,63
+571,A Place in this World,4,Taylor Swift (Deluxe Edition),Big Machine,2006,October,0.051,0.576,0.777,0.32,-2.881,0.032,115.028,0.428,55
+572,Cold As You,5,Taylor Swift (Deluxe Edition),Big Machine,2006,October,0.217,0.418,0.482,0.123,-5.769,0.027,175.558,0.261,55
+573,The Outside,6,Taylor Swift (Deluxe Edition),Big Machine,2006,October,0.005,0.589,0.805,0.24,-4.055,0.029,112.982,0.591,54
+574,Tied Together with a Smile,7,Taylor Swift (Deluxe Edition),Big Machine,2006,October,0.525,0.479,0.578,0.084,-4.963,0.029,146.165,0.192,54
+575,Stay Beautiful,8,Taylor Swift (Deluxe Edition),Big Machine,2006,October,0.087,0.594,0.629,0.137,-4.919,0.025,131.597,0.504,53
+576,Should've Said No,9,Taylor Swift (Deluxe Edition),Big Machine,2006,October,0.01,0.476,0.777,0.196,-3.771,0.029,167.964,0.472,60
+577,Mary's Song (Oh My My My),10,Taylor Swift (Deluxe Edition),Big Machine,2006,October,0.018,0.403,0.627,0.182,-5.28,0.029,74.9,0.374,57
+578,Our Song,11,Taylor Swift (Deluxe Edition),Big Machine,2006,October,0.111,0.668,0.672,0.329,-4.931,0.03,89.011,0.539,64
+579,I'm Only Me When I'm With You,12,Taylor Swift (Deluxe Edition),Big Machine,2006,October,0.005,0.563,0.934,0.103,-3.629,0.065,143.964,0.518,56
+580,Invisible,13,Taylor Swift (Deluxe Edition),Big Machine,2006,October,0.637,0.612,0.394,0.147,-5.723,0.024,96.001,0.233,54
+581,A Perfectly Good Heart,14,Taylor Swift (Deluxe Edition),Big Machine,2006,October,0.003,0.483,0.751,0.128,-5.726,0.036,156.092,0.268,53
+582,Teardrops on My Guitar - Pop Version,15,Taylor Swift (Deluxe Edition),Big Machine,2006,October,0.04,0.459,0.753,0.086,-3.827,0.054,199.997,0.483,55
