@@ -1,0 +1,191 @@
+---
+title: "Taylor Swift Song and Lyric Analysis"
+author: "Dingning Yang"
+date: "2025-02-15"
+format: 
+ html:
+    toc: true
+    toc-depth: 3
+    toc-title: "Table of Contents"
+    number-sections: true
+    highlight-style: github
+    theme: cosmo
+    fontsize: 1.25em
+    linestretch: 1.5
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r}
+#| label: setup
+#| include: false
+# Install required packages
+if(!require(tidyverse)){install.packages("tidyverse")}
+if(!require(ggplot2)){install.packages("ggplot2")}
+if(!require(ggiraph)){install.packages("ggiraph")}
+if(!require(viridis)){install.packages("viridis")}
+if(!require(knitr)){install.packages("knitr")}
+if(!require(kableExtra)){install.packages("kableExtra")}
+if(!require(plotly)){install.packages("plotly")}
+if(!require(wordcloud2)){install.packages("wordcloud2")}
+if(!require(shiny)){install.packages("shiny")}
+
+# List of required packages
+required_packages <- c ("tidyverse", "ggplot2", "ggiraph", "viridis", "knitr", "kableExtra", "plotly", "wordcloud2", "shiny")
+
+# Load required packages
+lapply(required_packages, library, character.only = TRUE)
+set.seed(123)
+
+```
+
+## Spotify Data Analysis
+
+This project first focuses on analyzing Taylor Swift's music using data from her songs' Spotify data. The raw dataset from Kaggle includes different data types such as album name, track name, release date (***categorical***); acousticness, danceability, energy, popularity scores (***numeric***), etc. Data cleaning and transformation were performed before analyzing the data.
+
+```{r}
+#| label: Source cleaned and transformed sourced script
+#| include: false
+
+source("Source/Data Cleaning.R")
+
+```
+
+### Descriptive Analysis
+
+The Spotify dataset contains `r n_distinct (ts.spotify$id)` tracks from `r n_distinct (ts.spotify$album)` albums of Taylor Swift. Specifically, there are `r nrow(ts.spotify[ts.spotify$album_label == "Republic", ])` tracks and `r length(unique(ts.spotify$album[ts.spotify$album_label == "Republic"]))` albums under the Republic record label. Under the Big Machine record label, there are `r nrow(ts.spotify[ts.spotify$album_label == "Big Machine", ])` tracks and `r length(unique(ts.spotify$album[ts.spotify$album_label == "Big Machine"]))` albums. Table 1 summarizes the album release time and average popularity scores of different albums.
+
+```{r}
+#| label: Generate album release time and popularity table
+#| tbl-cap: "Table 1: Album Release Time and Popularity"
+
+album_summary <- ts.spotify %>%
+  mutate(track_number = as.numeric(as.character(track_number))) %>% 
+  group_by(album) %>%
+  summarise(
+    album_label = first(album_label),
+    release_year = first(release_year),
+    release_month = first(release_month),
+    avg_popularity = sum(popularity) / max(track_number),
+    .groups = 'drop'
+  ) %>%
+  arrange(desc(release_year), desc(release_month), desc(avg_popularity))
+  
+# Create the kable table
+album_summary %>%
+  kable(
+    caption = "Album Release Time and Popularity",
+    col.names = c("Album", "Label", "Year", "Month", "Avg. Popularity"),
+    digits = 2,
+    align = c('l', 'l', 'c', 'c', 'r')
+  ) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"),
+                full_width = FALSE) %>%
+  column_spec(1, bold = TRUE) %>%
+  row_spec(0, bold = TRUE)
+
+
+
+
+```
+
+Specifically, `r round(100 * sum(ts.spotify$album_label == "Republic") / nrow(ts.spotify), 1)`% of Taylor Swift's songs are under the Republic record label, while `r round(100 * sum(ts.spotify$album_label == "Big Machine") / nrow(ts.spotify), 1)`% are under the Big Machine record label.
+
+```{r}
+#| label: fig-album-label-percentage
+#| include: true
+
+# Summarize data for album label
+label_data <- ts.spotify %>%
+  group_by(album_label) %>%
+  summarise(count = n(), .groups = 'drop') %>%
+  mutate(percentage = count / sum(count) * 100)  # Calculate percentage
+
+# Create the pie chart
+p <- plot_ly(label_data, 
+              labels = ~album_label, 
+              values = ~count, 
+              type = 'pie', 
+              textinfo = 'label+percent', 
+              hoverinfo = 'text', 
+              text = ~paste(album_label, ": ", count, " (", round(percentage, 1), "%)", sep = ""),
+              marker = list(colors = viridis::viridis(nrow(label_data)))) %>%
+  layout(title = "Percentage of Taylor Swift's Songs by Record Label",
+         showlegend = TRUE,
+         legend = list(orientation = "h", xanchor = "center", x = 0.5, y = -0.2))
+
+# Show the plot
+p
+
+```
+
+
+The dataset also includes music features of each song, which are explained in the following sections:
+
+#### Acousticness
+
+A confidence measure from 0.0 to 1.0 of whether the track is acoustic. Tracks with values close to 0.0 are likely to have minimal acoustic elements and are more likely produced using electronic instruments or heavily synthesized sounds. Tracks with values close to 1.0 are likely to have a strong presence of acoustic elements, such as acoustic guitar, piano, or other non-electronic instruments.
+
+For instance, the lowest acousticness score is 0.000 for ***Style*** and the highest is 0.971 for ***It’s Nice To Have A Friend***.
+
+##### Style
+
+Click the button below to listen to ***Style***: Low Acousticness Score
+
+<audio controls>
+
+<source src="audio/Taylor Swift - Style.mp3" type="audio/mpeg">
+
+Your browser does not support the audio element. </audio>
+
+##### It's Nice To Have A Friend
+
+Click the button below to listen to ***It's Nice To Have A Friend***: High Acousticness Score
+
+<audio controls>
+
+<source src="audio/Taylor Swift - It's Nice To Have A Friend.mp3" type="audio/mpeg">
+
+Your browser does not support the audio element. </audio>
+
+##### Summary
+
+Specifically, the average acousticness score of Taylor Swift's songs is `r round(mean(ts.spotify$acousticness), 2)`(*SD* = `r round(sd(ts.spotify$acousticness, na.rm = TRUE), 1)`).
+
+#### Danceability
+
+Danceability describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity. A value of 0.0 is least danceable and 1.0 is most danceable.
+
+For instance, the lowest danceability score is 0.175 for ***epiphany*** and the highest is 0.897 for ***I Think He Knows***.
+
+##### epiphany
+
+Click the button below to listen to ***epiphany***: Low Danceability Score
+
+<audio controls>
+
+<source src="audio/Taylor Swift - epiphany.mp3" type="audio/mpeg">
+
+Your browser does not support the audio element. </audio>
+
+##### I Think He Knows
+
+Click the button below to listen to ***I Think He Knows***: High Danceability Score
+
+<audio controls>
+
+<source src="audio/Taylor Swift - I Think He Knows.mp3" type="audio/mpeg">
+
+Your browser does not support the audio element. </audio>
+
+#### Energy
+
+Energy is a measure from 0.0 to 1.0 and represents a perceptual measure of intensity and activity. Typically, energetic tracks feel fast, loud, and noisy.
+
+For instance, the lowest energy score is 0.000 for ***Soon You'll Get Better*** and the highest is 0.964 for ***I Think He Knows***.
+
+## Running Code
+
+www
