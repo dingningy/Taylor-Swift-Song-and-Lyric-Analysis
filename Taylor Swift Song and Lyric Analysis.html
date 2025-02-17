@@ -1,0 +1,1535 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Dingning Yang">
+<meta name="dcterms.date" content="2025-02-15">
+
+<title>Taylor Swift Song and Lyric Analysis</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="Taylor Swift Song and Lyric Analysis_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Taylor Swift Song and Lyric Analysis_files/libs/quarto-html/quarto.js"></script>
+<script src="Taylor Swift Song and Lyric Analysis_files/libs/quarto-html/popper.min.js"></script>
+<script src="Taylor Swift Song and Lyric Analysis_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Taylor Swift Song and Lyric Analysis_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Taylor Swift Song and Lyric Analysis_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Taylor Swift Song and Lyric Analysis_files/libs/quarto-html/quarto-syntax-highlighting-86daaaaad7353f9cc0c554efc1dd6d94.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Taylor Swift Song and Lyric Analysis_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Taylor Swift Song and Lyric Analysis_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Taylor Swift Song and Lyric Analysis_files/libs/bootstrap/bootstrap-cd25279cb57f4dfcefa9ef6583669dca.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="Taylor Swift Song and Lyric Analysis_files/libs/kePrint-0.0.1/kePrint.js"></script>
+
+<link href="Taylor Swift Song and Lyric Analysis_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
+<link href="Taylor Swift Song and Lyric Analysis_files/libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+
+<script src="Taylor Swift Song and Lyric Analysis_files/libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+
+<script src="Taylor Swift Song and Lyric Analysis_files/libs/plotly-binding-4.10.4/plotly.js"></script>
+
+<script src="Taylor Swift Song and Lyric Analysis_files/libs/typedarray-0.1/typedarray.min.js"></script>
+
+<script src="Taylor Swift Song and Lyric Analysis_files/libs/jquery-3.5.1/jquery.min.js"></script>
+
+<link href="Taylor Swift Song and Lyric Analysis_files/libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
+
+<script src="Taylor Swift Song and Lyric Analysis_files/libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+
+<link href="Taylor Swift Song and Lyric Analysis_files/libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet">
+
+<script src="Taylor Swift Song and Lyric Analysis_files/libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of Contents</h2>
+   
+  <ul>
+  <li><a href="#spotify-data-analysis---taylor-as-a-brand" id="toc-spotify-data-analysis---taylor-as-a-brand" class="nav-link active" data-scroll-target="#spotify-data-analysis---taylor-as-a-brand"><span class="header-section-number">1</span> Spotify Data Analysis - Taylor As A Brand</a>
+  <ul class="collapse">
+  <li><a href="#descriptive-analysis" id="toc-descriptive-analysis" class="nav-link" data-scroll-target="#descriptive-analysis"><span class="header-section-number">1.1</span> Descriptive Analysis</a></li>
+  <li><a href="#popularity-score-predictors" id="toc-popularity-score-predictors" class="nav-link" data-scroll-target="#popularity-score-predictors"><span class="header-section-number">1.2</span> Popularity Score Predictors</a></li>
+  </ul></li>
+  <li><a href="#sentiment-analysis-of-lyrics---taylor-as-a-person" id="toc-sentiment-analysis-of-lyrics---taylor-as-a-person" class="nav-link" data-scroll-target="#sentiment-analysis-of-lyrics---taylor-as-a-person"><span class="header-section-number">2</span> Sentiment Analysis of Lyrics - Taylor As A Person</a>
+  <ul class="collapse">
+  <li><a href="#the-miserable-track-5" id="toc-the-miserable-track-5" class="nav-link" data-scroll-target="#the-miserable-track-5"><span class="header-section-number">2.1</span> The Miserable Track 5</a></li>
+  <li><a href="#sentiment-analysis-of-lyrics" id="toc-sentiment-analysis-of-lyrics" class="nav-link" data-scroll-target="#sentiment-analysis-of-lyrics"><span class="header-section-number">2.2</span> Sentiment Analysis of Lyrics</a></li>
+  <li><a href="#easter-eggs-can-wordclouds-reveal-taylors-secrets" id="toc-easter-eggs-can-wordclouds-reveal-taylors-secrets" class="nav-link" data-scroll-target="#easter-eggs-can-wordclouds-reveal-taylors-secrets"><span class="header-section-number">2.3</span> Easter Eggs: Can Wordclouds Reveal Taylor’s Secrets?</a></li>
+  </ul></li>
+  <li><a href="#ending" id="toc-ending" class="nav-link" data-scroll-target="#ending"><span class="header-section-number">3</span> Ending</a></li>
+  </ul>
+</nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Taylor Swift Song and Lyric Analysis</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Dingning Yang </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 15, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="spotify-data-analysis---taylor-as-a-brand" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="spotify-data-analysis---taylor-as-a-brand"><span class="header-section-number">1</span> Spotify Data Analysis - Taylor As A Brand</h2>
+<p>This project first focuses on analyzing Taylor Swift’s music using data from her songs’ Spotify data. The raw dataset from Kaggle includes different data types such as album name, track name, release date (<strong><em>categorical</em></strong>); acousticness, danceability, energy, popularity scores (<strong><em>numeric</em></strong>), etc. Data cleaning and transformation were performed before analyzing the data.</p>
+<section id="descriptive-analysis" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="descriptive-analysis"><span class="header-section-number">1.1</span> Descriptive Analysis</h3>
+<p>The Spotify dataset contains 582 tracks from 29 albums of Taylor Swift. Specifically, there are 341 tracks and 16 albums under the Republic record label. Under the Big Machine record label, there are 241 tracks and 13 albums. Table 1 summarizes the album release time and average popularity scores of different albums.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-striped table-hover table-condensed caption-top table-sm small" data-quarto-postprocess="true">
+<caption>Table 1: Album Release Time and Popularity</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: left; font-weight: bold;">Album</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; font-weight: bold;">Label</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; font-weight: bold;">Year</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; font-weight: bold;">Month</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; font-weight: bold;">Avg. Popularity</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">THE TORTURED POETS DEPARTMENT: THE ANTHOLOGY</td>
+<td style="text-align: left;">Republic</td>
+<td style="text-align: center;">2024</td>
+<td style="text-align: center;">April</td>
+<td style="text-align: right;">78.77</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">THE TORTURED POETS DEPARTMENT</td>
+<td style="text-align: left;">Republic</td>
+<td style="text-align: center;">2024</td>
+<td style="text-align: center;">April</td>
+<td style="text-align: right;">77.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">Speak Now (Taylor's Version)</td>
+<td style="text-align: left;">Republic</td>
+<td style="text-align: center;">2023</td>
+<td style="text-align: center;">July</td>
+<td style="text-align: right;">69.45</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">Midnights (The Til Dawn Edition)</td>
+<td style="text-align: left;">Republic</td>
+<td style="text-align: center;">2023</td>
+<td style="text-align: center;">May</td>
+<td style="text-align: right;">62.43</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">1989 (Taylor's Version)</td>
+<td style="text-align: left;">Republic</td>
+<td style="text-align: center;">2023</td>
+<td style="text-align: center;">October</td>
+<td style="text-align: right;">72.19</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">1989 (Taylor's Version) [Deluxe]</td>
+<td style="text-align: left;">Republic</td>
+<td style="text-align: center;">2023</td>
+<td style="text-align: center;">October</td>
+<td style="text-align: right;">63.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">Midnights</td>
+<td style="text-align: left;">Republic</td>
+<td style="text-align: center;">2022</td>
+<td style="text-align: center;">October</td>
+<td style="text-align: right;">74.15</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">Midnights (3am Edition)</td>
+<td style="text-align: left;">Republic</td>
+<td style="text-align: center;">2022</td>
+<td style="text-align: center;">October</td>
+<td style="text-align: right;">62.85</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">Fearless (Taylor's Version)</td>
+<td style="text-align: left;">Republic</td>
+<td style="text-align: center;">2021</td>
+<td style="text-align: center;">April</td>
+<td style="text-align: right;">65.27</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">Red (Taylor's Version)</td>
+<td style="text-align: left;">Republic</td>
+<td style="text-align: center;">2021</td>
+<td style="text-align: center;">November</td>
+<td style="text-align: right;">67.23</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">evermore (deluxe version)</td>
+<td style="text-align: left;">Republic</td>
+<td style="text-align: center;">2021</td>
+<td style="text-align: center;">January</td>
+<td style="text-align: right;">64.24</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">folklore (deluxe version)</td>
+<td style="text-align: left;">Republic</td>
+<td style="text-align: center;">2020</td>
+<td style="text-align: center;">August</td>
+<td style="text-align: right;">65.94</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">folklore</td>
+<td style="text-align: left;">Republic</td>
+<td style="text-align: center;">2020</td>
+<td style="text-align: center;">July</td>
+<td style="text-align: right;">72.81</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">evermore</td>
+<td style="text-align: left;">Republic</td>
+<td style="text-align: center;">2020</td>
+<td style="text-align: center;">December</td>
+<td style="text-align: right;">66.40</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition]</td>
+<td style="text-align: left;">Republic</td>
+<td style="text-align: center;">2020</td>
+<td style="text-align: center;">November</td>
+<td style="text-align: right;">98.12</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">Lover</td>
+<td style="text-align: left;">Republic</td>
+<td style="text-align: center;">2019</td>
+<td style="text-align: center;">August</td>
+<td style="text-align: right;">75.94</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">reputation</td>
+<td style="text-align: left;">Big Machine</td>
+<td style="text-align: center;">2017</td>
+<td style="text-align: center;">November</td>
+<td style="text-align: right;">75.73</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">reputation Stadium Tour Surprise Song Playlist</td>
+<td style="text-align: left;">Big Machine</td>
+<td style="text-align: center;">2017</td>
+<td style="text-align: center;">November</td>
+<td style="text-align: right;">31.59</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">1989</td>
+<td style="text-align: left;">Big Machine</td>
+<td style="text-align: center;">2014</td>
+<td style="text-align: center;">January</td>
+<td style="text-align: right;">52.69</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">1989 (Deluxe)</td>
+<td style="text-align: left;">Big Machine</td>
+<td style="text-align: center;">2014</td>
+<td style="text-align: center;">January</td>
+<td style="text-align: right;">49.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">Red</td>
+<td style="text-align: left;">Big Machine</td>
+<td style="text-align: center;">2012</td>
+<td style="text-align: center;">October</td>
+<td style="text-align: right;">45.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">Red (Deluxe Edition)</td>
+<td style="text-align: left;">Big Machine</td>
+<td style="text-align: center;">2012</td>
+<td style="text-align: center;">October</td>
+<td style="text-align: right;">44.95</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">Speak Now</td>
+<td style="text-align: left;">Big Machine</td>
+<td style="text-align: center;">2010</td>
+<td style="text-align: center;">October</td>
+<td style="text-align: right;">50.71</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">Speak Now World Tour Live</td>
+<td style="text-align: left;">Big Machine</td>
+<td style="text-align: center;">2010</td>
+<td style="text-align: center;">October</td>
+<td style="text-align: right;">41.31</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">Speak Now (Deluxe Package)</td>
+<td style="text-align: left;">Big Machine</td>
+<td style="text-align: center;">2010</td>
+<td style="text-align: center;">January</td>
+<td style="text-align: right;">48.36</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">Live From Clear Channel Stripped 2008</td>
+<td style="text-align: left;">Big Machine</td>
+<td style="text-align: center;">2008</td>
+<td style="text-align: center;">June</td>
+<td style="text-align: right;">32.25</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">Fearless (Platinum Edition)</td>
+<td style="text-align: left;">Big Machine</td>
+<td style="text-align: center;">2008</td>
+<td style="text-align: center;">November</td>
+<td style="text-align: right;">43.16</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">Fearless (International Version)</td>
+<td style="text-align: left;">Big Machine</td>
+<td style="text-align: center;">2008</td>
+<td style="text-align: center;">November</td>
+<td style="text-align: right;">32.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">Taylor Swift (Deluxe Edition)</td>
+<td style="text-align: left;">Big Machine</td>
+<td style="text-align: center;">2006</td>
+<td style="text-align: center;">October</td>
+<td style="text-align: right;">56.67</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+<p>Specifically, 58.6% of Taylor Swift’s songs are under the Republic record label, while 41.4% are under the Big Machine record label.</p>
+<div class="cell">
+<div id="fig-album-label-percentage" class="cell-output-display quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-album-label-percentage-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-9eceb20dc2a931752ae4" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-9eceb20dc2a931752ae4">{"x":{"visdat":{"57a43e5c619":["function () ","plotlyVisDat"]},"cur_data":"57a43e5c619","attrs":{"57a43e5c619":{"labels":{},"values":{},"textinfo":"label+percent","hoverinfo":"text","text":{},"marker":{"colors":["#440154FF","#FDE725FF"]},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"pie"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":"Percentage of Taylor Swift's Songs by Record Label","showlegend":true,"legend":{"orientation":"h","xanchor":"center","x":0.5,"y":-0.20000000000000001},"hovermode":"closest"},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"labels":["Big Machine","Republic"],"values":[241,341],"textinfo":"label+percent","hoverinfo":["text","text"],"text":["Big Machine: 241 (41.4%)","Republic: 341 (58.6%)"],"marker":{"color":"rgba(31,119,180,1)","colors":["#440154FF","#FDE725FF"],"line":{"color":"rgba(255,255,255,1)"}},"type":"pie","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-album-label-percentage-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Percentage of Taylor Swift’s Songs by Record Label
+</figcaption>
+</figure>
+</div>
+</div>
+<p>The dataset also includes music features of each song, which are explained in the following sections:</p>
+<section id="acousticness" class="level4" data-number="1.1.1">
+<h4 data-number="1.1.1" class="anchored" data-anchor-id="acousticness"><span class="header-section-number">1.1.1</span> Acousticness</h4>
+<p>A confidence measure from 0.0 to 1.0 of whether the track is acoustic. Tracks with values close to 0.0 are likely to have minimal acoustic elements and are more likely produced using electronic instruments or heavily synthesized sounds. Tracks with values close to 1.0 are likely to have a strong presence of acoustic elements, such as acoustic guitar, piano, or other non-electronic instruments.</p>
+<p>For instance, the lowest acousticness score is 0.000 for <strong><em>Style</em></strong> and the highest is 0.971 for <strong><em>It’s Nice To Have A Friend</em></strong>.</p>
+<section id="style" class="level5" data-number="1.1.1.1">
+<h5 data-number="1.1.1.1" class="anchored" data-anchor-id="style"><span class="header-section-number">1.1.1.1</span> Style</h5>
+<p>Click the button below to listen to <strong><em>Style</em></strong>: Low Acousticness Score</p>
+<audio controls="">
+<source src="audio/Taylor Swift - Style.mp3" type="audio/mpeg">
+<p>Your browser does not support the audio element. </p>
+</audio></section>
+<section id="its-nice-to-have-a-friend" class="level5" data-number="1.1.1.2">
+<h5 data-number="1.1.1.2" class="anchored" data-anchor-id="its-nice-to-have-a-friend"><span class="header-section-number">1.1.1.2</span> It’s Nice To Have A Friend</h5>
+<p>Click the button below to listen to <strong><em>It’s Nice To Have A Friend</em></strong>: High Acousticness Score</p>
+<audio controls="">
+<source src="audio/Taylor Swift - It's Nice To Have A Friend.mp3" type="audio/mpeg">
+<p>Your browser does not support the audio element. </p>
+</audio></section>
+<section id="summary" class="level5" data-number="1.1.1.3">
+<h5 data-number="1.1.1.3" class="anchored" data-anchor-id="summary"><span class="header-section-number">1.1.1.3</span> Summary</h5>
+<p>Specifically, the average acousticness score of Taylor Swift’s songs is 0.33(<em>SD</em> = 0.3).</p>
+</section>
+</section>
+<section id="danceability" class="level4" data-number="1.1.2">
+<h4 data-number="1.1.2" class="anchored" data-anchor-id="danceability"><span class="header-section-number">1.1.2</span> Danceability</h4>
+<p>Danceability describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity. A value of 0.0 is least danceable and 1.0 is most danceable.</p>
+<p>For instance, the lowest danceability score is 0.175 for <strong><em>epiphany</em></strong> and the highest is 0.897 for <strong><em>I Think He Knows</em></strong>.</p>
+<section id="epiphany" class="level5" data-number="1.1.2.1">
+<h5 data-number="1.1.2.1" class="anchored" data-anchor-id="epiphany"><span class="header-section-number">1.1.2.1</span> epiphany</h5>
+<p>Click the button below to listen to <strong><em>epiphany</em></strong>: Low Danceability Score</p>
+<audio controls="">
+<source src="audio/Taylor Swift - epiphany.mp3" type="audio/mpeg">
+<p>Your browser does not support the audio element. </p>
+</audio></section>
+<section id="i-think-he-knows" class="level5" data-number="1.1.2.2">
+<h5 data-number="1.1.2.2" class="anchored" data-anchor-id="i-think-he-knows"><span class="header-section-number">1.1.2.2</span> I Think He Knows</h5>
+<p>Click the button below to listen to <strong><em>I Think He Knows</em></strong>: High Danceability Score</p>
+<audio controls="">
+<source src="audio/Taylor Swift - I Think He Knows.mp3" type="audio/mpeg">
+<p>Your browser does not support the audio element. </p>
+</audio></section>
+<section id="summary-1" class="level5" data-number="1.1.2.3">
+<h5 data-number="1.1.2.3" class="anchored" data-anchor-id="summary-1"><span class="header-section-number">1.1.2.3</span> Summary</h5>
+<p>Specifically, the average danceability score of Taylor Swift’s songs is 0.58(<em>SD</em> = 0.1).</p>
+</section>
+</section>
+<section id="energy" class="level4" data-number="1.1.3">
+<h4 data-number="1.1.3" class="anchored" data-anchor-id="energy"><span class="header-section-number">1.1.3</span> Energy</h4>
+<p>Energy is a measure from 0.0 to 1.0 and represents a perceptual measure of intensity and activity. Typically, energetic tracks feel fast, loud, and noisy.</p>
+<p>For instance, the lowest energy score is 0.118 for <strong><em>State Of Grace - Acoustic</em></strong> and the highest is 0.948 for <strong><em>Haunted</em></strong>.</p>
+<section id="state-of-grace---acoustic" class="level5" data-number="1.1.3.1">
+<h5 data-number="1.1.3.1" class="anchored" data-anchor-id="state-of-grace---acoustic"><span class="header-section-number">1.1.3.1</span> State Of Grace - Acoustic</h5>
+<p>Click the button below to listen to <strong><em>State Of Grace - Acoustic</em></strong>: Low Energy Score</p>
+<audio controls="">
+<source src="audio/Taylor Swift - State Of Grace (Acoustic Version) (Taylor's Version).mp3" type="audio/mpeg">
+<p>Your browser does not support the audio element. </p>
+</audio></section>
+<section id="haunted" class="level5" data-number="1.1.3.2">
+<h5 data-number="1.1.3.2" class="anchored" data-anchor-id="haunted"><span class="header-section-number">1.1.3.2</span> Haunted</h5>
+<p>Click the button below to listen to <strong><em>Haunted</em></strong>: High Energy Score</p>
+<audio controls="">
+<source src="audio/Taylor Swift - Haunted.mp3" type="audio/mpeg">
+<p>Your browser does not support the audio element. </p>
+</audio></section>
+<section id="summary-2" class="level5" data-number="1.1.3.3">
+<h5 data-number="1.1.3.3" class="anchored" data-anchor-id="summary-2"><span class="header-section-number">1.1.3.3</span> Summary</h5>
+<p>Specifically, the average energy score of Taylor Swift’s songs is 0.57(<em>SD</em> = 0.2).</p>
+</section>
+</section>
+<section id="liveness" class="level4" data-number="1.1.4">
+<h4 data-number="1.1.4" class="anchored" data-anchor-id="liveness"><span class="header-section-number">1.1.4</span> Liveness</h4>
+<p>Liveness detects the presence of an audience in the recording. Higher liveness values represent an increased probability that the track was performed live. A value above 0.8 provides strong likelihood that the track is live.</p>
+<p>For instance, the lowest liveness score is 0.034 for <strong><em>I Knew You Were Trouble</em></strong> and the highest is 0.931 for <strong><em>Better Than Revenge - Live/2011</em></strong>.</p>
+<section id="i-knew-you-were-trouble" class="level5" data-number="1.1.4.1">
+<h5 data-number="1.1.4.1" class="anchored" data-anchor-id="i-knew-you-were-trouble"><span class="header-section-number">1.1.4.1</span> I Knew You Were Trouble</h5>
+<p>Click the button below to listen to <strong><em>I Knew You Were Trouble</em></strong>: Low Liveness Score</p>
+<audio controls="">
+<source src="audio/Taylor Swift - I Knew You Were Trouble (Taylor's Version).mp3" type="audio/mpeg">
+</audio></section>
+<section id="better-than-revenge---live2011" class="level5" data-number="1.1.4.2">
+<h5 data-number="1.1.4.2" class="anchored" data-anchor-id="better-than-revenge---live2011"><span class="header-section-number">1.1.4.2</span> Better Than Revenge - Live/2011</h5>
+<p>Click the button below to listen to <strong><em>Better Than Revenge - Live/2011</em></strong>: High Liveness Score</p>
+<audio controls="">
+<source src="audio/Taylor Swift - Better Than Revenge (Live2011).mp3" type="audio/mpeg">
+</audio></section>
+<section id="summary-3" class="level5" data-number="1.1.4.3">
+<h5 data-number="1.1.4.3" class="anchored" data-anchor-id="summary-3"><span class="header-section-number">1.1.4.3</span> Summary</h5>
+<p>Specifically, the average liveness score of Taylor Swift’s songs is 0.16(<em>SD</em> = 0.1). It is notable that most albums have a liveness score close to 0, indicating that the majority of the songs are studio albums rather than live recordings. Nevertheless, it is possible that the same song may have different versions, such as live versions, acoustic versions, or remixes, which may have higher liveness scores. For instance, <strong><em>I Knew You Were Trouble</em></strong> has multiple live versions. Here is an example from reputation Stadium tour (Oct 19, 2018):</p>
+<video width="320" height="240" controls="">
+<source src="audio/IKYWT live2018.mp4" type="video/mp4">
+<p>Your browser does not support the video tag. </p>
+</video></section>
+</section>
+<section id="valence" class="level4" data-number="1.1.5">
+<h4 data-number="1.1.5" class="anchored" data-anchor-id="valence"><span class="header-section-number">1.1.5</span> Valence</h4>
+<p>A measure from 0.0 to 1.0 describing the musical positiveness conveyed by a track. Tracks with high valence sound more positive (e.g.&nbsp;happy, cheerful, euphoric), while tracks with low valence sound more negative (e.g.&nbsp;sad, depressed, angry).</p>
+<p>For instance, the lowest valence score is 0.153 for <strong><em>Maroon</em></strong> and the highest is 0.943 for <strong><em>Shake It Off</em></strong>.</p>
+<section id="maroon" class="level5" data-number="1.1.5.1">
+<h5 data-number="1.1.5.1" class="anchored" data-anchor-id="maroon"><span class="header-section-number">1.1.5.1</span> Maroon</h5>
+<p>Click the button below to listen to <strong><em>Maroon</em></strong>: Low Valence Score</p>
+<audio controls="">
+<source src="audio/Taylor Swift - Maroon.mp3" type="audio/mpeg">
+</audio></section>
+<section id="shake-it-off" class="level5" data-number="1.1.5.2">
+<h5 data-number="1.1.5.2" class="anchored" data-anchor-id="shake-it-off"><span class="header-section-number">1.1.5.2</span> Shake It Off</h5>
+<p>Click the button below to listen to <strong><em>Shake It Off</em></strong>: High Valence Score</p>
+<audio controls="">
+<source src="audio/Taylor Swift - Shake It Off.mp3" type="audio/mpeg">
+</audio></section>
+<section id="summary-4" class="level5" data-number="1.1.5.3">
+<h5 data-number="1.1.5.3" class="anchored" data-anchor-id="summary-4"><span class="header-section-number">1.1.5.3</span> Summary</h5>
+<p>Specifically, the average valence score of Taylor Swift’s songs is 0.39(<em>SD</em> = 0.2). This indicates that her songs are slightly skewed towards negative emotions.</p>
+<p>It is reasonable to conclude that the song <strong><em>Maroon</em></strong> has a low valence score based on the the lyrics and the muse of the song. Specifically, the lyrics are proven to be related to several plots in a book called “<em>The Seven Husbands of Evelyn Hugo</em>” by Taylor Jenkins Reid. The novel follows Evelyn rose from poverty to become a major star in the 1950s-60s, navigating the complicated world of Hollywood while hiding her true identity as a bisexual Cuban woman by seven marriages. “<em>The rust that grew between telephone</em>” is a metaphor for the distance between Evelyn and Celia when they experienced public love blackouts, and the “maroon” color is a symbol of both the joy they shared together (drinking wine) and pain that Evelyn has experienced. The book is claimed to be paralleled with Taylor Swift’s life about her beard romantic relationships and love blackout with the New York muse Karlie Kloss. Karlie Kloss confirmed her identity as the <strong><em>Maroon</em></strong> muse by wearing the “Cheap Ass Rosé” bracelet to the Eras tour on Aug 9, 2023 in Los Angeles, which resembles the “roommate muse” in <strong><em>Maroon</em></strong>.</p>
+<p>It is also easy to tell <strong><em>Shake It Off</em></strong> is a positive song if you listen to it!</p>
+<p><strong><em>Note</em></strong>: Loudness is not discussed here since all values are negative. Speechiness is not discussed here since all values are close to zero. Tempo is not considered in the popularity score prediction since it is unrelated.</p>
+</section>
+</section>
+</section>
+<section id="popularity-score-predictors" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="popularity-score-predictors"><span class="header-section-number">1.2</span> Popularity Score Predictors</h3>
+<section id="record-labels" class="level4" data-number="1.2.1">
+<h4 data-number="1.2.1" class="anchored" data-anchor-id="record-labels"><span class="header-section-number">1.2.1</span> Record Labels</h4>
+<p>Taylor Swift left Big Machine Records, her original label since age 15, and signed with Universal Music Group’s Republic Records in November 2018. This move came after her contract with Big Machine expired. Taylor wanted to own her master recordings, which Big Machine wouldn’t allow. After leaving, Big Machine sold her back catalog to Scooter Braun’s company, leading to a public dispute. Unable to buy back her masters, Taylor began re-recording her first six albums (i.e., Taylor’s Version) to regain control of her work. This section presents the popularity scores of Taylor Swift’s songs under different record labels, aiming to see if her control over her work affects the popularity of her songs.</p>
+<p>One-way ANOVA results indicated significant differences were found between record labels’ impacts on popularity scores (Figure 2). Specifically, songs under the Big Machine label showed lower popularity scores than under the Republic label (<span class="math inline">\(M_{\text{Big Machine}} = 44.77\)</span> vs.&nbsp;<span class="math inline">\(M_{\text{Republic}} = 67.11\)</span>; <em>F</em>(1, 580) = 503.98; <em>p</em> &lt; 0.001, η² = 0.465). It indicates that approximately 46.5% of the variance in popularity scores can be explained by the difference in record labels (Big Machine vs.&nbsp;Republic), suggesting that Taylor Swift’s control over her work has a significant impact on the popularity of her songs. The ownership not only allows her to re-record her songs but also to control the distribution and promotion of her music, which may contribute to the higher popularity scores under the Republic label. It is notable that the re-record versions are generally promoted by fans as a way to support Taylor Swift’s ownership of her work. This also reflects Taylor’s determination to regain control of her work and the revolutionary impact of her move on the music industry.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-popularity-by-label" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-popularity-by-label-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Taylor-Swift-Song-and-Lyric-Analysis_files/figure-html/fig-popularity-by-label-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-popularity-by-label-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Popularity Scores by Record Label
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="music-features" class="level4" data-number="1.2.2">
+<h4 data-number="1.2.2" class="anchored" data-anchor-id="music-features"><span class="header-section-number">1.2.2</span> Music Features</h4>
+<p>This section aims to observe how different music features contribute to song popularity and predict the popularity scores of Taylor Swift’s songs using different music features. Specifically, the following features are considered: acousticness, danceability, energy, liveness, and valence.</p>
+<section id="history-data-descriptive-regression" class="level5" data-number="1.2.2.1">
+<h5 data-number="1.2.2.1" class="anchored" data-anchor-id="history-data-descriptive-regression"><span class="header-section-number">1.2.2.1</span> History data: Descriptive Regression</h5>
+<p>This section presents the linear regression based on Spotify history data, focusing on existing dataset to describe the correlations between popularity scores and music features.</p>
+<p>The multiple linear regression analysis revealed that 2 out of 5 predictors were significantly associated with popularity scores (<em>F</em>(5, 576) = 6.18, <em>p</em> &lt; .001, <em>R</em>² = 0.051). Specifically, liveness (β = -21.67, <em>p</em> &lt; .001) and valence (β = -9.39, <em>p</em> = 0.029) were significantly associated with popularity, while acousticness (β = 3.99, <em>p</em> = 0.196), danceability (β = 5.02, <em>p</em> = 0.434), and energy (β = 2.42, <em>p</em> = 0.684) were not significant predictors. The model explained approximately 5% of the variance in popularity scores, indicating a relatively small effect size. The results suggest that liveness and valence are more likely to influence the popularity of Taylor Swift’s songs than acousticness, danceability, and energy.</p>
+<p>The multiple linear regression model can be expressed as:</p>
+<p><span class="math display">\[
+\text{Popularity} = \beta_0 + \beta_1(\text{Acousticness}) + \beta_2(\text{Danceability}) + \beta_3(\text{Energy}) + \beta_4(\text{Liveness}) + \beta_5(\text{Valence}) + \epsilon
+\]</span></p>
+<p>Where:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\beta_0 &amp;= 59.4 \text{ (Intercept)} \\
+\beta_1 &amp;= 3.99 \\
+\beta_2 &amp;= 5.02 \\
+\beta_3 &amp;= 2.42 \\
+\beta_4 &amp;= -21.67 \\
+\beta_5 &amp;= -9.39 \\
+\epsilon &amp;= \text{Error term}
+\end{aligned}
+\]</span></p>
+<p>Figure 3 illustrates the relationship between popularity scores and music features based on the multiple linear regression model. Specifically, liveness and valence are negatively associated with popularity scores. The negative relationship between liveness and popularity scores suggests that songs with a higher probability of being live recordings are less popular. It is reasonable since most albums are studio albums rather than live recordings. Another reason is that most live recordings are under the Big Machine label, which has lower popularity scores.</p>
+<p>The negative relationship between valence and popularity scores indicates that songs with more negative emotions are more popular. This is consistent with the previous analysis, which showed that Taylor Swift’s songs are slightly skewed towards negative emotions. As a 16-year Swiftie (Gaylor), I can better emotionally resonate with Taylor’s songs related to her personal life, which often involves negative emotions. Many lyrics can reflect my own experiences and challenges in life, making me feel understood and less alone. This emotional connection may contribute to the popularity of songs with negative emotions. It is not necessarily the case that negative emotions are more popular, but rather that they are more relatable and emotionally impactful. All in all, we have to experience complicated emotions to feel alive.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-feature-popularity-regression-history" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-feature-popularity-regression-history-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Taylor-Swift-Song-and-Lyric-Analysis_files/figure-html/fig-feature-popularity-regression-history-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-feature-popularity-regression-history-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Multiple Linear Regression Model for Popularity Scores (History Data)
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="predictive-analysis" class="level5" data-number="1.2.2.2">
+<h5 data-number="1.2.2.2" class="anchored" data-anchor-id="predictive-analysis"><span class="header-section-number">1.2.2.2</span> Predictive Analysis</h5>
+<p>This section aims to predict the popularity scores of Taylor Swift’s songs using different music features. Specifically, the dataset is split into training and testing sets, and a linear regression model is built using the training set. The model is then evaluated using the testing set, and the feature importance is visualized.</p>
+<p>The multiple linear regression analysis revealed that 2 out of 5 predictors were significantly associated with popularity scores (<em>F</em>(5, 461) = 5.87, <em>p</em> &lt; .001, <em>R</em>² = 0.06). Specifically, liveness (β = -22.2, <em>p</em> &lt; .001) and valence (β = -11.16, <em>p</em> = 0.024) were significantly associated with popularity, while acousticness (β = 3.95, <em>p</em> = 0.253), danceability (β = 8.28, <em>p</em> = 0.264), and energy (β = 2.56, <em>p</em> = 0.701) were not significant predictors. The model explained 6% of the variance in popularity scores. The visualization will be almost the same with the descriptive regression in the previous section.</p>
+<p>The multiple linear regression model can be expressed as:</p>
+<p><span class="math display">\[
+\text{Popularity} = \beta_0 + \beta_1(\text{Acousticness}) + \beta_2(\text{Danceability}) + \beta_3(\text{Energy}) + \beta_4(\text{Liveness}) + \beta_5(\text{Valence}) + \epsilon
+\]</span></p>
+<p>Where:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\beta_0 &amp;= 58.18 \text{ (Intercept)} \\
+\beta_1 &amp;= 3.95 \\
+\beta_2 &amp;= 8.28 \\
+\beta_3 &amp;= 2.56 \\
+\beta_4 &amp;= -22.2 \\
+\beta_5 &amp;= -11.16 \\
+\epsilon &amp;= \text{Error term}
+\end{aligned}
+\]</span></p>
+</section>
+</section>
+</section>
+</section>
+<section id="sentiment-analysis-of-lyrics---taylor-as-a-person" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="sentiment-analysis-of-lyrics---taylor-as-a-person"><span class="header-section-number">2</span> Sentiment Analysis of Lyrics - Taylor As A Person</h2>
+<p>The second part of this project focuses on analyzing Taylor Swift’s lyrics using sentiment analysis. The Spotify dataset provides measurement of Taylor’s music in the industry by popularity scores, but it does not capture the essence of her music and the emotions she conveys through her lyrics. When we dive deep into Taylor’s narratives, we can better understand her as a person and resonate with her work.</p>
+<p><strong><em>“Let me say it again, louder for those in the back…We think we know someone, but the truth is that we only know the version of them that they have chosen to show us.”</em></strong></p>
+<p>——Reputation [Prologue] by Taylor Swift</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Image/Fig%2004_Reputation%20Prologue.jpg" class="img-fluid figure-img"></p>
+<figcaption>Reputation Prologue</figcaption>
+</figure>
+</div>
+<p>The Reputation prologue is one of my favorite quotes from Taylor Swift. It reflects the complexity of human nature and the different versions of ourselves we present to the world. Taylor Swift is known for her storytelling and emotional depth in her lyrics, which often reflect her personal experiences and emotions. Nevertheless, it is essential to recognize that different people may interpret her lyrics differently based on their own experiences, values, and perspectives. This section aims to analyze Taylor’s lyrics combining her personal life changes to better understand her as a person.</p>
+<section id="the-miserable-track-5" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="the-miserable-track-5"><span class="header-section-number">2.1</span> The Miserable Track 5</h3>
+<p>According to Taylor, the fifth track is usually her most emotional, vulnerable, and raw track on the album. A Reddit user named u/LaraEligia once described the track 5 as “<strong><em>the track that punches you in the face calls you names kicks you in the stomach punctures your spleen with a kitchen knife and leaves you bleeding to death</em></strong>”.</p>
+<section id="track-5-and-valence-score-table" class="level4" data-number="2.1.1">
+<h4 data-number="2.1.1" class="anchored" data-anchor-id="track-5-and-valence-score-table"><span class="header-section-number">2.1.1</span> Track 5 and Valence Score Table</h4>
+<p>The table below shows the track 5 of each album and the corresponding valence score. It is true that most track 5s have a low valence score. Scores higher than 0.5 (i.e., skewed to positive emotions) include only <strong><em>All You Had To Do Was Stay</em></strong> from <strong><em>1989</em></strong>, which is a song with relatively positive melody. The <strong><em>Holy Ground</em></strong> from <strong><em>reputation Stadium Tour Surprise Song Playlist</em></strong> does not count because it is a live recording album rather than a typical studio album.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-striped table-hover caption-top table-sm small" data-quarto-postprocess="true">
+<caption>Table 2: Track 5 of Each Album and Valence Score</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: left; font-weight: bold; color: white !important; background-color: rgba(0, 115, 207, 255) !important;">Album</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; font-weight: bold; color: white !important; background-color: rgba(0, 115, 207, 255) !important;">Track 5</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; font-weight: bold; color: white !important; background-color: rgba(0, 115, 207, 255) !important;">Valence Score</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left; width: 12em;">reputation</td>
+<td style="text-align: left; width: 12em;">Delicate</td>
+<td style="text-align: center; width: 8em; font-weight: bold;">0.050</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; width: 12em;">folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition]</td>
+<td style="text-align: left; width: 12em;">my tears ricochet</td>
+<td style="text-align: center; width: 8em; font-weight: bold;">0.112</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; width: 12em;">folklore (deluxe version)</td>
+<td style="text-align: left; width: 12em;">my tears ricochet</td>
+<td style="text-align: center; width: 8em; font-weight: bold;">0.112</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; width: 12em;">folklore</td>
+<td style="text-align: left; width: 12em;">my tears ricochet</td>
+<td style="text-align: center; width: 8em; font-weight: bold;">0.112</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; width: 12em;">Speak Now (Taylor's Version)</td>
+<td style="text-align: left; width: 12em;">Dear John (Taylor's Version)</td>
+<td style="text-align: center; width: 8em; font-weight: bold;">0.115</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; width: 12em;">Speak Now</td>
+<td style="text-align: left; width: 12em;">Dear John</td>
+<td style="text-align: center; width: 8em; font-weight: bold;">0.126</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; width: 12em;">Speak Now (Deluxe Package)</td>
+<td style="text-align: left; width: 12em;">Dear John</td>
+<td style="text-align: center; width: 8em; font-weight: bold;">0.126</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; width: 12em;">Red (Taylor's Version)</td>
+<td style="text-align: left; width: 12em;">All Too Well (Taylor's Version)</td>
+<td style="text-align: center; width: 8em; font-weight: bold;">0.132</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; width: 12em;">Lover</td>
+<td style="text-align: left; width: 12em;">The Archer</td>
+<td style="text-align: center; width: 8em; font-weight: bold;">0.166</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; width: 12em;">folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition]</td>
+<td style="text-align: left; width: 12em;">my tears ricochet - the long pond studio sessions</td>
+<td style="text-align: center; width: 8em; font-weight: bold;">0.168</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; width: 12em;">Fearless (International Version)</td>
+<td style="text-align: left; width: 12em;">White Horse</td>
+<td style="text-align: center; width: 8em; font-weight: bold;">0.212</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; width: 12em;">evermore (deluxe version)</td>
+<td style="text-align: left; width: 12em;">tolerate it</td>
+<td style="text-align: center; width: 8em; font-weight: bold;">0.221</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; width: 12em;">evermore</td>
+<td style="text-align: left; width: 12em;">tolerate it</td>
+<td style="text-align: center; width: 8em; font-weight: bold;">0.221</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; width: 12em;">Fearless (Platinum Edition)</td>
+<td style="text-align: left; width: 12em;">SuperStar</td>
+<td style="text-align: center; width: 8em; font-weight: bold;">0.228</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; width: 12em;">THE TORTURED POETS DEPARTMENT: THE ANTHOLOGY</td>
+<td style="text-align: left; width: 12em;">So Long, London</td>
+<td style="text-align: center; width: 8em; font-weight: bold;">0.248</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; width: 12em;">THE TORTURED POETS DEPARTMENT</td>
+<td style="text-align: left; width: 12em;">So Long, London</td>
+<td style="text-align: center; width: 8em; font-weight: bold;">0.248</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; width: 12em;">Taylor Swift (Deluxe Edition)</td>
+<td style="text-align: left; width: 12em;">Cold As You</td>
+<td style="text-align: center; width: 8em; font-weight: bold;">0.261</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; width: 12em;">Speak Now World Tour Live</td>
+<td style="text-align: left; width: 12em;">Ours - Live/2011</td>
+<td style="text-align: center; width: 8em; font-weight: bold;">0.267</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; width: 12em;">Red (Deluxe Edition)</td>
+<td style="text-align: left; width: 12em;">All Too Well</td>
+<td style="text-align: center; width: 8em; font-weight: bold;">0.337</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; width: 12em;">Red</td>
+<td style="text-align: left; width: 12em;">All Too Well</td>
+<td style="text-align: center; width: 8em; font-weight: bold;">0.337</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; width: 12em;">Fearless (Taylor's Version)</td>
+<td style="text-align: left; width: 12em;">White Horse (Taylor’s Version)</td>
+<td style="text-align: center; width: 8em; font-weight: bold;">0.366</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; width: 12em;">Midnights (The Til Dawn Edition)</td>
+<td style="text-align: left; width: 12em;">You're On Your Own, Kid</td>
+<td style="text-align: center; width: 8em; font-weight: bold;">0.395</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; width: 12em;">Midnights (3am Edition)</td>
+<td style="text-align: left; width: 12em;">You're On Your Own, Kid</td>
+<td style="text-align: center; width: 8em; font-weight: bold;">0.395</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; width: 12em;">Midnights</td>
+<td style="text-align: left; width: 12em;">You're On Your Own, Kid</td>
+<td style="text-align: center; width: 8em; font-weight: bold;">0.395</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; width: 12em;">1989</td>
+<td style="text-align: left; width: 12em;">All You Had To Do Was Stay</td>
+<td style="text-align: center; width: 8em; font-weight: bold;">0.472</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; width: 12em;">1989 (Deluxe)</td>
+<td style="text-align: left; width: 12em;">All You Had To Do Was Stay</td>
+<td style="text-align: center; width: 8em; font-weight: bold;">0.539</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; width: 12em;">1989 (Taylor's Version) [Deluxe]</td>
+<td style="text-align: left; width: 12em;">All You Had To Do Was Stay (Taylor's Version)</td>
+<td style="text-align: center; width: 8em; font-weight: bold;">0.540</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; width: 12em;">1989 (Taylor's Version)</td>
+<td style="text-align: left; width: 12em;">All You Had To Do Was Stay (Taylor's Version)</td>
+<td style="text-align: center; width: 8em; font-weight: bold;">0.540</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; width: 12em;">Live From Clear Channel Stripped 2008</td>
+<td style="text-align: left; width: 12em;">Teardrops On My Guitar - Live From Clear Channel Stripped 2008</td>
+<td style="text-align: center; width: 8em; font-weight: bold;">0.615</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; width: 12em;">reputation Stadium Tour Surprise Song Playlist</td>
+<td style="text-align: left; width: 12em;">Holy Ground</td>
+<td style="text-align: center; width: 8em; font-weight: bold;">0.648</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+</section>
+<section id="track-5-and-valence-score-analysis" class="level4" data-number="2.1.2">
+<h4 data-number="2.1.2" class="anchored" data-anchor-id="track-5-and-valence-score-analysis"><span class="header-section-number">2.1.2</span> Track 5 and Valence Score Analysis</h4>
+<p>The analysis comparing the valence scores of track 5 to other tracks revealed a significant difference (t(33.5) = 3.35, <em>p</em> = 0.002). The mean valence score for track 5 was 0.29, compared to 0.396 for other tracks. Figure 5 illustrates the comparison of valence scores between track 5 and other tracks. The results suggest that track 5 tends to have lower valence scores than other tracks with more data point proportion condensed at the lower end, supporting that track 5 is often the most vulnerable, emotional, and raw track on Taylor Swift’s albums.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-track-5-valence-boxplot" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-track-5-valence-boxplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Taylor-Swift-Song-and-Lyric-Analysis_files/figure-html/fig-track-5-valence-boxplot-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-track-5-valence-boxplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Valence Scores of Track 5 vs.&nbsp;Other Tracks
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="sentiment-analysis-of-lyrics" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="sentiment-analysis-of-lyrics"><span class="header-section-number">2.2</span> Sentiment Analysis of Lyrics</h3>
+<p>This section aims to analyze the sentiment of Taylor Swift’s lyrics using sentiment analysis based on 11 studio albums.</p>
+<p>The sentiment analysis of Taylor Swift’s lyrics by album is presented in Table 3 and Figure 5. The sentiment scores are based on the BING lexicon, which categorizes words as positive or negative. The sentiment score is calculated as the difference between the number of positive and negative words in the lyrics. Positive values indicate more positive sentiment, while negative values indicate more negative sentiment. The absolute value of the sentiment score reflects the intensity of the sentiment.</p>
+<p>The average sentiment scores by album are shown below:</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="lightable-classic caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>Table 3: Sentiment Analysis of Taylor Swift’s Lyrics by Album</caption>
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: left; empty-cells: hide;"></th>
+<th data-quarto-table-cell-role="th" style="text-align: center; padding-bottom: 0; padding-left: 3px; padding-right: 3px;"><div style="border-bottom: 1px solid #111111; margin-bottom: -1px; ">
+Sentiment Analysis
+</div></th>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th" style="text-align: left; font-weight: bold; color: white !important; background-color: rgba(78, 121, 167, 255) !important;">Album</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; font-weight: bold; color: white !important; background-color: rgba(78, 121, 167, 255) !important;">Average Sentiment</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left; width: 15em; font-weight: bold; color: white !important; background-color: rgba(0, 163, 173, 255) !important;">TS1: Taylor Swift</td>
+<td style="text-align: center; width: 10em; color: white !important; background-color: rgba(0, 163, 173, 255) !important;">23</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; width: 15em; font-weight: bold; color: black !important; background-color: rgba(246, 237, 149, 255) !important;">TS2: Fearless</td>
+<td style="text-align: center; width: 10em; color: black !important; background-color: rgba(246, 237, 149, 255) !important;">110</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; width: 15em; font-weight: bold; color: white !important; background-color: rgba(81, 49, 99, 255) !important;">TS3: Speak Now</td>
+<td style="text-align: center; width: 10em; color: white !important; background-color: rgba(81, 49, 99, 255) !important;">41</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; width: 15em; font-weight: bold; color: white !important; background-color: rgba(149, 30, 26, 255) !important;">TS4: Red</td>
+<td style="text-align: center; width: 10em; color: white !important; background-color: rgba(149, 30, 26, 255) !important;">158</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; width: 15em; font-weight: bold; color: black !important; background-color: rgba(120, 154, 192, 255) !important;">TS5: 1989</td>
+<td style="text-align: center; width: 10em; color: black !important; background-color: rgba(120, 154, 192, 255) !important;">21</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; width: 15em; font-weight: bold; color: white !important; background-color: rgba(0, 0, 0, 255) !important;">TS6: Reputation</td>
+<td style="text-align: center; width: 10em; color: white !important; background-color: rgba(0, 0, 0, 255) !important;">61</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; width: 15em; font-weight: bold; color: black !important; background-color: rgba(253, 192, 204, 255) !important;">TS7: Lover</td>
+<td style="text-align: center; width: 10em; color: black !important; background-color: rgba(253, 192, 204, 255) !important;">130</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; width: 15em; font-weight: bold; color: white !important; background-color: rgba(127, 127, 127, 255) !important;">TS8: Folklore</td>
+<td style="text-align: center; width: 10em; color: white !important; background-color: rgba(127, 127, 127, 255) !important;">-44</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; width: 15em; font-weight: bold; color: white !important; background-color: rgba(204, 98, 27, 255) !important;">TS9: Evermore</td>
+<td style="text-align: center; width: 10em; color: white !important; background-color: rgba(204, 98, 27, 255) !important;">6</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; width: 15em; font-weight: bold; color: white !important; background-color: rgba(30, 12, 110, 255) !important;">TS10: Midnights</td>
+<td style="text-align: center; width: 10em; color: white !important; background-color: rgba(30, 12, 110, 255) !important;">-17</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; width: 15em; font-weight: bold; color: black !important; background-color: rgba(237, 235, 231, 255) !important;">TS11: The Tortured Poets Department</td>
+<td style="text-align: center; width: 10em; color: black !important; background-color: rgba(237, 235, 231, 255) !important;">-158</td>
+</tr>
+</tbody><tfoot>
+<tr class="odd">
+<td style="text-align: left; padding: 0;"><span style="font-style: italic;">Note:</span> <sup></sup> Based on BING lexicon sentiment analysis</td>
+<td style="text-align: center;"></td>
+</tr>
+</tfoot>
+
+</table>
+
+
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-sentiment-analysis-by-album" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-sentiment-analysis-by-album-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Taylor-Swift-Song-and-Lyric-Analysis_files/figure-html/fig-sentiment-analysis-by-album-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sentiment-analysis-by-album-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Average Sentiment Scores of Taylor Swift’s Lyrics by Album
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Figure 6 illustrates the progression of sentiment scores across Taylor Swift’s albums by a line chart. It is notable that all of the first seven albums have positive sentiment scores, though featuring flunctuations from album to album. However, all recent four albums have negative sentiment scores (with evermore has a slightly positive score), indicating a shift in the emotional tone of Taylor Swift’s lyrics. This shift may reflect her changing perspectives and evolving experiences over time. The sentiment progression of Taylor Swift’s lyrics provides insights into her emotional journey, allowing listeners to connect with her music on a deeper level.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-sentiment-progress-by-album" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-sentiment-progress-by-album-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Taylor-Swift-Song-and-Lyric-Analysis_files/figure-html/fig-sentiment-progress-by-album-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sentiment-progress-by-album-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Sentiment Progression of Taylor Swift’s Lyrics by Album
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>There are multiple factors that may contribute to the shift in sentiment scores across Taylor Swift’s albums. For instance, the transition from country to pop music (1989) may have influenced the emotional tone of her lyrics, focusing more on sophisticated and complicated emotions rather than depicting pure love life. The personal experiences and relationships she went through during each album’s creation may also have played a significant role. Apart from these, the Hollywood industry and the public’s perception of her may have influenced her emotional state and the themes she explores in her music. For instance, the industry, media, and fans’ reactions and expectations to her personal life, relationships, body image, and political values may have impacted her emotional well-being and the sentiments she conveys in her lyrics. It is difficult for her to be perfectly happy when she is constantly under public scrutiny and facing challenges in her personal life. She was often portrayed as a “victim” of men and the industry in the media, which may have influenced her emotional state.</p>
+<p>From my perspective, music before <strong><em>reputation</em></strong> serves more for “Taylor as a brand”, which reflects more exploration on music styles. <strong><em>1989</em></strong> is a turning point for Taylor Swift, which marks her transition from country to pop music. It is also notable that Taylor met Karlie Kloss during the <strong><em>1989</em></strong> era, and Karlie is the one who persuaded Taylor to move to New York City. This is the reason why Karlie is recognized as the muse in New York in later albums. <strong><em>reputation</em></strong> is a significant album for Taylor Swift, which marks her transformation from “America’s Sweetheart” to a “Reputation” queen. Part of the album is a response to the media and public’s perception of her, which is a turning point for her to take control of her narrative, including her control over her work by leaving Big Machine Records. It is also notable that the love life in <strong><em>reputation</em></strong> is more about her relationship with Karlie Kloss as a secret love:</p>
+<embed src="source/Reputation is about Karlie Kloss.pdf" type="application/pdf" width="100%" height="600px">
+<p><strong><em>Lover</em></strong> is a significant album for Taylor Swift, which features a high volumn of queer representations, metaphors, and symbols. It is rumored that Taylor intended to come out as bisexual during the Lover era but failed to do so due to complicated political reasons, which also contributes to the love blackout of Taylor and Karlie.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Image/Fig%2008_Lover%20Era%20Queerness.jpg" class="img-fluid figure-img"></p>
+<figcaption>Lover Era Queerness</figcaption>
+</figure>
+</div>
+<p>It is not difficult to infer that the steep progression to negative sentiment scores in <strong><em>Folklore</em></strong> and <strong><em>Evermore</em></strong> is related to the love blackout of Taylor and Karlie, as well as her failure to come out. The <strong><em>Midnights</em></strong> and <strong><em>The Tortured Poets Department</em></strong> are the most recent albums, which features more intense negative emotions. The sister albums <strong><em>Folklore</em></strong> and <strong><em>Evermore</em></strong> combines myths, fairy tales, and personal experiences, which reflects Taylor’s exploration of her inner world and the complexity of her life. It is worth mentioning that the queer representation in <strong><em>Folklore</em></strong> and <strong><em>Evermore</em></strong> is more subtle, implicit, and miserable, which is different from the explicit queer representation in <strong><em>Lover</em></strong>. For instance, <strong><em>Seven</em></strong> features a lyric of “Come live with me then you won’t have to cry or hide in the closet”, which is a metaphor of hiding sexuality. <strong><em>Evermore</em></strong> features more historical queer evidence. For instance, <strong><em>Cowboy Like Me</em></strong> mirrors the forbidden love between two cowboys in the movie <strong><em>Brokeback Mountain</em></strong>, while the “hairpin” metaphor in <strong><em>Right where you left me</em></strong> is a symbol of queer people recognizing each other during the Stonewall era. <strong><em>Ivy</em></strong> is absolutely Taylor’s most queer song forever, which dedicates to Emily Dickinson.</p>
+<p>Click the button below to listen to <strong><em>Ivy</em></strong>:</p>
+<audio controls="">
+<source src="audio/Taylor Swift - ivy.mp3" type="audio/mpeg">
+<p>Your browser does not support the audio element. </p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Image/Fig%2009_Failed%20come%20out.webp" class="img-fluid figure-img"></p>
+<figcaption>Fail to Come Out</figcaption>
+</figure>
+</div>
+</audio></section>
+<section id="easter-eggs-can-wordclouds-reveal-taylors-secrets" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="easter-eggs-can-wordclouds-reveal-taylors-secrets"><span class="header-section-number">2.3</span> Easter Eggs: Can Wordclouds Reveal Taylor’s Secrets?</h3>
+<p>This section aims to analyze the lyrics of Taylor Swift’s songs using word clouds to identify common themes. Word clouds are visual representations of text data that highlight the most frequently used words. By analyzing the word clouds of Taylor Swift’s lyrics, we can gain insights into the themes, emotions, and symbols that are prevalent in her music. To get a better understanding of the sentiment of Taylor Swift’s lyrics, I only include words that are not neutral and have a frequency of more than 2. The sentiment word clouds are generated for each album, providing a visual representation of the most frequently used positive and negative words in Taylor Swift’s songs. The word clouds are based on the sentiment lexicon from the BING lexicon, which categorizes words as positive or negative. The sentiment word clouds of Taylor Swift’s lyrics by album are presented below:</p>
+<div id="fig-sentiment-wordclouds" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-sentiment-wordclouds-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-sentiment-wordclouds" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-sentiment-wordclouds-1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-sentiment-wordclouds-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="sentiment_wordcloud_TS1_%20Taylor%20Swift.png" class="img-fluid figure-img" style="width:100.0%" data-ref-parent="fig-sentiment-wordclouds">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-sentiment-wordclouds-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Taylor Swift
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-sentiment-wordclouds" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-sentiment-wordclouds-2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-sentiment-wordclouds-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="sentiment_wordcloud_TS2_%20Fearless.png" class="img-fluid figure-img" style="width:100.0%" data-ref-parent="fig-sentiment-wordclouds">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-sentiment-wordclouds-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Fearless
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-sentiment-wordclouds" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-sentiment-wordclouds-3" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-sentiment-wordclouds-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="sentiment_wordcloud_TS3_%20Speak%20Now.png" class="img-fluid figure-img" style="width:100.0%" data-ref-parent="fig-sentiment-wordclouds">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-sentiment-wordclouds-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(c) Speak Now
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-sentiment-wordclouds" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-sentiment-wordclouds-4" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-sentiment-wordclouds-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="sentiment_wordcloud_TS4_%20Red.png" class="img-fluid figure-img" style="width:100.0%" data-ref-parent="fig-sentiment-wordclouds">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-sentiment-wordclouds-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(d) Red
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-sentiment-wordclouds" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-sentiment-wordclouds-5" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-sentiment-wordclouds-5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="sentiment_wordcloud_TS5_%201989.png" class="img-fluid figure-img" style="width:100.0%" data-ref-parent="fig-sentiment-wordclouds">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-sentiment-wordclouds-5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(e) 1989
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-sentiment-wordclouds" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-sentiment-wordclouds-6" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-sentiment-wordclouds-6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="sentiment_wordcloud_TS6_%20Reputation.png" class="img-fluid figure-img" style="width:100.0%" data-ref-parent="fig-sentiment-wordclouds">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-sentiment-wordclouds-6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(f) Reputation
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-sentiment-wordclouds" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-sentiment-wordclouds-7" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-sentiment-wordclouds-7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="sentiment_wordcloud_TS7_%20Lover.png" class="img-fluid figure-img" style="width:100.0%" data-ref-parent="fig-sentiment-wordclouds">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-sentiment-wordclouds-7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(g) Lover
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-sentiment-wordclouds" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-sentiment-wordclouds-8" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-sentiment-wordclouds-8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="sentiment_wordcloud_TS8_%20Folklore.png" class="img-fluid figure-img" style="width:100.0%" data-ref-parent="fig-sentiment-wordclouds">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-sentiment-wordclouds-8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(h) Folklore
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-sentiment-wordclouds" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-sentiment-wordclouds-9" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-sentiment-wordclouds-9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="sentiment_wordcloud_TS9_%20Evermore.png" class="img-fluid figure-img" style="width:100.0%" data-ref-parent="fig-sentiment-wordclouds">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-sentiment-wordclouds-9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(i) Evermore
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-sentiment-wordclouds" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-sentiment-wordclouds-10" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-sentiment-wordclouds-10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="sentiment_wordcloud_TS10_%20Midnights.png" class="img-fluid figure-img" style="width:100.0%" data-ref-parent="fig-sentiment-wordclouds">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-sentiment-wordclouds-10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(j) Midnights
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-sentiment-wordclouds" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-sentiment-wordclouds-11" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-sentiment-wordclouds-11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="sentiment_wordcloud_TS11_%20The%20Tortured%20Poets%20Department.png" class="img-fluid figure-img" style="width:100.0%" data-ref-parent="fig-sentiment-wordclouds">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-sentiment-wordclouds-11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(k) The Tortured Poets Department
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sentiment-wordclouds-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: Sentiment Word Clouds of Taylor Swift’s Lyrics by Album
+</figcaption>
+</figure>
+</div>
+<p>It is interesting to observe the sentiment word clouds of Taylor Swift’s lyrics by album. <strong><em>Taylor Swift</em></strong> and <strong><em>Fearless</em></strong> reflect Taylor’s youthful optimism and romantic idealism. Words like “beautiful,” “perfect,” “right,” and “fall” dominate, suggesting themes of first love, innocence, and hope. There is a sense of positivity and naivety, with occasional mentions of heartbreak (“sorry,” “losing”).</p>
+<p><strong><em>Speak Now</em></strong> introduces more conflict and emotional complexity. Words like “confessions,” “bad,” and “foolish” indicate a growing awareness of the difficulties in relationships. However, positive words like “magic” and “right” reveal lingering traces of youthful optimism.</p>
+<p><strong><em>Red</em></strong> captures the intensity of love and heartbreak. Words like “break,” “better,” and “hate” highlight emotional turbulence, while “darling” and “loving” hint at deep emotional connections. This album marks a shift toward more mature themes of vulnerability and passion.</p>
+<p><strong><em>1989</em></strong> represents an era of reinvention and empowerment. Words like “shake,” “welcome,” and “clear” suggest confidence and freedom. The album shows a sense of resilience and optimism, with tracks celebrating independence and self-expression, marking Taylor’s shift from country to pop music, as well as a new beginning in New York City.</p>
+<p><strong><em>Reputation</em></strong>, on the other hand, is darker and more defensive, as seen in words like “mad,” “delicate,” and “crazy” This album reflects themes of betrayal, self-preservation, and reclaiming power in the face of criticism, showing Taylor’s evolution into a more assertive and self-aware artist.</p>
+<p><strong><em>Lover</em></strong> shifts back toward warmth and positivity. Words like “bless,” “darling,” and “right” reflect themes of love and gratitude. The album feels celebratory, exploring the joy of romance while acknowledging its imperfections. This is consistent with her coming out plan during the <strong><em>Lover</em></strong> era.</p>
+<p><strong><em>Folklore</em></strong> and <strong><em>Evermore</em></strong> mark a departure from personal storytelling to fictional narratives and introspection. Words like “mad,” “worst,” “ruining,” and “lose” in Folklore suggest a reflective and imaginary tone skewed to negative emotions, while “happiness” and “better” in Evermore indicate a balance between sorrow and hope. I can’t stop thinking about songs like ivy and gold rush, which are absolutely beautiful… Both albums delve into themes of regret, longing, and existential musings, showing Taylor’s lyrical maturity.</p>
+<p><strong><em>Midnights</em></strong> revisits deeply personal themes. Words like “sweet,” “hurts,” and “problem” suggest a blend of introspection, vulnerability, and romantic musings. The album feels intimate, with a mix of lighthearted and contemplative emotions.</p>
+<p><strong><em>The Tortured Poets Department</em></strong> features words like “fuck,” “die,” and “lost,” indicating an extremely negative emotion release. It is notable that this album is based on Taylor’s most intimate emotions. She created five playlists to mark the five phases of heartbreaking on Apple Music before the release of the album. Both track names and lyrics reflect depressed emotions. For instance, “I can do it with a broken heart” as the song name or “Am I allowed to cry?” as the lyric. I would say this album is Taylor’s saddest album (you can also tell from the sentiment score!). The album explores different themes, such as hidden sexuality, the restraint from the fan community and family members, as well as general mental health problems. I feel like this album is an expansion of Midnights, which is also intimate, personal, and delicate.</p>
+</section>
+</section>
+<section id="ending" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="ending"><span class="header-section-number">3</span> Ending</h2>
+<p>Taylor is good at employing intertextuality, metaphors, and symbols in her lyrics, which makes her music more profound and open to interpretation. The queer representation in her music is not only about her personal life but also about the history of queer people and the struggles they have faced. It is a way for her to express her support for the LGBTQ+ community and to raise awareness of the challenges they face. The negative sentiment scores in her recent albums may reflect her struggles with her identity, relationships, and the public’s perception of her. It is essential to recognize that Taylor Swift is a complex and multifaceted person, and her music reflects her personal experiences, emotions, and values. As a fan, I appreciate her honesty, vulnerability, and courage to share her story with the world. Her music has helped me through difficult times and inspired me to be true to myself and stand up for what I believe in. I hope that Taylor Swift’s music will continue to inspire and empower people to be themselves and embrace their uniqueness.</p>
+<p>My Easter EGG: TAY smiled at me during the performance of <strong><em>august</em></strong>, filmed by my friend:</p>
+<video width="320" height="320" controls="">
+<source src="audio/Tay Smile.mp4" type="video/mp4">
+<p>Your browser does not support the video tag. </p>
+</video></section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
