@@ -53,8 +53,8 @@ ts.lyric.tsv:[View the Dataset](./Data/ts.lyric.tsv)
 ts.spotify.csv:[View the Dataset](./Data/ts.spotify.csv)
 
 ### Data Source
-The Spotify dataset is from Kaggle [View the link](https://www.kaggle.com/datasets/jarredpriester/taylor-swift-spotify-dataset)
-The lyric dataset is from GitHub [View the link](https://github.com/sagesolar/Corpus-of-Taylor-Swift)
+The Spotify dataset is from Kaggle [View the link](https://www.kaggle.com/datasets/jarredpriester/taylor-swift-spotify-dataset).
+The lyric dataset is from GitHub [View the link](https://github.com/sagesolar/Corpus-of-Taylor-Swift).
 
 ### Size
 Approximately 757 KB.
