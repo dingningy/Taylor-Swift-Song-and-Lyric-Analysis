@@ -31,9 +31,11 @@ if(!require(kableExtra)){install.packages("kableExtra")}
 if(!require(plotly)){install.packages("plotly")}
 if(!require(wordcloud2)){install.packages("wordcloud2")}
 if(!require(shiny)){install.packages("shiny")}
+if(!require(caret)){install.packages("caret")}
+if(!require(gridExtra)){install.packages("gridExtra")}
 
 # List of required packages
-required_packages <- c ("tidyverse", "ggplot2", "ggiraph", "viridis", "knitr", "kableExtra", "plotly", "wordcloud2", "shiny")
+required_packages <- c ("tidyverse", "ggplot2", "ggiraph", "viridis", "knitr", "kableExtra", "plotly", "wordcloud2", "shiny","caret","gridExtra")
 
 # Load required packages
 lapply(required_packages, library, character.only = TRUE)
@@ -41,7 +43,7 @@ set.seed(123)
 
 ```
 
-## Spotify Data Analysis
+## Spotify Data Analysis - Taylor As A Brand
 
 This project first focuses on analyzing Taylor Swift's music using data from her songs' Spotify data. The raw dataset from Kaggle includes different data types such as album name, track name, release date (***categorical***); acousticness, danceability, energy, popularity scores (***numeric***), etc. Data cleaning and transformation were performed before analyzing the data.
 
@@ -363,6 +365,164 @@ print (label_effect_boxplot)
 
 ```
 
-## Running Code
+
+#### Music Features
+
+This section aims to observe how different music features contribute to song popularity and predict the popularity scores of Taylor Swift's songs using different music features. Specifically, the following features are considered: acousticness, danceability, energy, liveness, and valence.
+
+##### History data: Descriptive Regression
+
+This section presents the linear regression based on Spotify history data, focusing on existing dataset to describe the correlations between popularity scores and music features. 
+```{r}
+#| label: Descriptive linear regression model for popularity scores
+#| include: false
+
+features <- c("acousticness", "danceability", "energy", "liveness", "valence")
+data_history <- ts.spotify[, c("popularity", features)]
+
+# Build the multiple linear regression model
+model_history <- lm(popularity ~ ., data = data_history)
+
+# View the summary of the model
+summary(model_history)
+
+```
+
+The multiple linear regression analysis revealed that `r sum(summary(model_history)$coefficients[-1, 4] < 0.05)` out of 5 predictors were significantly associated with popularity scores (*F*(`r summary(model_history)$fstatistic[2]`, `r summary(model_history)$fstatistic[3]`) = `r round(summary(model_history)$fstatistic[1], 2)`, *p* < .001, *R*² = `r round(summary(model_history)$r.squared, 3)`). Specifically, liveness (β = `r round(coef(model_history)["liveness"], 2)`, *p* < .001) and valence (β = `r round(coef(model_history)["valence"], 2)`, *p* = `r round(summary(model_history)$coefficients["valence", 4], 3)`) were significantly associated with popularity, while acousticness (β = `r round(coef(model_history)["acousticness"], 2)`, *p* = `r round(summary(model_history)$coefficients["acousticness", 4], 3)`), danceability (β = `r round(coef(model_history)["danceability"], 2)`, *p* = `r round(summary(model_history)$coefficients["danceability", 4], 3)`), and energy (β = `r round(coef(model_history)["energy"], 2)`, *p* = `r round(summary(model_history)$coefficients["energy", 4], 3)`) were not significant predictors. The model explained approximately 5% of the variance in popularity scores, indicating a relatively small effect size. The results suggest that liveness and valence are more likely to influence the popularity of Taylor Swift's songs than acousticness, danceability, and energy. 
+
+The multiple linear regression model can be expressed as:
+
+$$
+\text{Popularity} = \beta_0 + \beta_1(\text{Acousticness}) + \beta_2(\text{Danceability}) + \beta_3(\text{Energy}) + \beta_4(\text{Liveness}) + \beta_5(\text{Valence}) + \epsilon
+$$
+
+Where:
+
+$$
+\begin{aligned}
+\beta_0 &= `r round(coef(model_history)[1], 2)` \text{ (Intercept)} \\
+\beta_1 &= `r round(coef(model_history)["acousticness"], 2)` \\
+\beta_2 &= `r round(coef(model_history)["danceability"], 2)` \\
+\beta_3 &= `r round(coef(model_history)["energy"], 2)` \\
+\beta_4 &= `r round(coef(model_history)["liveness"], 2)` \\
+\beta_5 &= `r round(coef(model_history)["valence"], 2)` \\
+\epsilon &= \text{Error term}
+\end{aligned}
+$$
+
+Figure 3 illustrates the relationship between popularity scores and music features based on the multiple linear regression model. Specifically, liveness and valence are negatively associated with popularity scores. The negative relationship between liveness and popularity scores suggests that songs with a higher probability of being live recordings are less popular. It is reasonable since most albums are studio albums rather than live recordings. Another reason is that most live recordings are under the Big Machine label, which has lower popularity scores. 
+
+The negative relationship between valence and popularity scores indicates that songs with more negative emotions are more popular. This is consistent with the previous analysis, which showed that Taylor Swift's songs are slightly skewed towards negative emotions. As a 16-year Swiftie (Gaylor), I can better emotionally resonate with Taylor's songs related to her personal life, which often involves negative emotions. Many lyrics can reflect my own experiences and challenges in life, making me feel understood and less alone. This emotional connection may contribute to the popularity of songs with negative emotions. It is not necessarily the case that negative emotions are more popular, but rather that they are more relatable and emotionally impactful. All in all, we have to experience complicated emotions to feel alive. 
+
+
+
+
+```{r}
+#| label: fig-feature-popularity-regression-history
+#| fig.cap: "Multiple Linear Regression Model for Popularity Scores (History Data)"
+#| include: true
+
+# Create a function to generate a plot for each predictor
+plot_predictor <- function(data, x_var, y_var = "popularity", model) {
+  ggplot(ts.spotify, aes_string(x = x_var, y = y_var)) +
+    geom_point(alpha = 0.2, color = "#0073cf") +  
+    geom_smooth(method = "lm", se = FALSE, color = "#800000") +
+    labs(x = x_var, y = "Popularity") +
+    theme_minimal() +
+    theme(plot.title = element_text(hjust = 0.5)) +  
+    ggtitle(paste("Popularity vs", x_var)) +
+    annotate("label", x = Inf, y = -Inf, 
+             label = paste("β =", round(coef(model)[x_var], 2)),
+             hjust = 1, vjust = 0,
+             fill = "white", alpha = 0.8)  
+}
+
+# Create a list of plots for each predictor
+plots <- lapply(c("acousticness", "danceability", "energy", "liveness", "valence"), 
+                function(x) plot_predictor(ts.spotify, x, model = model_history))
+
+# Arrange the plots in a grid
+grid_plot <- do.call(grid.arrange, c(plots, ncol = 2, top = "Relationship between Popularity and Music Features"))
+
+
+```
+
+
+
+
+##### Predictive Analysis
+
+This section aims to predict the popularity scores of Taylor Swift's songs using different music features. Specifically, the dataset is split into training and testing sets, and a linear regression model is built using the training set. The model is then evaluated using the testing set, and the feature importance is visualized.
+
+
+```{r}
+#| label: Predictive linear regression model for popularity scores
+#| include: false
+
+features <- c("acousticness", "danceability", "energy", "liveness", "valence")
+data_predictive <- ts.spotify[, c("popularity", features)]
+
+# Split the data into training and testing sets
+set.seed(123)  
+trainIndex <- createDataPartition(data_predictive$popularity, p = 0.8, list = FALSE)
+train_data <- data_predictive[trainIndex, ]
+test_data <- data_predictive[-trainIndex, ]
+
+# Build the linear regression model
+model_predictive <- lm(popularity ~ ., data = train_data)
+
+# Evaluate the model
+# Make predictions on the test set
+predictions <- predict(model_predictive, newdata = test_data)
+
+# Calculate RMSE (Root Mean Square Error)
+rmse <- sqrt(mean((test_data$popularity - predictions)^2))
+
+# Calculate R-squared
+r_squared <- summary(model_predictive)$r.squared
+
+# Print model summary and evaluation metrics
+summary(model_predictive)
+cat("RMSE:", rmse, "\n")
+cat("R-squared:", r_squared, "\n")
+
+
+```
+
+The multiple linear regression analysis revealed that `r sum(summary(model_predictive)$coefficients[-1, 4] < 0.05)` out of 5 predictors were significantly associated with popularity scores (*F*(`r summary(model_predictive)$fstatistic[2]`, `r summary(model_predictive)$fstatistic[3]`) = `r round(summary(model_predictive)$fstatistic[1], 2)`, *p* < .001, *R*² = `r round(summary(model_predictive)$r.squared, 3)`). Specifically, liveness (β = `r round(coef(model_predictive)["liveness"], 2)`, *p* < .001) and valence (β = `r round(coef(model_predictive)["valence"], 2)`, *p* = `r round(summary(model_predictive)$coefficients["valence", 4], 3)`) were significantly associated with popularity, while acousticness (β = `r round(coef(model_predictive)["acousticness"], 2)`, *p* = `r round(summary(model_predictive)$coefficients["acousticness", 4], 3)`), danceability (β = `r round(coef(model_predictive)["danceability"], 2)`, *p* = `r round(summary(model_predictive)$coefficients["danceability", 4], 3)`), and energy (β = `r round(coef(model_predictive)["energy"], 2)`, *p* = `r round(summary(model_predictive)$coefficients["energy", 4], 3)`) were not significant predictors. The model explained `r round(summary(model_predictive)$r.squared * 100, 1)`% of the variance in popularity scores. The visualization will be almost the same with the descriptive regression in the previous section. 
+
+The multiple linear regression model can be expressed as:
+
+$$
+\text{Popularity} = \beta_0 + \beta_1(\text{Acousticness}) + \beta_2(\text{Danceability}) + \beta_3(\text{Energy}) + \beta_4(\text{Liveness}) + \beta_5(\text{Valence}) + \epsilon
+$$
+
+Where:
+
+$$
+\begin{aligned}
+\beta_0 &= `r round(coef(model_predictive)[1], 2)` \text{ (Intercept)} \\
+\beta_1 &= `r round(coef(model_predictive)["acousticness"], 2)` \\
+\beta_2 &= `r round(coef(model_predictive)["danceability"], 2)` \\
+\beta_3 &= `r round(coef(model_predictive)["energy"], 2)` \\
+\beta_4 &= `r round(coef(model_predictive)["liveness"], 2)` \\
+\beta_5 &= `r round(coef(model_predictive)["valence"], 2)` \\
+\epsilon &= \text{Error term}
+\end{aligned}
+$$
+
+## Sentiment Analysis of Lyrics - Taylor As A Person
+
+The second part of this project focuses on analyzing Taylor Swift's lyrics using sentiment analysis. The Spotify dataset provides measurement of Taylor's music in the industry by popularity scores, but it does not capture the essence of her music and the emotions she conveys through her lyrics. When we dive deep into Taylor's narratives, we can better understand her as a person and resonate with her work. 
+
+
+***"Let me say it again, louder for those in the back...We think we know someone, but the truth is that we only know the version of them that they have chosen to show us."***
+
+——Reputation [Prologue] by Taylor Swift
+
+![Reputation Prologue](Image/Fig 04_Reputation Prologue.jpg)
+
+The Reputation prologue is one of my favorite quotes from Taylor Swift. It reflects the complexity of human nature and the different versions of ourselves we present to the world. Taylor Swift is known for her storytelling and emotional depth in her lyrics, which often reflect her personal experiences and emotions. Nevertheless, it is essential to recognize that different people may interpret her lyrics differently based on their own experiences, values, and perspectives. This section aims to analyze Taylor's lyrics combining her personal life changes to better understand her as a person. 
+
 
 
