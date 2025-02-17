@@ -33,10 +33,12 @@ if(!require(wordcloud2)){install.packages("wordcloud2")}
 if(!require(shiny)){install.packages("shiny")}
 if(!require(caret)){install.packages("caret")}
 if(!require(gridExtra)){install.packages("gridExtra")}
+if(!require(tidytext)){install.packages("tidytext")}
+if(!require(textdata)){install.packages("textdata")}
 
 
 # List of required packages
-required_packages <- c ("tidyverse", "ggplot2", "ggiraph", "viridis", "knitr", "kableExtra", "plotly", "wordcloud2", "shiny","caret","gridExtra")
+required_packages <- c ("tidyverse", "ggplot2", "ggiraph", "viridis", "knitr", "kableExtra", "plotly", "wordcloud2", "shiny","caret","gridExtra", "tidytext", "textdata")
 
 # Load required packages
 lapply(required_packages, library, character.only = TRUE)
@@ -108,7 +110,7 @@ label_data <- ts.spotify %>%
   mutate(percentage = count / sum(count) * 100)  # Calculate percentage
 
 # Create the pie chart
-p <- plot_ly(label_data, 
+label_pie <- plot_ly(label_data, 
               labels = ~album_label, 
               values = ~count, 
               type = 'pie', 
@@ -121,7 +123,7 @@ p <- plot_ly(label_data,
          legend = list(orientation = "h", xanchor = "center", x = 0.5, y = -0.2))
 
 # Show the plot
-p
+label_pie
 
 ```
 
@@ -630,3 +632,263 @@ print(track_5_box)
 
 
 ```
+
+
+
+
+
+
+### Sentiment Analysis of Lyrics
+
+This section aims to analyze the sentiment of Taylor Swift's lyrics using sentiment analysis based on 11 studio albums. 
+
+
+```{r}
+#| label: Sentiment analysis of Taylor Swift's lyrics by album
+#| include: false
+
+# Create a named vector for album name replacements
+album_replacements <- c(
+  "TSW" = "TS1: Taylor Swift",
+  "FER" = "TS2: Fearless",
+  "SPN" = "TS3: Speak Now",
+  "RED" = "TS4: Red",
+  "NEN" = "TS5: 1989",
+  "REP" = "TS6: Reputation",
+  "LVR" = "TS7: Lover",
+  "FOL" = "TS8: Folklore",
+  "EVE" = "TS9: Evermore",
+  "MID" = "TS10: Midnights",
+  "TPD" = "TS11: The Tortured Poets Department"
+)
+
+# Load the lyrics data
+lyrics_data <- read_tsv("data/ts.lyric.tsv", 
+                        col_names = c("album_name", "lyric_content")) %>%
+  mutate(album_name = str_extract(album_name, "^[^:]+")) %>%  
+  filter(!is.na(lyric_content)) %>% 
+  filter(!str_detect(album_name, "^OTH")) %>% 
+  mutate(album_name = recode(album_name, !!!album_replacements)) 
+
+# Preprocess the data
+lyrics_tokens <- lyrics_data %>%
+  unnest_tokens(word, lyric_content)
+
+# Perform sentiment analysis
+sentiments <- get_sentiments("bing")
+
+lyrics_sentiment <- lyrics_tokens %>%
+  inner_join(sentiments) %>%
+  count(album_name, sentiment) %>%
+  pivot_wider(names_from = sentiment, values_from = n, values_fill = 0) %>%
+  mutate(sentiment_score = positive - negative,
+         album_order = as.numeric(str_extract(album_name, "\\d+"))) %>%  
+  arrange(album_order)  # Arrange by album number to facilitate later visualization
+
+# Average sentiment score by album
+album_sentiment <- lyrics_sentiment %>%
+  group_by(album_name) %>%
+  summarize(avg_sentiment = mean(sentiment_score)) %>%
+  mutate(album_order = as.numeric(str_extract(album_name, "\\d+"))) %>%
+  arrange(album_order)
+
+```
+
+
+
+
+The sentiment analysis of Taylor Swift's lyrics by album is presented in Table 3 and Figure 5. The sentiment scores are based on the BING lexicon, which categorizes words as positive or negative. The sentiment score is calculated as the difference between the number of positive and negative words in the lyrics. Positive values indicate more positive sentiment, while negative values indicate more negative sentiment. The absolute value of the sentiment score reflects the intensity of the sentiment.
+
+The average sentiment scores by album are shown below:
+
+
+
+```{r}
+#| label: Generate sentiment analysis table by album
+#| tbl-cap: "Table 3: Sentiment Analysis of Taylor Swift's Lyrics by Album"
+#| include: true
+
+# Define album colors by album's corresponding hex palette
+album_colors <- c(
+  "TS1: Taylor Swift" = "#00a3ad",
+  "TS2: Fearless" = "#f6ed95",
+  "TS3: Speak Now" = "#513163",
+  "TS4: Red" = "#951e1a",
+  "TS5: 1989" = "#789ac0",
+  "TS6: Reputation" = "#000000",
+  "TS7: Lover" = "#fdc0cc",
+  "TS8: Folklore" = "#7f7f7f",
+  "TS9: Evermore" = "#cc621b",
+  "TS10: Midnights" = "#1e0c6e",
+  "TS11: The Tortured Poets Department" = "#edebe7"
+)
+
+# Function to determine text color based on background
+get_text_color <- function(bg_color) {
+  if (mean(col2rgb(bg_color)) > 128) {
+    return("black")
+  } else {
+    return("white")
+  }
+}
+
+# Create a kable
+sentiment_table <- album_sentiment %>%
+  select(Album = album_name, `Average Sentiment` = avg_sentiment) %>%
+  kbl(caption = "Average Sentiment Scores by Album",
+      digits = 3,
+      align = c("l", "c")) %>%
+  kable_classic(full_width = FALSE, html_font = "Arial", font_size = 14) %>%
+  row_spec(0, bold = TRUE, color = "white", background = "#4E79A7") %>%
+  column_spec(1, width = "15em", bold = TRUE) %>%
+  column_spec(2, width = "10em") %>%
+  add_header_above(c(" " = 1, "Sentiment Analysis" = 1)) %>%
+  footnote(general = "Based on BING lexicon sentiment analysis",
+           general_title = "Note:",
+           footnote_as_chunk = TRUE)
+
+
+# Apply custom colors to each row
+for (i in 1:nrow(album_sentiment)) {
+  bg_color <- album_colors[album_sentiment$album_name[i]]
+  text_color <- get_text_color(bg_color)
+  sentiment_table <- sentiment_table %>%
+    row_spec(i, background = bg_color, color = text_color)
+}
+
+# Display the table
+sentiment_table
+
+
+
+
+```
+
+
+```{r}
+#| label: fig-sentiment-analysis-by-album
+#| fig.cap: "Average Sentiment Scores of Taylor Swift's Lyrics by Album"
+#| include: true
+
+
+# Create a bar plot of average sentiment by album
+
+sentiment_plot <- ggplot(album_sentiment, aes(x = reorder(album_name, avg_sentiment), y = avg_sentiment, fill = album_name)) +
+  geom_bar(stat = "identity") +
+  scale_fill_manual(values = album_colors) +
+  coord_flip() +
+  labs(title = "Average Sentiment Score by Album",
+       x = "Album",
+       y = "Average Sentiment Score") +
+  theme_minimal() +
+  theme(axis.text.y = element_text(size = 8),
+        legend.position = "none") 
+
+# Display the plot
+print(sentiment_plot)
+
+
+```
+
+
+
+Figure 6 illustrates the progression of sentiment scores across Taylor Swift's albums by a line chart. It is notable that all of the first seven albums have positive sentiment scores, though featuring flunctuations from album to album. However, all recent four albums have negative sentiment scores (with evermore has a slightly positive score), indicating a shift in the emotional tone of Taylor Swift's lyrics. This shift may reflect her changing perspectives and evolving experiences over time. The sentiment progression of Taylor Swift's lyrics provides insights into her emotional journey, allowing listeners to connect with her music on a deeper level.
+
+
+
+
+
+
+```{r}
+#| label: fig-sentiment-progress-by-album
+#| fig.cap: "Sentiment Progression of Taylor Swift's Lyrics by Album"
+#| include: true
+
+
+# Define album colors, order, and release years
+album_line <- tibble(
+  album_name = c(
+    "TS1: Taylor Swift", "TS2: Fearless", "TS3: Speak Now", "TS4: Red", "TS5: 1989",
+    "TS6: Reputation", "TS7: Lover", "TS8: Folklore", "TS9: Evermore", "TS10: Midnights",
+    "TS11: The Tortured Poets Department"
+  ),
+  release_year = c(2006, 2008, 2010, 2012, 2014, 2017, 2019, 2020, 2020, 2022, 2024),
+  color = c(
+    "#00a3ad", "#f6ed95", "#513163", "#951e1a", "#789ac0", "#000000", 
+    "#fdc0cc", "#7f7f7f", "#cc621b", "#1e0c6e", "#edebe7"
+  )
+)
+
+# Merge album_data with album_sentiment
+album_sentiment_timeline <- album_sentiment %>%
+  left_join(album_line, by = "album_name") %>%
+  arrange(release_year) %>%
+  mutate(album_name = factor(album_name, levels = album_line$album_name))
+
+# Create the line chart
+sentiment_timeline_plot <- ggplot(album_sentiment_timeline, 
+                                  aes(x = release_year, y = avg_sentiment, group = 1)) +
+  geom_line(color = "gray", size = 1) +
+  geom_point(aes(color = album_name), size = 4) +
+  scale_color_manual(values = setNames(album_line$color, album_line$album_name)) +
+  scale_x_continuous(breaks = album_sentiment_timeline$release_year) +
+  labs(title = "Sentiment Change Across Taylor Swift's Albums",
+       x = "Release Year",
+       y = "Average Sentiment Score",
+       color = "Album") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "right",
+        plot.title = element_text(hjust = 0.5, face = "bold"))
+
+# Display the plot
+print(sentiment_timeline_plot)
+
+
+
+
+
+
+
+
+```
+
+There are multiple factors that may contribute to the shift in sentiment scores across Taylor Swift's albums. For instance, the transition from country to pop music (1989) may have influenced the emotional tone of her lyrics, focusing more on sophisticated and complicated emotions rather than depicting pure love life. The personal experiences and relationships she went through during each album's creation may also have played a significant role. Apart from these, the Hollywood industry and the public's perception of her may have influenced her emotional state and the themes she explores in her music. For instance, the industry, media, and fans' reactions and expectations to her personal life, relationships, body image, and political values may have impacted her emotional well-being and the sentiments she conveys in her lyrics. It is difficult for her to be perfectly happy when she is constantly under public scrutiny and facing challenges in her personal life. She was often portrayed as a "victim" of men and the industry in the media, which may have influenced her emotional state. 
+
+From my perspective, music before ***reputation*** serves more for "Taylor as a brand", which reflects more exploration on music styles. ***1989*** is a turning point for Taylor Swift, which marks her transition from country to pop music. It is also notable that Taylor met Karlie Kloss during the ***1989*** era, and Karlie is the one who persuaded Taylor to move to New York City. This is the reason why Karlie is recognized as the muse in New York in later albums. ***reputation*** is a significant album for Taylor Swift, which marks her transformation from "America's Sweetheart" to a "Reputation" queen. Part of the album is a response to the media and public's perception of her, which is a turning point for her to take control of her narrative, including her control over her work by leaving Big Machine Records. It is also notable that the love life in ***reputation*** is more about her relationship with Karlie Kloss as a secret love:
+
+
+<embed src="source/Reputation is about Karlie Kloss.pdf" type="application/pdf" width="100%" height="600px" />
+
+
+
+***Lover*** is a significant album for Taylor Swift, which features a high volumn of queer representations, metaphors, and symbols. It is rumored that Taylor intended to come out as bisexual during the Lover era but failed to do so due to complicated political reasons, which also contributes to the love blackout of Taylor and Karlie. 
+
+
+![Lover Era Queerness](Image/Fig 08_Lover Era Queerness.jpg)
+
+It is not difficult to infer that the steep progression to negative sentiment scores in ***Folklore*** and ***Evermore*** is related to the love blackout of Taylor and Karlie, as well as her failure to come out. The ***Midnights*** and ***The Tortured Poets Department*** are the most recent albums, which features more intense negative emotions. The sister albums ***Folklore*** and ***Evermore*** combines myths, fairy tales, and personal experiences, which reflects Taylor's exploration of her inner world and the complexity of her life. It is worth mentioning that the queer representation in ***Folklore*** and ***Evermore*** is more subtle, implicit, and miserable, which is different from the explicit queer representation in ***Lover***. For instance, ***Seven*** features a lyric of "Come live with me then you won't have to cry or hide in the closet", which is a metaphor of hiding sexuality. ***Evermore*** features more historical queer evidence. For instance, ***Cowboy Like Me*** mirrors the forbidden love between two cowboys in the movie ***Brokeback Mountain***, while the "hairpin" metaphor in ***Right where you left me*** is a symbol of queer people recognizing each other during the Stonewall era. ***Ivy*** is absolutely Taylor's most queer song forever, which dedicates to Emily Dickinson. 
+
+
+![Fail to Come Out](Image/Fig 09_Failed come out.webp)
+
+Taylor is good at employing intertextuality, metaphors, and symbols in her lyrics, which makes her music more profound and open to interpretation. The queer representation in her music is not only about her personal life but also about the history of queer people and the struggles they have faced. It is a way for her to express her support for the LGBTQ+ community and to raise awareness of the challenges they face. The negative sentiment scores in her recent albums may reflect her struggles with her identity, relationships, and the public's perception of her. It is essential to recognize that Taylor Swift is a complex and multifaceted person, and her music reflects her personal experiences, emotions, and values. As a fan, I appreciate her honesty, vulnerability, and courage to share her story with the world. Her music has helped me through difficult times and inspired me to be true to myself and stand up for what I believe in. I hope that Taylor Swift's music will continue to inspire and empower people to be themselves and embrace their uniqueness.
+
+
+### Easter Eggs: Can Wordclouds Reveal Taylor's Secrets?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
