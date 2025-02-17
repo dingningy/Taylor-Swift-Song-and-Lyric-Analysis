@@ -20,7 +20,7 @@ This repository contains the quarto markdown that renders an HTML output, datase
 - [Image](./Image): Directory containing all figures used in the project.
 
 5. **Audio & Video Materials**:
-- [Audio](./Image): Directory containing all audio and video files used in the project.
+- [Audio](./Audio): Directory containing all audio and video files used in the project.
 
 6. **Documentation**:
 - [README.md](./README.md): Overview of the project, repository structure, and dataset details.
