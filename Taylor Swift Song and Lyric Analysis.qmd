@@ -34,6 +34,7 @@ if(!require(shiny)){install.packages("shiny")}
 if(!require(caret)){install.packages("caret")}
 if(!require(gridExtra)){install.packages("gridExtra")}
 
+
 # List of required packages
 required_packages <- c ("tidyverse", "ggplot2", "ggiraph", "viridis", "knitr", "kableExtra", "plotly", "wordcloud2", "shiny","caret","gridExtra")
 
@@ -525,4 +526,107 @@ The second part of this project focuses on analyzing Taylor Swift's lyrics using
 The Reputation prologue is one of my favorite quotes from Taylor Swift. It reflects the complexity of human nature and the different versions of ourselves we present to the world. Taylor Swift is known for her storytelling and emotional depth in her lyrics, which often reflect her personal experiences and emotions. Nevertheless, it is essential to recognize that different people may interpret her lyrics differently based on their own experiences, values, and perspectives. This section aims to analyze Taylor's lyrics combining her personal life changes to better understand her as a person. 
 
 
+### The Miserable Track 5
 
+According to Taylor, the fifth track is usually her most emotional, vulnerable, and raw track on the album. A Reddit user named u/LaraEligia once described the track 5 as "***the track that punches you in the face calls you names kicks you in the stomach punctures your spleen with a kitchen knife and leaves you bleeding to death***". 
+
+#### Track 5 and Valence Score Table
+
+The table below shows the track 5 of each album and the corresponding valence score. It is true that most track 5s have a low valence score. Scores higher than 0.5 (i.e., skewed to positive emotions) include only ***All You Had To Do Was Stay*** from ***1989***, which is a song with relatively positive melody. The ***Holy Ground*** from ***reputation Stadium Tour Surprise Song Playlist*** does not count because it is a live recording album rather than a typical studio album.
+
+```{r}
+#| label: Track 5 and Valence Score Table
+#| tbl-cap: "Table 2: Track 5 of Each Album and Valence Score"
+
+# Extract track 5 from each album
+track_5_data <- ts.spotify %>%
+  filter(track_number == 5) %>%
+  select(album, track_name, valence) %>%
+  arrange(valence) 
+
+# Create the table
+track_5_table <- kable(track_5_data, 
+                       col.names = c("Album", "Track 5", "Valence Score"),
+                       align = c("l", "l", "c"),
+                       digits = 3) %>%
+  kable_styling(bootstrap_options = c("striped", "hover"),
+                full_width = FALSE,
+                position = "center") %>%
+  column_spec(1:2, width = "12em") %>%
+  column_spec(3, width = "8em", bold = TRUE) %>%
+  row_spec(0, bold = TRUE, color = "white", background = "#0073CF")
+
+# Display the table
+track_5_table
+
+```
+
+
+
+#### Track 5 and Valence Score Analysis
+
+```{r}
+#| label: track-5-t-test
+#| include: false
+
+# Prepare the data
+ts.spotify$is_track_5 <- ifelse(ts.spotify$track_number == 5, "Track 5", "Other Tracks")
+
+# Perform t-test
+t_test_result <- t.test(valence ~ is_track_5, data = ts.spotify)
+
+# Perform Wilcoxon test (non-parametric alternative)
+wilcox_test_result <- wilcox.test(valence ~ is_track_5, data = ts.spotify)
+
+# Calculate mean valence for track 5 and other tracks
+mean_valence_track5 <- mean(ts.spotify$valence[ts.spotify$track_number == 5], na.rm = TRUE)
+mean_valence_others <- mean(ts.spotify$valence[ts.spotify$track_number != 5], na.rm = TRUE)
+
+
+
+
+```
+
+The analysis comparing the valence scores of track 5 to other tracks revealed `r ifelse(t_test_result$p.value < 0.05, "a significant", "no significant")` difference (t(`r round(t_test_result$parameter, 1)`) = `r round(t_test_result$statistic, 2)`, *p* = `r round(t_test_result$p.value, 3)`). The mean valence score for track 5 was `r round(mean_valence_track5, 3)`, compared to `r round(mean_valence_others, 3)` for other tracks. Figure 5 illustrates the comparison of valence scores between track 5 and other tracks. The results suggest that track 5 tends to have lower valence scores than other tracks with more data point proportion condensed at the lower end, supporting that track 5 is often the most vulnerable, emotional, and raw track on Taylor Swift's albums.
+
+
+```{r}
+#| label: fig-track-5-valence-boxplot
+#| fig.cap: "Valence Scores of Track 5 vs. Other Tracks"
+#| include: true
+#| warning: false
+
+# Calculate means for annotation
+mean_valence <- ts.spotify %>%
+  group_by(is_track_5) %>%
+  summarize(mean_valence = mean(valence, na.rm = TRUE))
+
+custom_colors_track <- c("Track 5" = "lightyellow", "Other Tracks" = "lightblue")
+
+# Create the plot
+track_5_box <- ggplot(ts.spotify, aes(x = is_track_5, y = valence, fill = is_track_5)) +
+  geom_boxplot(alpha = 0.7, outlier.shape = NA) +  
+  geom_jitter(width = 0.2, alpha = 0.2, color = "darkgrey") +
+  stat_summary(fun = mean, geom = "point", shape = 18, size = 4, color = "#800000") +
+  geom_text(data = mean_valence, aes(y = mean_valence, label = round(mean_valence, 3)),
+            vjust = -1, color = "#800000") +
+  labs(title = "Comparison of Valence Scores: Track 5 vs. Other Tracks",
+       x = "Track Position", y = "Valence Score") +
+  theme.clean() +
+  theme(axis.text.x = element_text(hjust = 0.5))+
+  scale_fill_manual(values = custom_colors_track)+
+  labs(fill = "Track Position") 
+
+# Add t-test results to the plot
+track_5_box <- track_5_box + annotate("text", x = 1.5, y = max(ts.spotify$valence, na.rm = TRUE),
+                  label = paste("t-test p-value =", format.pval(t_test_result$p.value, digits = 3)),
+                  hjust = 0.5, vjust = 1)
+
+# Display the plot
+print(track_5_box)
+
+
+
+
+
+```
