@@ -29,16 +29,17 @@ if(!require(viridis)){install.packages("viridis")}
 if(!require(knitr)){install.packages("knitr")}
 if(!require(kableExtra)){install.packages("kableExtra")}
 if(!require(plotly)){install.packages("plotly")}
-if(!require(wordcloud2)){install.packages("wordcloud2")}
+if(!require(wordcloud)){install.packages("wordcloud")}
 if(!require(shiny)){install.packages("shiny")}
 if(!require(caret)){install.packages("caret")}
 if(!require(gridExtra)){install.packages("gridExtra")}
 if(!require(tidytext)){install.packages("tidytext")}
 if(!require(textdata)){install.packages("textdata")}
+if(!require(RColorBrewer)){install.packages("RColorBrewer")}
 
 
 # List of required packages
-required_packages <- c ("tidyverse", "ggplot2", "ggiraph", "viridis", "knitr", "kableExtra", "plotly", "wordcloud2", "shiny","caret","gridExtra", "tidytext", "textdata")
+required_packages <- c ("tidyverse", "ggplot2", "ggiraph", "viridis", "knitr", "kableExtra", "plotly", "wordcloud", "shiny","caret","gridExtra", "tidytext", "textdata", "RColorBrewer")
 
 # Load required packages
 lapply(required_packages, library, character.only = TRUE)
@@ -869,25 +870,134 @@ From my perspective, music before ***reputation*** serves more for "Taylor as a 
 
 It is not difficult to infer that the steep progression to negative sentiment scores in ***Folklore*** and ***Evermore*** is related to the love blackout of Taylor and Karlie, as well as her failure to come out. The ***Midnights*** and ***The Tortured Poets Department*** are the most recent albums, which features more intense negative emotions. The sister albums ***Folklore*** and ***Evermore*** combines myths, fairy tales, and personal experiences, which reflects Taylor's exploration of her inner world and the complexity of her life. It is worth mentioning that the queer representation in ***Folklore*** and ***Evermore*** is more subtle, implicit, and miserable, which is different from the explicit queer representation in ***Lover***. For instance, ***Seven*** features a lyric of "Come live with me then you won't have to cry or hide in the closet", which is a metaphor of hiding sexuality. ***Evermore*** features more historical queer evidence. For instance, ***Cowboy Like Me*** mirrors the forbidden love between two cowboys in the movie ***Brokeback Mountain***, while the "hairpin" metaphor in ***Right where you left me*** is a symbol of queer people recognizing each other during the Stonewall era. ***Ivy*** is absolutely Taylor's most queer song forever, which dedicates to Emily Dickinson. 
 
+Click the button below to listen to ***Ivy***:
+
+<audio controls>
+
+<source src="audio/Taylor Swift - ivy.mp3" type="audio/mpeg">
+
+Your browser does not support the audio element. </audio>
+
+
 
 ![Fail to Come Out](Image/Fig 09_Failed come out.webp)
 
-Taylor is good at employing intertextuality, metaphors, and symbols in her lyrics, which makes her music more profound and open to interpretation. The queer representation in her music is not only about her personal life but also about the history of queer people and the struggles they have faced. It is a way for her to express her support for the LGBTQ+ community and to raise awareness of the challenges they face. The negative sentiment scores in her recent albums may reflect her struggles with her identity, relationships, and the public's perception of her. It is essential to recognize that Taylor Swift is a complex and multifaceted person, and her music reflects her personal experiences, emotions, and values. As a fan, I appreciate her honesty, vulnerability, and courage to share her story with the world. Her music has helped me through difficult times and inspired me to be true to myself and stand up for what I believe in. I hope that Taylor Swift's music will continue to inspire and empower people to be themselves and embrace their uniqueness.
+
 
 
 ### Easter Eggs: Can Wordclouds Reveal Taylor's Secrets?
 
 
+This section aims to analyze the lyrics of Taylor Swift's songs using word clouds to identify common themes. Word clouds are visual representations of text data that highlight the most frequently used words. By analyzing the word clouds of Taylor Swift's lyrics, we can gain insights into the themes, emotions, and symbols that are prevalent in her music. To get a better understanding of the sentiment of Taylor Swift's lyrics, I only include words that are not neutral and have a frequency of more than 2. The sentiment word clouds are generated for each album, providing a visual representation of the most frequently used positive and negative words in Taylor Swift's songs. The word clouds are based on the sentiment lexicon from the BING lexicon, which categorizes words as positive or negative. The sentiment word clouds of Taylor Swift's lyrics by album are presented below:
+
+
+```{r}
+#| label: Generate sentiment word clouds for each album
+#| include: false
+
+# Load sentiment lexicon
+sentiment_lexicon <- get_sentiments("bing")
+
+lyrics_tokens <- lyrics_data %>%
+  unnest_tokens(word, lyric_content) %>%
+  inner_join(sentiment_lexicon) %>%  
+  filter(!word %in% c("like", "well", "love", "miss", "yeah", "oh", "uh", "hey", "ooh"))
+
+create_sentiment_wordcloud <- function(album_name) {
+  album_words <- lyrics_tokens %>%
+    filter(album_name == !!album_name) %>%
+    count(word, sentiment, sort = TRUE) %>%
+    filter(n > 2)  # Adjust this number to include more or fewer words
+  
+# Choose a color palette from RColorBrewer
+  color_palette <- brewer.pal(8, "Dark2")  # You can change "Dark2" to other palettes
+  
+  wordcloud::wordcloud(words = album_words$word, 
+                       freq = album_words$n, 
+                       min.freq = 1,
+                       max.words = 200,
+                       random.order = FALSE, 
+                       rot.per = 0.35, 
+                       scale = c(5, 0.5),
+                       colors = color_palette)
+}
+
+# Create word clouds for each album
+album_names <- unique(lyrics_data$album_name)
+
+for (album in album_names) {
+  png(filename = paste0("sentiment_wordcloud_", gsub("[::]", "_", album), ".png"), 
+      width = 1500, height = 1500, res = 300)  # Significantly increased size and resolution
+  create_sentiment_wordcloud(album)
+  dev.off()
+}
+
+
+```
+
+
+```{r}
+#| label: fig-sentiment-wordclouds
+#| fig.cap: "Sentiment Word Clouds of Taylor Swift's Lyrics by Album"
+#| include: true
+#| fig-subcap:
+#|   - "Taylor Swift"
+#|   - "Fearless"
+#|   - "Speak Now"
+#|   - "Red"
+#|   - "1989"
+#|   - "Reputation"
+#|   - "Lover"
+#|   - "Folklore"
+#|   - "Evermore"
+#|   - "Midnights"
+#|   - "The Tortured Poets Department"
+#| layout-ncol: 2
+#| fig-width: 10
+#| fig-height: 10
+#| out-width: "100%" 
+
+
+
+# List of album names
+album_names <- c("TS1: Taylor Swift", "TS2: Fearless", "TS3: Speak Now", 
+                 "TS4: Red", "TS5: 1989", "TS6: Reputation", 
+                 "TS7: Lover", "TS8: Folklore", "TS9: Evermore", 
+                 "TS10: Midnights", "TS11: The Tortured Poets Department")
+
+# Display the generated images
+knitr::include_graphics(paste0("sentiment_wordcloud_", gsub("[::]", "_", album_names), ".png"))
 
 
 
 
 
+```
+
+It is interesting to observe the sentiment word clouds of Taylor Swift's lyrics by album. ***Taylor Swift*** and ***Fearless*** reflect Taylor's youthful optimism and romantic idealism. Words like “beautiful,” “perfect,” “right,” and “fall” dominate, suggesting themes of first love, innocence, and hope. There is a sense of positivity and naivety, with occasional mentions of heartbreak (“sorry,” “losing”).
 
 
+***Speak Now*** introduces more conflict and emotional complexity. Words like “confessions,” “bad,” and “foolish” indicate a growing awareness of the difficulties in relationships. However, positive words like “magic” and “right” reveal lingering traces of youthful optimism.
+
+***Red*** captures the intensity of love and heartbreak. Words like “break,” “better,” and “hate” highlight emotional turbulence, while “darling” and “loving” hint at deep emotional connections. This album marks a shift toward more mature themes of vulnerability and passion.
+
+***1989*** represents an era of reinvention and empowerment. Words like “shake,” “welcome,” and “clear” suggest confidence and freedom. The album shows a sense of resilience and optimism, with tracks celebrating independence and self-expression, marking Taylor's shift from country to pop music, as well as a new beginning in New York City.
+
+***Reputation***, on the other hand, is darker and more defensive, as seen in words like “mad,” “delicate,” and “crazy” This album reflects themes of betrayal, self-preservation, and reclaiming power in the face of criticism, showing Taylor’s evolution into a more assertive and self-aware artist.
+
+***Lover*** shifts back toward warmth and positivity. Words like “bless,” “darling,” and “right” reflect themes of love and gratitude. The album feels celebratory, exploring the joy of romance while acknowledging its imperfections. This is consistent with her coming out plan during the ***Lover*** era.
 
 
+***Folklore*** and ***Evermore*** mark a departure from personal storytelling to fictional narratives and introspection. Words like “mad,” “worst,” “ruining,” and “lose” in Folklore suggest a reflective and imaginary tone skewed to negative emotions, while “happiness” and “better” in Evermore indicate a balance between sorrow and hope. I can't stop thinking about songs like ivy and gold rush, which are absolutely beautiful... Both albums delve into themes of regret, longing, and existential musings, showing Taylor's lyrical maturity.
 
+
+***Midnights*** revisits deeply personal themes. Words like “sweet,” “hurts,” and “problem” suggest a blend of introspection, vulnerability, and romantic musings. The album feels intimate, with a mix of lighthearted and contemplative emotions.
+
+***The Tortured Poets Department*** features words like “fuck,” “die,” and “lost,” indicating an extremely negative emotion release. It is notable that this album is based on Taylor's most intimate emotions. She created five playlists to mark the five phases of heartbreaking on Apple Music before the release of the album. Both track names and lyrics reflect depressed emotions. For instance, "I can do it with a broken heart" as the song name or "Am I allowed to cry?" as the lyric. I would say this album is Taylor's saddest album (you can also tell from the sentiment score!). The album explores different themes, such as hidden sexuality, the restraint from the fan community and family members, as well as general mental health problems. I feel like this album is an expansion of Midnights, which is also intimate, personal, and delicate. 
+
+
+## Ending
+Taylor is good at employing intertextuality, metaphors, and symbols in her lyrics, which makes her music more profound and open to interpretation. The queer representation in her music is not only about her personal life but also about the history of queer people and the struggles they have faced. It is a way for her to express her support for the LGBTQ+ community and to raise awareness of the challenges they face. The negative sentiment scores in her recent albums may reflect her struggles with her identity, relationships, and the public's perception of her. It is essential to recognize that Taylor Swift is a complex and multifaceted person, and her music reflects her personal experiences, emotions, and values. As a fan, I appreciate her honesty, vulnerability, and courage to share her story with the world. Her music has helped me through difficult times and inspired me to be true to myself and stand up for what I believe in. I hope that Taylor Swift's music will continue to inspire and empower people to be themselves and embrace their uniqueness.
 
 
 
