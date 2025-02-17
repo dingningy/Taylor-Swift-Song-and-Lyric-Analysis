@@ -1,4 +1,4 @@
-<img src="Image/Fig 11_Tay cat.avif" width="30px"> # Taylor Swift: Song and Lyric Analysis
+<img src="Image/Fig 11_Tay cat.avif" width="30px"># Taylor Swift: Song and Lyric Analysis
 
 
 ## :musical_keyboard: Repository Purpose :guitar:
