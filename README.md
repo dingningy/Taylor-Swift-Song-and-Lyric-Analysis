@@ -1,4 +1,4 @@
-# Taylor Swift: Song and Lyric Analysis
+<img src = https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.lemonde.fr%2Fen%2Fm-le-mag%2Farticle%2F2024%2F09%2F18%2Ftaylor-swift-s-cat-a-political-figure-in-his-own-right_6726507_117.html&psig=AOvVaw3_BlZdoS7ZrtsH1i6s-rSt&ust=1739911257535000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMiVstnIy4sDFQAAAAAdAAAAABAE width="30px"># Taylor Swift: Song and Lyric Analysis
 
 
 ## :musical_keyboard: Repository Purpose :guitar:
