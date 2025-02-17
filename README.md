@@ -28,3 +28,32 @@ This repository contains the quarto markdown that renders an HTML output, datase
 7. **Version Control**:
 - [.gitignore](./.gitignore): Specifies intentionally untracked files to ignore.
 - [R Project](./Taylor-Swift-Song-and-Lyric-Analysis.Rproj): R Project synchronized with GitHub version control. 
+
+For questions or further information, please contact [Dingning Yang] at :e-mail:(mailto:dingningy@uchicago.edu).
+
+
+## :bar_chart:Data Information
+
+### Dataset Names
+
+**Raw dataset:**
+ts.spotify.raw.csv:[View the Dataset](./Data/raw.ts.spotify.raw.csv);
+ts.lyric.csv:[View the Dataset](./Data/ts.lyric.csv)
+
+**Cleaned and transformed dataset:**
+ts.spotify.csv:[View the Dataset](./Data/ts.spotify.csv)
+
+### Data Source
+The Spotify dataset is from Kaggle [View the link](https://www.kaggle.com/datasets/jarredpriester/taylor-swift-spotify-dataset)
+The lyric dataset is from GitHub [View the link](https://github.com/sagesolar/Corpus-of-Taylor-Swift)
+
+### Size
+Approximately 757 KB.
+
+### Licensing
+This dataset is for internal use only and should not be shared without permission.
+
+
+
+
+
