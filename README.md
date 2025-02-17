@@ -46,7 +46,7 @@ For questions or further information, please contact [Dingning Yang] at :e-mail:
 ### Dataset Names
 
 **Raw dataset:**
-ts.spotify.raw.csv:[View the Dataset](./Data/raw.ts.spotify.raw.csv);
+ts.spotify.raw.csv:[View the Dataset](./Data/ts.spotify.raw.csv);
 ts.lyric.csv:[View the Dataset](./Data/ts.lyric.csv)
 
 **Cleaned and transformed dataset:**
