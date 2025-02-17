@@ -1,7 +1,7 @@
 ---
 title: "Taylor Swift Song and Lyric Analysis"
 author: "Dingning Yang"
-date: "2025-02-15"
+date: "2025-02-17"
 format: 
  html:
     toc: true
