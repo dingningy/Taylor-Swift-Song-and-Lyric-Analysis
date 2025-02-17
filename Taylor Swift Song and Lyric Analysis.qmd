@@ -61,11 +61,11 @@ source("Source/Data Cleaning.R")
 
 ### Descriptive Analysis
 
-The Spotify dataset contains `r n_distinct (ts.spotify$id)` tracks from `r n_distinct (ts.spotify$album)` albums of Taylor Swift. Specifically, there are `r nrow(ts.spotify[ts.spotify$album_label == "Republic", ])` tracks and `r length(unique(ts.spotify$album[ts.spotify$album_label == "Republic"]))` albums under the Republic record label. Under the Big Machine record label, there are `r nrow(ts.spotify[ts.spotify$album_label == "Big Machine", ])` tracks and `r length(unique(ts.spotify$album[ts.spotify$album_label == "Big Machine"]))` albums. Table 1 summarizes the album release time and average popularity scores of different albums.
+The Spotify dataset contains `r n_distinct (ts.spotify$id)` tracks from `r n_distinct (ts.spotify$album)` albums of Taylor Swift. Specifically, there are `r nrow(ts.spotify[ts.spotify$album_label == "Republic", ])` tracks and `r length(unique(ts.spotify$album[ts.spotify$album_label == "Republic"]))` albums under the Republic record label. Under the Big Machine record label, there are `r nrow(ts.spotify[ts.spotify$album_label == "Big Machine", ])` tracks and `r length(unique(ts.spotify$album[ts.spotify$album_label == "Big Machine"]))` albums. @tbl-album-release-time-and-popularity the album release time and average popularity scores of different albums.
 
 ```{r}
-#| label: Generate album release time and popularity table
-#| tbl-cap: "Table 1: Album Release Time and Popularity"
+#| label: tbl-album-release-time-and-popularity
+#| tbl-cap: "Album Release Time and Popularity"
 
 album_summary <- ts.spotify %>%
   mutate(track_number = as.numeric(as.character(track_number))) %>% 
@@ -97,7 +97,7 @@ album_summary %>%
 
 ```
 
-Specifically, `r round(100 * sum(ts.spotify$album_label == "Republic") / nrow(ts.spotify), 1)`% of Taylor Swift's songs are under the Republic record label, while `r round(100 * sum(ts.spotify$album_label == "Big Machine") / nrow(ts.spotify), 1)`% are under the Big Machine record label.
+Specifically, `r round(100 * sum(ts.spotify$album_label == "Republic") / nrow(ts.spotify), 1)`% of Taylor Swift's songs are under the Republic record label, while `r round(100 * sum(ts.spotify$album_label == "Big Machine") / nrow(ts.spotify), 1)`% are under the Big Machine record label (@fig-album-label-percentage).
 
 ```{r}
 #| label: fig-album-label-percentage
@@ -317,7 +317,7 @@ eta_squared_rounded <- round(eta_squared, 3)
 
 ```
 
-One-way ANOVA results indicated significant differences were found between record labels' impacts on popularity scores (Figure 2). Specifically, songs under the Big Machine label showed lower popularity scores than under the Republic label ($M_{\text{Big Machine}} = `r round(mean(ts.spotify$popularity[ts.spotify$album_label == "Big Machine"]), 2)`$ vs. $M_{\text{Republic}} = `r round(mean(ts.spotify$popularity[ts.spotify$album_label == "Republic"]), 2)`$; *F*(`r summary_label_effect$Df[1]`, `r summary_label_effect$Df[2]`) = `r round(summary_label_effect$"F value"[1], 2)`; *p* `r if(summary_label_effect$"Pr(>F)"[1] < 0.001) "< 0.001" else paste("=", sprintf("%.3f", summary_label_effect$"Pr(>F)"[1]))`, η² = `r eta_squared_rounded`). It indicates that approximately 46.5% of the variance in popularity scores can be explained by the difference in record labels (Big Machine vs. Republic), suggesting that Taylor Swift's control over her work has a significant impact on the popularity of her songs. The ownership not only allows her to re-record her songs but also to control the distribution and promotion of her music, which may contribute to the higher popularity scores under the Republic label. It is notable that the re-record versions are generally promoted by fans as a way to support Taylor Swift's ownership of her work. This also reflects Taylor's determination to regain control of her work and the revolutionary impact of her move on the music industry.
+One-way ANOVA results indicated significant differences were found between record labels' impacts on popularity scores (@fig-popularity-by-label). Specifically, songs under the Big Machine label showed lower popularity scores than under the Republic label ($M_{\text{Big Machine}} = `r round(mean(ts.spotify$popularity[ts.spotify$album_label == "Big Machine"]), 2)`$ vs. $M_{\text{Republic}} = `r round(mean(ts.spotify$popularity[ts.spotify$album_label == "Republic"]), 2)`$; *F*(`r summary_label_effect$Df[1]`, `r summary_label_effect$Df[2]`) = `r round(summary_label_effect$"F value"[1], 2)`; *p* `r if(summary_label_effect$"Pr(>F)"[1] < 0.001) "< 0.001" else paste("=", sprintf("%.3f", summary_label_effect$"Pr(>F)"[1]))`, η² = `r eta_squared_rounded`). It indicates that approximately 46.5% of the variance in popularity scores can be explained by the difference in record labels (Big Machine vs. Republic), suggesting that Taylor Swift's control over her work has a significant impact on the popularity of her songs. The ownership not only allows her to re-record her songs but also to control the distribution and promotion of her music, which may contribute to the higher popularity scores under the Republic label. It is notable that the re-record versions are generally promoted by fans as a way to support Taylor Swift's ownership of her work. This also reflects Taylor's determination to regain control of her work and the revolutionary impact of her move on the music industry.
 
 
 
@@ -414,7 +414,7 @@ $$
 \end{aligned}
 $$
 
-Figure 3 illustrates the relationship between popularity scores and music features based on the multiple linear regression model. Specifically, liveness and valence are negatively associated with popularity scores. The negative relationship between liveness and popularity scores suggests that songs with a higher probability of being live recordings are less popular. It is reasonable since most albums are studio albums rather than live recordings. Another reason is that most live recordings are under the Big Machine label, which has lower popularity scores. 
+@fig-feature-popularity-regression-history illustrates the relationship between popularity scores and music features based on the multiple linear regression model. Specifically, liveness and valence are negatively associated with popularity scores. The negative relationship between liveness and popularity scores suggests that songs with a higher probability of being live recordings are less popular. It is reasonable since most albums are studio albums rather than live recordings. Another reason is that most live recordings are under the Big Machine label, which has lower popularity scores. 
 
 The negative relationship between valence and popularity scores indicates that songs with more negative emotions are more popular. This is consistent with the previous analysis, which showed that Taylor Swift's songs are slightly skewed towards negative emotions. As a 16-year Swiftie (Gaylor), I can better emotionally resonate with Taylor's songs related to her personal life, which often involves negative emotions. Many lyrics can reflect my own experiences and challenges in life, making me feel understood and less alone. This emotional connection may contribute to the popularity of songs with negative emotions. It is not necessarily the case that negative emotions are more popular, but rather that they are more relatable and emotionally impactful. All in all, we have to experience complicated emotions to feel alive. 
 
@@ -535,11 +535,11 @@ According to Taylor, the fifth track is usually her most emotional, vulnerable, 
 
 #### Track 5 and Valence Score Table
 
-The table below shows the track 5 of each album and the corresponding valence score. It is true that most track 5s have a low valence score. Scores higher than 0.5 (i.e., skewed to positive emotions) include only ***All You Had To Do Was Stay*** from ***1989***, which is a song with relatively positive melody. The ***Holy Ground*** from ***reputation Stadium Tour Surprise Song Playlist*** does not count because it is a live recording album rather than a typical studio album.
+@tbl-track-5-valence shows the track 5 of each album and the corresponding valence score. It is true that most track 5s have a low valence score. Scores higher than 0.5 (i.e., skewed to positive emotions) include only ***All You Had To Do Was Stay*** from ***1989***, which is a song with relatively positive melody. The ***Holy Ground*** from ***reputation Stadium Tour Surprise Song Playlist*** does not count because it is a live recording album rather than a typical studio album.
 
 ```{r}
-#| label: Track 5 and Valence Score Table
-#| tbl-cap: "Table 2: Track 5 of Each Album and Valence Score"
+#| label: tbl-track-5-valence
+#| tbl-cap: "Track 5 of Each Album and Valence Score"
 
 # Extract track 5 from each album
 track_5_data <- ts.spotify %>%
@@ -590,7 +590,7 @@ mean_valence_others <- mean(ts.spotify$valence[ts.spotify$track_number != 5], na
 
 ```
 
-The analysis comparing the valence scores of track 5 to other tracks revealed `r ifelse(t_test_result$p.value < 0.05, "a significant", "no significant")` difference (t(`r round(t_test_result$parameter, 1)`) = `r round(t_test_result$statistic, 2)`, *p* = `r round(t_test_result$p.value, 3)`). The mean valence score for track 5 was `r round(mean_valence_track5, 3)`, compared to `r round(mean_valence_others, 3)` for other tracks. Figure 5 illustrates the comparison of valence scores between track 5 and other tracks. The results suggest that track 5 tends to have lower valence scores than other tracks with more data point proportion condensed at the lower end, supporting that track 5 is often the most vulnerable, emotional, and raw track on Taylor Swift's albums.
+The analysis comparing the valence scores of track 5 to other tracks revealed `r ifelse(t_test_result$p.value < 0.05, "a significant", "no significant")` difference (t(`r round(t_test_result$parameter, 1)`) = `r round(t_test_result$statistic, 2)`, *p* = `r round(t_test_result$p.value, 3)`). The mean valence score for track 5 was `r round(mean_valence_track5, 3)`, compared to `r round(mean_valence_others, 3)` for other tracks. @fig-track-5-valence-boxplot illustrates the comparison of valence scores between track 5 and other tracks. The results suggest that track 5 tends to have lower valence scores than other tracks with more data point proportion condensed at the lower end, supporting that track 5 is often the most vulnerable, emotional, and raw track on Taylor Swift's albums.
 
 
 ```{r}
@@ -698,15 +698,15 @@ album_sentiment <- lyrics_sentiment %>%
 
 
 
-The sentiment analysis of Taylor Swift's lyrics by album is presented in Table 3 and Figure 5. The sentiment scores are based on the BING lexicon, which categorizes words as positive or negative. The sentiment score is calculated as the difference between the number of positive and negative words in the lyrics. Positive values indicate more positive sentiment, while negative values indicate more negative sentiment. The absolute value of the sentiment score reflects the intensity of the sentiment.
+The sentiment analysis of Taylor Swift's lyrics by album is presented in @tbl-sentiment-analysis-by-album and @fig-sentiment-analysis-by-album . The sentiment scores are based on the BING lexicon, which categorizes words as positive or negative. The sentiment score is calculated as the difference between the number of positive and negative words in the lyrics. Positive values indicate more positive sentiment, while negative values indicate more negative sentiment. The absolute value of the sentiment score reflects the intensity of the sentiment.
 
 The average sentiment scores by album are shown below:
 
 
 
 ```{r}
-#| label: Generate sentiment analysis table by album
-#| tbl-cap: "Table 3: Sentiment Analysis of Taylor Swift's Lyrics by Album"
+#| label: tbl-sentiment-analysis-by-album
+#| tbl-cap: "Sentiment Analysis of Taylor Swift's Lyrics by Album"
 #| include: true
 
 # Define album colors by album's corresponding hex palette
@@ -793,7 +793,7 @@ print(sentiment_plot)
 
 
 
-Figure 6 illustrates the progression of sentiment scores across Taylor Swift's albums by a line chart. It is notable that all of the first seven albums have positive sentiment scores, though featuring flunctuations from album to album. However, all recent four albums have negative sentiment scores (with evermore has a slightly positive score), indicating a shift in the emotional tone of Taylor Swift's lyrics. This shift may reflect her changing perspectives and evolving experiences over time. The sentiment progression of Taylor Swift's lyrics provides insights into her emotional journey, allowing listeners to connect with her music on a deeper level.
+@fig-sentiment-progress-by-album illustrates the progression of sentiment scores across Taylor Swift's albums by a line chart. It is notable that all of the first seven albums have positive sentiment scores, though featuring flunctuations from album to album. However, all recent four albums have negative sentiment scores (with evermore has a slightly positive score), indicating a shift in the emotional tone of Taylor Swift's lyrics. This shift may reflect her changing perspectives and evolving experiences over time. The sentiment progression of Taylor Swift's lyrics provides insights into her emotional journey, allowing listeners to connect with her music on a deeper level.
 
 
 
@@ -888,7 +888,7 @@ Your browser does not support the audio element. </audio>
 ### Easter Eggs: Can Wordclouds Reveal Taylor's Secrets?
 
 
-This section aims to analyze the lyrics of Taylor Swift's songs using word clouds to identify common themes. Word clouds are visual representations of text data that highlight the most frequently used words. By analyzing the word clouds of Taylor Swift's lyrics, we can gain insights into the themes, emotions, and symbols that are prevalent in her music. To get a better understanding of the sentiment of Taylor Swift's lyrics, I only include words that are not neutral and have a frequency of more than 2. The sentiment word clouds are generated for each album, providing a visual representation of the most frequently used positive and negative words in Taylor Swift's songs. The word clouds are based on the sentiment lexicon from the BING lexicon, which categorizes words as positive or negative. The sentiment word clouds of Taylor Swift's lyrics by album are presented below:
+This section aims to analyze the lyrics of Taylor Swift's songs using word clouds to identify common themes. Word clouds are visual representations of text data that highlight the most frequently used words. By analyzing the word clouds of Taylor Swift's lyrics, we can gain insights into the themes, emotions, and symbols that are prevalent in her music. To get a better understanding of the sentiment of Taylor Swift's lyrics, I only include words that are not neutral and have a frequency of more than 2. The sentiment word clouds are generated for each album, providing a visual representation of the most frequently used positive and negative words in Taylor Swift's songs. The word clouds are based on the sentiment lexicon from the BING lexicon, which categorizes words as positive or negative. The sentiment word clouds in @fig-sentiment-wordclouds presents the sentiment words in Taylor Swift's lyrics by album: 
 
 
 ```{r}
