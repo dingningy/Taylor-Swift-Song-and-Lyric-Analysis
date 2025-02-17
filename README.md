@@ -13,18 +13,18 @@ This repository contains the quarto markdown that renders an HTML output, datase
 - [Inserted PDF in sentiment analysis interpretation](./Source/Reputation%20is%20about%20Karlie%20Kloss.pdf): A PDF explaining Taylor's sixth studio album reputation is about Karlie Kloss. 
 
 3. **Datasets**:
-   - [Data](./Data/): Directory containing two original datasets, one is the Spotify dataset for popularity score predictive analysis, and the other is lyrics sorted by album for sentiment analysis. There is also a cleaned and transformed 
+- [Data](./Data/): Directory containing two original datasets, one is the Spotify dataset for popularity score predictive analysis, and the other is lyrics sorted by album for sentiment analysis. There is also a cleaned and transformed 
   dataset for the Spotify data.
 
 4. **Visualizations**:
- - [Image](./Image): Directory containing all figures used in the project.
+- [Image](./Image): Directory containing all figures used in the project.
 
 5. **Audio & Video Materials**:
- - [Audio](./Image): Directory containing all audio and video files used in the project.
+- [Audio](./Image): Directory containing all audio and video files used in the project.
 
 6. **Documentation**:
-   - [README.md](./README.md): Overview of the project, repository structure, and dataset details.
+- [README.md](./README.md): Overview of the project, repository structure, and dataset details.
   
 7. **Version Control**:
-   - [.gitignore](./.gitignore): Specifies intentionally untracked files to ignore.
-   - [R Project](./Taylor-Swift-Song-and-Lyric-Analysis.Rproj): R Project synchronized with GitHub version control. 
+- [.gitignore](./.gitignore): Specifies intentionally untracked files to ignore.
+- [R Project](./Taylor-Swift-Song-and-Lyric-Analysis.Rproj): R Project synchronized with GitHub version control. 
