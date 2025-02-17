@@ -55,8 +55,7 @@ Approximately 757 KB.
 This dataset is for internal use only and should not be shared without permission.
 
 
-With my highest sincerity, 
-dedicated to Taylor Swift - Childless Cat Lady
+<img src="Image/Fig 14_Dedication.png" width="100%">
 
 <img src="Image/Fig 11_Tay cat.avif" width="100%">
 
