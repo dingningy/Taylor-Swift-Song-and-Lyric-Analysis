@@ -1000,7 +1000,7 @@ It is interesting to observe the sentiment word clouds of Taylor Swift's lyrics 
 Taylor is good at employing intertextuality, metaphors, and symbols in her lyrics, which makes her music more profound and open to interpretation. The queer representation in her music is not only about her personal life but also about the history of queer people and the struggles they have faced. It is a way for her to express her support for the LGBTQ+ community and to raise awareness of the challenges they face. The negative sentiment scores in her recent albums may reflect her struggles with her identity, relationships, and the public's perception of her. It is essential to recognize that Taylor Swift is a complex and multifaceted person, and her music reflects her personal experiences, emotions, and values. As a fan, I appreciate her honesty, vulnerability, and courage to share her story with the world. Her music has helped me through difficult times and inspired me to be true to myself and stand up for what I believe in. I hope that Taylor Swift's music will continue to inspire and empower people to be themselves and embrace their uniqueness.
 
 
-My Easter EGG: TAY smiled at me during the performance of ***august***, filmed by my friend:
+**My Easter EGG**: TAY smiled at me during the performance of ***august***, filmed by my friend:
 
 <video width="320" height="320" controls>
      <source src="audio/Tay Smile.mp4" type="video/mp4">
