@@ -1,4 +1,4 @@
-<img src="Image/Fig 11_Tay cat.avif" width="20%">
+<img src="Image/Fig 12_Tay era.webp" width="20%">
 
 # Taylor Swift: Song and Lyric Analysis
 
