@@ -39,7 +39,9 @@ This repository contains the quarto markdown that renders an HTML output, datase
 For questions or further information, please contact [Dingning Yang] at :e-mail:(mailto:dingningy@uchicago.edu).
 
 
-## :bar_chart:Data Information
+<p align="center">
+<img src="Image/Fig 17_Data Info.jpg" width="80%">
+</p>
 
 ### Dataset Names
 
