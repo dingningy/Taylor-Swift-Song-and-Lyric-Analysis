@@ -7,3 +7,7 @@ This repository contains the quarto markdown that renders an HTML output, datase
 ### :musical_score:Repository Contents
 1. **Quarto Markdown**:
 - [Project.qmd](./Taylor%20Swift%20Song%20and%20Lyric%20Analysis.qmd): Quarto markdown that renders an HTML output.
+  
+2. **Source**:
+- [Data Cleaning.R](./Source/Data%20Cleaning.R): Script for cleaning and transforming raw Spotify dataset.
+- [Inserted PDF in sentiment analysis interpretation](./Source/Reputation%20is%20about%20Karlie%20Kloss.pdf): A PDF explaining Taylor's sixth studio album reputation is about Karlie Kloss. 
