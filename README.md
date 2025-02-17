@@ -57,6 +57,7 @@ This dataset is for internal use only and should not be shared without permissio
 
 With my highest sincerity, 
 dedicated to Taylor Swift - Childless Cat Lady
-<img src="Image/Fig 11_Tay cat.avif" width="22.5%">
+
+<img src="Image/Fig 11_Tay cat.avif" width="100%">
 
 
