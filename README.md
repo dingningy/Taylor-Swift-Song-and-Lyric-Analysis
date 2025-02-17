@@ -1,5 +1,5 @@
 <img src="Image/Fig 12_Tay era.jpg" width="100%">
-
+:rainbow:
 # Taylor Swift: Song and Lyric Analysis  <img src="Image/Fig 11_Tay cat.avif" width="30%">
 
 ## :musical_keyboard: Repository Purpose :guitar:
