@@ -326,7 +326,7 @@ One-way ANOVA results indicated significant differences were found between recor
 #| label: fig-popularity-by-label
 #| fig.cap: "Popularity Scores by Record Label"
 
-# Define the theme
+# Define the theme for visualization
 theme.clean <- function(){
   theme_bw()+
     theme(axis.text.x = element_text(size = 12, vjust = 1, hjust = 1),
@@ -903,14 +903,15 @@ lyrics_tokens <- lyrics_data %>%
   inner_join(sentiment_lexicon) %>%  
   filter(!word %in% c("like", "well", "love", "miss", "yeah", "oh", "uh", "hey", "ooh"))
 
+# Function to create sentiment word clouds
 create_sentiment_wordcloud <- function(album_name) {
   album_words <- lyrics_tokens %>%
     filter(album_name == !!album_name) %>%
     count(word, sentiment, sort = TRUE) %>%
-    filter(n > 2)  # Adjust this number to include more or fewer words
+    filter(n > 2)  
   
 # Choose a color palette from RColorBrewer
-  color_palette <- brewer.pal(8, "Dark2")  # You can change "Dark2" to other palettes
+  color_palette <- brewer.pal(8, "Dark2")  
   
   wordcloud::wordcloud(words = album_words$word, 
                        freq = album_words$n, 
@@ -927,7 +928,7 @@ album_names <- unique(lyrics_data$album_name)
 
 for (album in album_names) {
   png(filename = paste0("sentiment_wordcloud_", gsub("[::]", "_", album), ".png"), 
-      width = 1500, height = 1500, res = 300)  # Significantly increased size and resolution
+      width = 1500, height = 1500, res = 300)  
   create_sentiment_wordcloud(album)
   dev.off()
 }
