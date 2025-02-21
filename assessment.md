@@ -58,7 +58,7 @@ Below each learning objective is a list of general expectations for meeting that
 
         -   [ ] Objective attempt
         -   [✔] Unique objective attempt
-        -   [ ] Objective met
+        -   [✔] Objective met
         -   Grader comments: 
 
 2.  Maintain an informative and up-to-date README.md
@@ -67,8 +67,8 @@ Below each learning objective is a list of general expectations for meeting that
     2.  Outlines the repo structure with file tree or similar
 
         -   [ ] Objective attempt
-        -   [✔ ] Unique objective attempt
-        -   [ ] Objective met
+        -   [✔] Unique objective attempt
+        -   [✔] Objective met
         -   Grader comments:
 
 3.  Integrate a GitHub repo with an R studio project, including .gitignore file
@@ -78,7 +78,7 @@ Below each learning objective is a list of general expectations for meeting that
 
         -   [ ] Objective attempt
         -   [✔] Unique objective attempt
-        -   [ ] Objective met
+        -   [✔] Objective met
         -   Grader comments:
 
 4.  Effectively use version control
@@ -88,7 +88,7 @@ Below each learning objective is a list of general expectations for meeting that
 
         -   [ ] Objective attempt
         -   [✔] Unique objective attempt
-        -   [ ] Objective met
+        -   [✔] Objective met
         -   Grader comments:
 
 ### R programming
@@ -100,7 +100,7 @@ Below each learning objective is a list of general expectations for meeting that
 
         -   [✔] Objective attempt
         -   [ ] Unique objective attempt
-        -   [ ] Objective met
+        -   [✔] Objective met
         -   Grader comments: 
 
 6.  Use arithmetic, comparison, and logical operators
@@ -110,7 +110,7 @@ Below each learning objective is a list of general expectations for meeting that
 
         -   [✔] Objective attempt
         -   [ ] Unique objective attempt
-        -   [ ] Objective met
+        -   [✔] Objective met
         -   Grader comments:
 
 7.  Parse and define functions and arguments
@@ -121,7 +121,7 @@ Below each learning objective is a list of general expectations for meeting that
 
         -   [✔] Objective attempt
         -   [ ] Unique objective attempt
-        -   [ ] Objective met
+        -   [✔] Objective met
         -   Grader comments:
 
 8.  Parse and write conditional statements and/or loops
@@ -131,7 +131,7 @@ Below each learning objective is a list of general expectations for meeting that
 
         -   [✔] Objective attempt
         -   [ ] Unique objective attempt
-        -   [ ] Objective met
+        -   [✔] Objective met
         -   Grader comments:
 
 ### Tidyverse
@@ -143,7 +143,7 @@ Below each learning objective is a list of general expectations for meeting that
 
         -   [✔] Objective attempt
         -   [ ] Unique objective attempt
-        -   [ ] Objective met
+        -   [✔] Objective met
         -   Grader comments: Please refer to `Data Cleaning.R` to see write-out
 
 10. Use `dplyr` and `tidyr` functions to transform data
@@ -154,7 +154,7 @@ Below each learning objective is a list of general expectations for meeting that
 
         -   [✔] Objective attempt
         -   [ ] Unique objective attempt
-        -   [ ] Objective met
+        -   [✔] Objective met
         -   Grader comments: Please refer to `Data Cleaning.R`
 
 11. Use `stringr` functions to work with string variables
@@ -164,7 +164,7 @@ Below each learning objective is a list of general expectations for meeting that
 
         -   [✔] Objective attempt
         -   [ ] Unique objective attempt
-        -   [ ] Objective met
+        -   [✔] Objective met
         -   Grader comments:
 
 12. Use `forcats` functions to work with factor variables
@@ -175,7 +175,7 @@ Below each learning objective is a list of general expectations for meeting that
         -   [✔] Objective attempt
         -   [ ] Unique objective attempt
         -   [ ] Objective met
-        -   Grader comments:
+        -   Grader comments:I didn't find a specific example of using `forcats` functions in the project. Please let me know if I missed it.
 
 ### Data visualization with ggplot2
 
@@ -186,7 +186,7 @@ Below each learning objective is a list of general expectations for meeting that
 
         -   [✔] Objective attempt
         -   [ ] Unique objective attempt
-        -   [ ] Objective met
+        -   [✔] Objective met
         -   Grader comments:
 
 14. Use dynamic aesthetics to group data
@@ -195,7 +195,7 @@ Below each learning objective is a list of general expectations for meeting that
 
         -   [✔] Objective attempt
         -   [ ] Unique objective attempt
-        -   [ ] Objective met
+        -   [✔] Objective met
         -   Grader comments:
 
 15. Use facets to create parallel plots
@@ -217,7 +217,7 @@ Below each learning objective is a list of general expectations for meeting that
 
         -   [✔] Objective attempt
         -   [ ] Unique objective attempt
-        -   [ ] Objective met
+        -   [✔] Objective met
         -   Grader comments:
 
 ### Data analysis
@@ -230,7 +230,7 @@ Below each learning objective is a list of general expectations for meeting that
 
         -   [✔] Objective attempt
         -   [ ] Unique objective attempt
-        -   [ ] Objective met
+        -   [✔] Objective met
         -   Grader comments:
 
 18. Perform simple hypothesis testing analyses for multiple data types
@@ -241,7 +241,7 @@ Below each learning objective is a list of general expectations for meeting that
 
         -   [✔] Objective attempt
         -   [ ] Unique objective attempt
-        -   [ ] Objective met
+        -   [✔] Objective met
         -   Grader comments:
 
 19. Present and interpret statistics in manuscript narrative
@@ -253,7 +253,7 @@ Below each learning objective is a list of general expectations for meeting that
 
         -   [ ] Objective attempt
         -   [✔] Unique objective attempt
-        -   [ ] Objective met
+        -   [✔] Objective met
         -   Grader comments:
 
 ### BibTeX
@@ -293,7 +293,7 @@ Below each learning objective is a list of general expectations for meeting that
 
         -   [ ] Objective attempt
         -   [✔] Unique objective attempt
-        -   [ ] Objective met
+        -   [✔] Objective met
         -   Grader comments: 
         
 23. Use code chunks to set up a quarto document
@@ -305,7 +305,7 @@ Below each learning objective is a list of general expectations for meeting that
 
         -   [ ] Objective attempt
         -   [✔] Unique objective attempt
-        -   [ ] Objective met
+        -   [✔] Objective met
         -   Grader comments:
 
 24. Render publication-quality tables, figures, and images from code chunks
@@ -318,7 +318,7 @@ Below each learning objective is a list of general expectations for meeting that
 
         -   [ ] Objective attempt
         -   [✔] Unique objective attempt
-        -   [ ] Objective met
+        -   [✔] Objective met
         -   Grader comments:
 
 25. Execute descriptive analyses and/or hypothesis testing in code chunks
@@ -331,7 +331,7 @@ Below each learning objective is a list of general expectations for meeting that
 
         -   [✔] Objective attempt
         -   [ ] Unique objective attempt
-        -   [ ] Objective met
+        -   [✔] Objective met
         -   Grader comments:
 
 ### R Markdown and quarto
@@ -374,7 +374,7 @@ Below each learning objective is a list of general expectations for meeting that
 
         -   [ ] Objective attempt
         -   [✔] Unique objective attempt
-        -   [ ] Objective met
+        -   [✔] Objective met
         -   Grader comments:
 
 30. Use `knitr` and quarto to produce an APA7 formatted 1-click PDF manuscript
@@ -481,11 +481,11 @@ I have to say I gained a lot during the process since I finally managed to condu
 
 ## Grader feedback
 
--   Grader:
--   Date:
--   Points toward unique objectives (up to 20):
--   Additional points (up to 20):
--   TA provisional engagement points (up to 10):
+-   Grader: Yuchen Jin
+-   Date: February 20, 2025
+-   Points toward unique objectives (up to 20): 9
+-   Additional points (up to 20): 21
+-   TA provisional engagement points (up to 10): 7
 -   Final approved engagement points (up to 10):
 -   Total points (up to 50):
 
