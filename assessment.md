@@ -486,13 +486,12 @@ I have to say I gained a lot during the process since I finally managed to condu
 -   Points toward unique objectives (up to 20): 9
 -   Additional points (up to 20): 21
 -   TA provisional engagement points (up to 10): 7
--   Final approved engagement points (up to 10):
--   Total points (up to 50):
+-   Final approved engagement points (up to 10): 7
+-   Total points (up to 50): Maxed out across the board!!
 
 Engagement points are awarded for going above and beyond the expectations of the project and are not guaranteed on any given submission. Demonstrating the assessed learning objectives earns you points in those categories, but engagement points are awarded for exceptional effort, creativity, or skill.
 
 TAs may recommend engagement points provisionally, but the instructor will make the final decision on engagement points.
 
-Additional comments: 
-
+Additional comments:  ND - Wow. Just wow. Crushed it. 
 
